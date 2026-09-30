@@ -1,0 +1,59 @@
+{
+  "example_id": "housing_12",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hmm... well... hey... uh... I'm moving to a new city soon and... um... I really need to plan out how I'd get around.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Like... you know... hmm... could you calculate the commute from my apartment to the airport? I'd be going by... let me see... transit... since... um, I probably won't have a car right away.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "my apartment",
+        "destination_address": "the airport",
+        "mode": "transit"
+      },
+      "timestamp_start": 0.351,
+      "timestamp_end": 0.714
+    }
+  ],
+  "transcript": "Sure — what do you need? Working out the commute from my apartment to the airport. Here's what I found: duration mins 25, transit.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.026
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Working out the commute from my apartment to the airport.",
+      "t": 0.35
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: duration mins 25, transit.",
+      "t": 0.714
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "apartment",
+        "destination_address": "airport",
+        "mode": "transit"
+      }
+    }
+  ]
+}

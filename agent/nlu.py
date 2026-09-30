@@ -53,13 +53,16 @@ _FROM_RE = re.compile(r"\bfrom\s*$", re.I)
 # self-repair / correction markers — the value AFTER the last marker wins
 REPAIR_MARKERS = re.compile(
     r"\b(?:no[, \-]+wait|wait[, \-]+no|no[, ]+sorry|sorry[, ]+i mean|i mean|actually|"
-    r"rather|scratch that|make (?:it|that)|change (?:it|that) to|instead|not\s+\w+[, ]+but|no[,.]\s)",
+    r"rather|scratch that|make (?:it|that)|change (?:it|that) to|instead|not\s+\w+[, ]+but|no[,.]\s|"
+    r"sorry i meant|correction|not [a-z0-9]+ but|let me rephrase|i meant to say|hold on|"
+    r"switch it to|update that to|on second thought|let me correct that)\b",
     re.I)
 RETRACTION = re.compile(
     r"\b(never ?mind|forget (?:it|about it|that)|cancel (?:that|it|everything)|don'?t bother|"
     r"stop(?: that)?|no need|skip it|call it off|scratch that|hold off|"
-    r"(?:don'?t|do not) (?:do|book|change|send|submit|go ahead with) (?:that|it|this|anything)(?: after all)?)\b", re.I)
-INTENT_SWITCH = re.compile(r"\b(forget the \w+|different question|something else)\b", re.I)
+    r"(?:don'?t|do not) (?:do|book|change|send|submit|go ahead with) (?:that|it|this|anything)(?: after all)?|"
+    r"forget the whole thing|never mind all of that|start over|disregard that|drop it|abort)\b", re.I)
+INTENT_SWITCH = re.compile(r"\b(forget the \w+|different question|something else|forget it instead|actually can you|on another note|new request|ignore that, instead)\b", re.I)
 GREETING = re.compile(r"\b(hi|hello|hey|what can you (?:do|help)|who are you|help me with)\b", re.I)
 WEEKDAYS = r"(?:monday|tuesday|wednesday|thursday|friday|saturday|sunday)"
 DATE_RE = re.compile(
@@ -1463,8 +1466,21 @@ def _v(args: Dict[str, Any], *keys: str) -> Optional[str]:
     return None
 
 
+ACKNOWLEDGEMENTS = [
+    "On it!", "Absolutely, give me a second.", "Got you — checking now.",
+    "Sure thing, one moment.", "Understood — pulling that up.",
+    "Let me grab that for you.", "Right away.", "I'm on it.",
+    "Of course, just a moment.", "Sure, looking into that now.",
+    "Got it, hold on a sec.", "Let me check that for you.",
+    "One moment please.", "Working on it.", "On it right away.",
+    "Understood, searching now.", "Allow me a moment.",
+    "That's noted — let me look.", "I'll get that sorted.",
+    "Pulling that up now."
+]
+
 def ack_phrase(api: str, args: Dict[str, Any], kind: str = "read_only") -> str:
     """First substantive line: repeats the key argument so the user can correct it by barge-in."""
+    import random
     a = args or {}
     n = api.lower()
     if "cart" in n:
@@ -1493,7 +1509,7 @@ def ack_phrase(api: str, args: Dict[str, Any], kind: str = "read_only") -> str:
     what = norm(api.replace("_", " "))
     if kind == "state_modifying":
         return f"Okay — updating that now{' (' + vals[0] + ')' if vals else ''}."
-    return f"Checking {what}" + (f" for {vals[0]}." if vals else ".")
+    return random.choice(ACKNOWLEDGEMENTS)
 
 
 def done_phrase(api: str, res: Dict[str, Any]) -> Optional[str]:

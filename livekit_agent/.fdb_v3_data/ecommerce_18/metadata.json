@@ -1,0 +1,44 @@
+{
+  "id": "ecommerce_18",
+  "domain": "ecommerce_support",
+  "title": "Search + Cart + Track Chain",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Well... oh... um... hi... I've got a few things... um, I need done and I'm hoping we can get through them all at once.",
+      "user_annotated": "Well... oh... um... hi... I've got a few things... um, I need done and I'm hoping we can get through them all at once.",
+      "ai": "I'm ready! What do you need?"
+    },
+    {
+      "user": "Hmm... um... so like... first, search for a gaming mouse \u2014... um, I want to see what you have. Then add the cheapest option to my cart so I can buy it later. And while you're at it, could you also track my order P-O-9-9-9? I've been waiting on that one.",
+      "user_annotated": "Hmm... um... so like... first, search for a gaming mouse \u2014... um, I want to see what you have. Then add the cheapest option to my cart so I can buy it later. And while you're at it, could you also track my order P-O-9-9-9? I've been waiting on that one.",
+      "ai": "I'll search for the mouse, add it to your cart, and track your order."
+    }
+  ],
+  "acting_notes": "State all three steps in one continuous flow.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "gaming mouse"
+      }
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "$RESULT_0.cheapest_product_id",
+        "quantity": 1
+      }
+    },
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "PO999"
+      }
+    }
+  ],
+  "num_expected_calls": 3,
+  "state_rollback_test": false,
+  "latency_profile": "slow"
+}

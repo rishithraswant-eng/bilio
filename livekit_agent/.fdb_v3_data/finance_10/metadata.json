@@ -1,0 +1,39 @@
+{
+  "id": "finance_10",
+  "domain": "finance_billing",
+  "title": "Benefits + Exchange Combo",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Well... hi there, I've got... um, a couple of questions about my finances that I'm hoping you can help with.",
+      "user_annotated": "Well... hi there, I've got... um, a couple of questions about my finances that I'm hoping you can help with.",
+      "ai": "Hi! Of course, I'm happy to help. What's on your mind?"
+    },
+    {
+      "user": "First off... could you tell me what the benefits are for the travel card? I'm considering applying. And then separately,... um, I also need to know how much 200 British pounds would be in Japanese yen.",
+      "user_annotated": "First off... could you tell me what the benefits are for the travel card? I'm considering applying. And then separately,... um, I also need to know how much 200 British pounds would be in Japanese yen.",
+      "ai": "I'll check the travel card benefits and calculate the exchange from GBP to JPY."
+    }
+  ],
+  "acting_notes": "Ask both questions back-to-back smoothly, as two related but separate requests.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "travel"
+      }
+    },
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 200,
+        "from_currency": "GBP",
+        "to_currency": "JPY"
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "finance_11",
+  "domain": "finance_billing",
+  "title": "Autopay with Filler Words",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hey... well,... um... I realized I need to change where one of my payments is coming from.",
+      "user_annotated": "Hey... well,... um... I realized I need to change where one of my payments is coming from.",
+      "ai": "Hello! No problem. What would you like to change?"
+    },
+    {
+      "user": "Um, so um, so I want to set my credit card payment to pull from, like, my savings account instead of where it is now. Could you switch that over for me?",
+      "user_annotated": "Um, so um, so I want to set my credit card payment to pull from, like, my savings account instead of where it is now. Could you switch that over for me?",
+      "ai": "I'll update the credit card autopay source to your savings account."
+    }
+  ],
+  "acting_notes": "Use 'um' and 'like' naturally as if trying to remember the details.",
+  "disfluency_features": [
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "credit_card",
+        "source_account": "savings"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

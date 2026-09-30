@@ -1,0 +1,83 @@
+{
+  "example_id": "housing_13",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Um... well... oh... hi there, I've decided to expand my search a bit because I'm not finding anything... um, I like.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "You know... you know... like... you know... let's raise the max price to 3000 per month... and also bump up the minimum bedrooms to 3.... um, I think I need more space than I originally thought.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "max_price",
+        "value": 3000
+      },
+      "timestamp_start": 0.361,
+      "timestamp_end": 0.418
+    },
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "min_bedrooms",
+        "value": 3
+      },
+      "timestamp_start": 0.427,
+      "timestamp_end": 0.541
+    }
+  ],
+  "transcript": "Sure — what query should I use? Sure, dropping that — switching to your apartments request. Okay — updating that now (max_price). Done — max_price is now 3000. Done — min_bedrooms is now 3.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what query should I use?",
+      "t": 0.013
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, dropping that — switching to your apartments request.",
+      "t": 0.361
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (max_price).",
+      "t": 0.361
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — max_price is now 3000.",
+      "t": 0.427
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — min_bedrooms is now 3.",
+      "t": 0.541
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "max_price",
+        "value": 3000
+      }
+    },
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "min_bedrooms",
+        "value": 3
+      }
+    }
+  ]
+}

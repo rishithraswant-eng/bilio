@@ -1,0 +1,104 @@
+{
+  "example_id": "finance_25",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hey... uh,... um, I need your help with a bunch of stuff today. I've got a whole list I wrote down.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Like... okay, so first I want to... convert 800 US dollars to euros, just so I know the rate. Then... uh... set my mortgage to autopay from savings. And also I want to check the benefits of the... platinum card, because I'm thinking about switching.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 800,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      },
+      "timestamp_start": 0.328,
+      "timestamp_end": 0.33
+    },
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "savings"
+      },
+      "timestamp_start": 0.335,
+      "timestamp_end": 0.336
+    },
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "platinum"
+      },
+      "timestamp_start": 0.34,
+      "timestamp_end": 0.342
+    }
+  ],
+  "transcript": "Sure — what do you need? Checking the USD to EUR rate. Here's what I found: converted amount 720.0, rate 0.9. Okay — updating that now (mortgage). Done — your autopay settings are updated. Here's what I found: platinum, 2% Cashback, No Foreign Transaction Fee.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.018
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking the USD to EUR rate.",
+      "t": 0.328
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: converted amount 720.0, rate 0.9.",
+      "t": 0.335
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (mortgage).",
+      "t": 0.335
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — your autopay settings are updated.",
+      "t": 0.34
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: platinum, 2% Cashback, No Foreign Transaction Fee.",
+      "t": 0.342
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 800,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      }
+    },
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "savings"
+      }
+    },
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "platinum"
+      }
+    }
+  ]
+}

@@ -24,6 +24,8 @@
 # missing or errored, or when --require-judge is set and the judge is not used. Result files from earlier
 # runs are removed before inference so an old result can never be scored as a fresh one.
 set -euo pipefail
+export PYTHON="/c/Users/Rishith Raswant/AppData/Local/Programs/Python/Python312/python.exe"
+export PYTHONUTF8=1
 
 # ------------------------------------------------------------------------------------------ config
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -89,7 +91,7 @@ stage_1_install() {
     log "=== Stage 1/6: environment + pinned dependencies ==="
     command -v ffmpeg >/dev/null || fail "ffmpeg not found (the official runner converts audio with it). Install: apt-get install -y ffmpeg / brew install ffmpeg"
     if [ "$SKIP_INSTALL" = 1 ]; then
-        PY="$(command -v python3)"
+        PY="${PYTHON:-$(command -v python3)}"
         log "--skip-install: using $PY ($("$PY" -V 2>&1))"
     else
         local base=""

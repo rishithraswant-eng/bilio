@@ -1,0 +1,62 @@
+{
+  "example_id": "housing_03",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Um... oh, uh... hi there, I've been looking at a bunch of listings and... um, I think I need to adjust my search a bit.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um... so well, like... um,... um, I want to update my search filter so the max price is, like, 1800 a month. Everything I've been seeing is over budget.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "max_price",
+        "value": 1800
+      },
+      "timestamp_start": 0.345,
+      "timestamp_end": 0.412
+    }
+  ],
+  "transcript": "Sure — which city? Sure, dropping that — switching to your filter request. Okay — updating that now (max_price). Done — max_price is now 1800.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — which city?",
+      "t": 0.015
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, dropping that — switching to your filter request.",
+      "t": 0.345
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (max_price).",
+      "t": 0.345
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — max_price is now 1800.",
+      "t": 0.412
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "max_price",
+        "value": 1800
+      }
+    }
+  ]
+}

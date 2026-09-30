@@ -1,0 +1,57 @@
+{
+  "example_id": "travel_02",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hmm... good morning!... um... I just got my new passport and need to update my records.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Uh, yeah, so my new passport number is P-8-8-9-9-0-0-1-1. Could you update that in the system... um, for me please?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "passport",
+        "doc_number": "P88990011"
+      },
+      "timestamp_start": 0.314,
+      "timestamp_end": 0.315
+    }
+  ],
+  "transcript": "Sure — what doc number should I use? Okay — updating that now (passport). Done — your document details are updated.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what doc number should I use?",
+      "t": 0.01
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (passport).",
+      "t": 0.314
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — your document details are updated.",
+      "t": 0.315
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "passport",
+        "doc_number": "P9-9-9-90011"
+      }
+    }
+  ]
+}

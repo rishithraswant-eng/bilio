@@ -1,0 +1,57 @@
+{
+  "example_id": "housing_05",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Um, oh... well... um, hi there. I've been having... um, the hardest time finding a place that allows my dog.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "You know... you know... you know... well... i need... um, a pet-friendly apartment in Miami, and my budget is about... let me check... 1500 a month. Is there anything in that range?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "pets_allowed": true
+      },
+      "timestamp_start": 0.018,
+      "timestamp_end": 0.677
+    }
+  ],
+  "transcript": "Looking for apartments. Got it — switching to Miami. I started that search apartments, but the system also needs the city and bedrooms — what should I use?",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Looking for apartments.",
+      "t": 0.018
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Got it — switching to Miami.",
+      "t": 0.327
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that search apartments, but the system also needs the city and bedrooms — what should I use?",
+      "t": 0.677
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Miami",
+        "max_price": 1500,
+        "pets_allowed": true
+      }
+    }
+  ]
+}

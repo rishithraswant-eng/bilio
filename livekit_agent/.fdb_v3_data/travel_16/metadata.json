@@ -1,0 +1,34 @@
+{
+  "id": "travel_16",
+  "domain": "travel_identity",
+  "title": "Filler-Heavy Flight Search",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hey... sorry... um, to bother you. I've been going back and forth on this trip plan all day.",
+      "user_annotated": "Hey... sorry... um, to bother you. I've been going back and forth on this trip plan all day.",
+      "ai": "No bother at all! What do you need?"
+    },
+    {
+      "user": "Hmm... like... I've been thinking about it and... um, I need to book flights to, um, Vegas. I'm looking at going around, uh, August 8th if there's anything available.",
+      "user_annotated": "Hmm... like... I've been thinking about it and... um, I need to book flights to, um, Vegas. I'm looking at going around, uh, August 8th if there's anything available.",
+      "ai": "I'll search for flights to Vegas on August 8th for you."
+    }
+  ],
+  "acting_notes": "Use lots of filler words. Sound casual and a little uncertain, like you haven't fully committed.",
+  "disfluency_features": [
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Las Vegas",
+        "date": "August 8"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

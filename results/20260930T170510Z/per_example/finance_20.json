@@ -1,0 +1,67 @@
+{
+  "example_id": "finance_20",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hey... um... can you help me with something a bit more complicated? It involves a decision that depends on the exchange rate.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Well... here's my situation. I want to check what 1000 US dollars is in euros right now. If the exchange rate looks good to me, then go ahead and change my mortgage autopay to pull from checking. But if the rate isn't great, just leave everything as is and keep it on savings.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 1000,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      },
+      "timestamp_start": 0.341,
+      "timestamp_end": 0.342
+    }
+  ],
+  "transcript": "Sure — what amount should I use? Checking the USD to EUR rate. Here's what I found: converted amount 900.0, rate 0.9.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what amount should I use?",
+      "t": 0.016
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking the USD to EUR rate.",
+      "t": 0.341
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: converted amount 900.0, rate 0.9.",
+      "t": 0.342
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 1000,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      }
+    },
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "checking"
+      },
+      "note": "Only if rate is favorable"
+    }
+  ]
+}

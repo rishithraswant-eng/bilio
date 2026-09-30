@@ -1,0 +1,42 @@
+{
+  "id": "ecommerce_11",
+  "domain": "ecommerce_support",
+  "title": "Quantity Self-Correction",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Uh... hmm... um... hi... uh... I'm ready... um, to add something to my cart but I'm still deciding on the quantity.",
+      "user_annotated": "Uh... hmm... um... hi... uh... I'm ready... um, to add something to my cart but I'm still deciding on the quantity.",
+      "ai": "Hi! No problem. Tell me what you'd like."
+    },
+    {
+      "user": "You know... like... well, go ahead and add product B-7 to my cart. Make it 3 of them \u2014 no, wait, that's too many. Just put 1 in there for now, I'll order more later if... um, I need to.",
+      "user_annotated": "You know... like... well, go ahead and add product B-7 to my cart. Make it 3 of them \u2014 no, wait, that's too many. Just put 1 in there for now, I'll order more later if... um, I need to.",
+      "ai": "I'll add 1 unit of product B7 to your cart."
+    }
+  ],
+  "acting_notes": "Correct the quantity down from 3 to 1.",
+  "disfluency_features": [
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "B7",
+        "quantity": 1
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "quantity": 3
+    },
+    "corrected_param": {
+      "quantity": 1
+    }
+  },
+  "latency_profile": "normal"
+}

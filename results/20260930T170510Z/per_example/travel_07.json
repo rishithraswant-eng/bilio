@@ -1,0 +1,57 @@
+{
+  "example_id": "travel_07",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hi... hmm... I recently renewed my driver license and I need to get the new number into your system.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Uh,... um... the new driver license number is D-L-5-5-5. Could you swap out the old one and put this new one in there?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "driver_license",
+        "doc_number": "DL555"
+      },
+      "timestamp_start": 0.328,
+      "timestamp_end": 0.332
+    }
+  ],
+  "transcript": "Sure — what doc number should I use? Okay — updating that now (driver_license). Done — your document details are updated.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what doc number should I use?",
+      "t": 0.044
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (driver_license).",
+      "t": 0.328
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — your document details are updated.",
+      "t": 0.332
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "driver_license",
+        "doc_number": "DL555"
+      }
+    }
+  ]
+}

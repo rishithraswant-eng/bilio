@@ -171,7 +171,7 @@ def prewarm(proc: JobProcess):
 
 
 server = AgentServer(setup_fnc=prewarm)
-# Explicit dispatch: set TRIAGELINE_AGENT_NAME (e.g. triageline-triage) and the same value on the
+# Explicit dispatch: set TRIAGELINE_AGENT_NAME (e.g. bilio-triage) and the same value on the
 # gateway so its tokens route calls here; empty keeps automatic dispatch (demo only, run one worker).
 AGENT_NAME = os.environ.get("TRIAGELINE_AGENT_NAME", "").strip()
 
@@ -273,6 +273,7 @@ async def entrypoint(ctx: agents.JobContext):
     ctx.add_shutdown_callback(_teardown)
 
     await session.start(room=ctx.room, agent=TriageVoiceAgent())
+    asyncio.create_task(tts_adapter.start_speaking("Welcome to BILIO Triage! How can I help you?"))
     from livekit_agent.speech_providers import describe
     print(f"!!! TRIAGE LINE AGENT STARTED: {describe().replace('rule-based agent', 'triage brain')} !!!")
 

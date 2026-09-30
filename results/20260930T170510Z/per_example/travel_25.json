@@ -1,0 +1,119 @@
+{
+  "example_id": "travel_25",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Well... can you hear me alright? I need help with a pretty big travel request that involves several steps.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Uh... okay, so first... um, I need flights to Bangkok for March 1st. Book it for... Cameron, that's the traveler. Then I need to update my passport number to P-1-2-3, and also... my visa number to V-3-2-1.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Bangkok",
+        "date": "March 1"
+      },
+      "timestamp_start": 0.335,
+      "timestamp_end": 0.856
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "flight_id": "FL123",
+        "passenger_name": "March"
+      },
+      "timestamp_start": 0.857,
+      "timestamp_end": 0.857
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "passport",
+        "doc_number": "P123"
+      },
+      "timestamp_start": 0.861,
+      "timestamp_end": 0.861
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "visa",
+        "doc_number": "V321"
+      },
+      "timestamp_start": 0.865,
+      "timestamp_end": 0.865
+    }
+  ],
+  "transcript": "Sure — what do you need? On it — finding flights to Bangkok for March 1 first. Found FL123 at March 1 for $450 — booking it for March now. Done — you're booked on FL123 to Bangkok for March. Booking reference B789. Done — your document details are updated. Done — your document details are updated.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.008
+    },
+    {
+      "kind": "filler_speech",
+      "text": "On it — finding flights to Bangkok for March 1 first.",
+      "t": 0.335
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Found FL123 at March 1 for $450 — booking it for March now.",
+      "t": 0.857
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — you're booked on FL123 to Bangkok for March. Booking reference B789.",
+      "t": 0.861
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — your document details are updated.",
+      "t": 0.865
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — your document details are updated.",
+      "t": 0.866
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Bangkok",
+        "date": "March 1"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Cameron"
+      }
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "passport",
+        "doc_number": "P123"
+      }
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "visa",
+        "doc_number": "V321"
+      }
+    }
+  ]
+}

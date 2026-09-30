@@ -1,0 +1,48 @@
+{
+  "id": "travel_21",
+  "domain": "travel_identity",
+  "title": "Hesitant Booking Chain",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Hello... uh, I've got a pretty involved travel request. There are a bunch of things... um, I need done at once.",
+      "user_annotated": "Hello... uh, I've got a pretty involved travel request. There are a bunch of things... um, I need done at once.",
+      "ai": "Of course! I'm ready. Let me hear them all."
+    },
+    {
+      "user": "You know... okay so,... um... I need to find flights to... Vegas, I was thinking around August 8th. And then, um, once you find something, book it under the name Quinn Davis. Oh and while you're at it, could you also update my visa number to V-7-7?",
+      "user_annotated": "You know... okay so,... um... I need to find flights to... Vegas, I was thinking around August 8th. And then, um, once you find something, book it under the name Quinn Davis. Oh and while you're at it, could you also update my visa number to V-7-7?",
+      "ai": "Searching for flights to Vegas, booking for Quinn Davis, and updating your visa."
+    }
+  ],
+  "acting_notes": "Pause before saying Vegas. Use fillers between the three requests as natural transitions.",
+  "disfluency_features": [
+    "PAUSE",
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Las Vegas",
+        "date": "August 8"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Quinn Davis"
+      }
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "visa",
+        "doc_number": "V77"
+      }
+    }
+  ],
+  "num_expected_calls": 3,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

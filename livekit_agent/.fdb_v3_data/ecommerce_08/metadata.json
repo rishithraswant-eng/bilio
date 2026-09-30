@@ -1,0 +1,34 @@
+{
+  "id": "ecommerce_08",
+  "domain": "ecommerce_support",
+  "title": "Search with Pause",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Oh, um... hello... well... I've been meaning to buy a new keyboard and... um...... um, I finally have time to look.",
+      "user_annotated": "Oh, um... hello... well... I've been meaning to buy a new keyboard and... um...... um, I finally have time to look.",
+      "ai": "Hello! Great timing. What kind are you looking for?"
+    },
+    {
+      "user": "Uh... hmm... you know... uh... i want a mechanical keyboard... and I'm trying... um, to keep my budget under... 200 dollars. Do you have anything like that?",
+      "user_annotated": "Uh... hmm... you know... uh... i want a mechanical keyboard... and I'm trying... um, to keep my budget under... 200 dollars. Do you have anything like that?",
+      "ai": "Searching for mechanical keyboards under $200."
+    }
+  ],
+  "acting_notes": "Pause before saying the price, as if deciding on a budget.",
+  "disfluency_features": [
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "mechanical keyboards",
+        "max_price": 200
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

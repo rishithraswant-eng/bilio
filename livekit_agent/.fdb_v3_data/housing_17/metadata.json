@@ -1,0 +1,43 @@
+{
+  "id": "housing_17",
+  "domain": "housing_location",
+  "title": "Commute Mode Self-Correction",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Um... well... hey... well,... um, I need to double-check how long it would take me to get to work from the apartment I'm considering.",
+      "user_annotated": "Um... well... hey... well,... um, I need to double-check how long it would take me to get to work from the apartment I'm considering.",
+      "ai": "Sure, what route do you need?"
+    },
+    {
+      "user": "Like, like... um... so calculate the transit time to the office from there \u2014 wait, no, actually... um, I just remembered I'd be driving. So make it driving time to the office from my house instead.",
+      "user_annotated": "Like, like... um... so calculate the transit time to the office from there \u2014 wait, no, actually... um, I just remembered I'd be driving. So make it driving time to the office from my house instead.",
+      "ai": "I will calculate the driving commute from your house to the office."
+    }
+  ],
+  "acting_notes": "Change transit to driving naturally.",
+  "disfluency_features": [
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "my house",
+        "destination_address": "the office",
+        "mode": "driving"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "mode": "transit"
+    },
+    "corrected_param": {
+      "mode": "driving"
+    }
+  },
+  "latency_profile": "normal"
+}

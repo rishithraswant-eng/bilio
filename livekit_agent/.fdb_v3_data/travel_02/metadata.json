@@ -1,0 +1,32 @@
+{
+  "id": "travel_02",
+  "domain": "travel_identity",
+  "title": "Update Passport Number",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hmm... good morning!... um... I just got my new passport and need to update my records.",
+      "user_annotated": "Hmm... good morning!... um... I just got my new passport and need to update my records.",
+      "ai": "Good morning! Congrats on the new passport. I can help with that."
+    },
+    {
+      "user": "Uh, yeah, so my new passport number is P-8-8-9-9-0-0-1-1. Could you update that in the system... um, for me please?",
+      "user_annotated": "Uh, yeah, so my new passport number is P-8-8-9-9-0-0-1-1. Could you update that in the system... um, for me please?",
+      "ai": "I'll update your passport number to P9-9-9-90011 right away."
+    }
+  ],
+  "acting_notes": "Say the passport number clearly, spelling out each character one by one.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "passport",
+        "doc_number": "P9-9-9-90011"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

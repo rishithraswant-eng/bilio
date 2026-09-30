@@ -1,6 +1,6 @@
 {
-  "name": "TriageLine independent held-out set v1",
-  "provenance": "Written by the TriageLine team on 2026-09-28 WITHOUT copying FDB-v3 utterances. New ids, names, cities, amounts and phrasings. Never used to tune rules; any rule change must be justified on dev data and only re-scored here.",
+  "name": "BILIO independent held-out set v1",
+  "provenance": "Written by the BILIO team on 2026-09-28 WITHOUT copying FDB-v3 utterances. New ids, names, cities, amounts and phrasings. Never used to tune rules; any rule change must be justified on dev data and only re-scored here.",
   "scoring": "strict: the ordered list of (tool, subset-of-args) must equal expected; no extra state-modifying calls. Values compare case-insensitively; numbers numerically.",
   "items": [
     {"id": "h01", "domain": "ecommerce", "feature": "FILLER", "turns": ["Hey so, um, where's my parcel? The order number is Q R S seven six five."], "expected": [["track_order", {"order_id": "QRS765"}]]},

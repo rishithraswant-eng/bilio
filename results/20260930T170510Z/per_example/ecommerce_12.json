@@ -1,0 +1,56 @@
+{
+  "example_id": "ecommerce_12",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Well... oh, hey... um, I'm looking for a gift for my friend's birthday and I'm not totally sure what... um, to get.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Like... you know... uh... i'm thinking something in the... let me think... electronics section would be great. He's really into gadgets and tech stuff.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "Like... you know... uh... i'm thinking something in the... let me think... electronics section would be great. He's really into gadgets and tech stuff"
+      },
+      "timestamp_start": 0.316,
+      "timestamp_end": 0.318
+    }
+  ],
+  "transcript": "Sure — what query should I use? Searching for Like... you know... uh... i'm thinking something in the... let me think... electronics section would be great. He's really into gadgets and tech stuff. Here's what I found: ref PROD1, Like... you know... uh... i'm thinking something in the... let me think... electronics section would be great. He's really into gadgets and tech stuff Premium, $99.99.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what query should I use?",
+      "t": 0.024
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Searching for Like... you know... uh... i'm thinking something in the... let me think... electronics section would be great. He's really into gadgets and tech stuff.",
+      "t": 0.316
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, Like... you know... uh... i'm thinking something in the... let me think... electronics section would be great. He's really into gadgets and tech stuff Premium, $99.99.",
+      "t": 0.318
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "gift",
+        "category": "electronics"
+      }
+    }
+  ]
+}

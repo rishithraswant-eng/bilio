@@ -1,0 +1,46 @@
+{
+  "id": "ecommerce_25",
+  "domain": "ecommerce_support",
+  "title": "False Start into Complex Chain",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Um... um, hey... let's buy some stuff. I've got a whole list of things... um, I need to do today.",
+      "user_annotated": "Um... um, hey... let's buy some stuff. I've got a whole list of things... um, I need to do today.",
+      "ai": "I'm ready! What are we getting?"
+    },
+    {
+      "user": "You know... well... can... um, I return my \u2014 never mind, forget the return. Let me focus on what I actually need. Track order C-A-T for me. Then search for cat food because I'm running low. And add 3 of whatever you find to my cart.",
+      "user_annotated": "You know... well... can... um, I return my \u2014 never mind, forget the return. Let me focus on what I actually need. Track order C-A-T for me. Then search for cat food because I'm running low. And add 3 of whatever you find to my cart.",
+      "ai": "I will track the order, find cat food, and add 3 to the cart."
+    }
+  ],
+  "acting_notes": "Start to ask about a return, abandon it, then give 3 valid tasks.",
+  "disfluency_features": [
+    "FALSE_START"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "CAT"
+      }
+    },
+    {
+      "function": "search_products",
+      "args": {
+        "query": "cat food"
+      }
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "$RESULT_1.products[0].product_id",
+        "quantity": 3
+      }
+    }
+  ],
+  "num_expected_calls": 3,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

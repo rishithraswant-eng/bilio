@@ -1,0 +1,41 @@
+{
+  "id": "finance_20",
+  "domain": "finance_billing",
+  "title": "Conditional Autopay Based on Exchange Rate",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Hey... um... can you help me with something a bit more complicated? It involves a decision that depends on the exchange rate.",
+      "user_annotated": "Hey... um... can you help me with something a bit more complicated? It involves a decision that depends on the exchange rate.",
+      "ai": "Absolutely! I can handle that. Tell me what you need."
+    },
+    {
+      "user": "Well... here's my situation. I want to check what 1000 US dollars is in euros right now. If the exchange rate looks good to me, then go ahead and change my mortgage autopay to pull from checking. But if the rate isn't great, just leave everything as is and keep it on savings.",
+      "user_annotated": "Well... here's my situation. I want to check what 1000 US dollars is in euros right now. If the exchange rate looks good to me, then go ahead and change my mortgage autopay to pull from checking. But if the rate isn't great, just leave everything as is and keep it on savings.",
+      "ai": "I'll check the exchange rate and update your autopay depending on the result."
+    }
+  ],
+  "acting_notes": "Speak clearly. Emphasize the if-then condition so it's easy to understand.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 1000,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      }
+    },
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "checking"
+      },
+      "note": "Only if rate is favorable"
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "slow"
+}

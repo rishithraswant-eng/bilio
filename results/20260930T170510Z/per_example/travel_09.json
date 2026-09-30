@@ -1,0 +1,57 @@
+{
+  "example_id": "travel_09",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hi,... um... I need help booking a flight for an upcoming business trip.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Uh... i need... um, to look at flights to Paris — actually, no, scratch that. My meeting got moved to Berlin, so make that Berlin instead, on September 10th please.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Berlin",
+        "date": "September 10"
+      },
+      "timestamp_start": 0.315,
+      "timestamp_end": 0.741
+    }
+  ],
+  "transcript": "Sure, checking flights to None for today. Got it — switching to Berlin. I found a flight to Berlin: FL123 departing September 10 for $450.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to None for today.",
+      "t": 0.013
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Got it — switching to Berlin.",
+      "t": 0.315
+    },
+    {
+      "kind": "final_response",
+      "text": "I found a flight to Berlin: FL123 departing September 10 for $450.",
+      "t": 0.742
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Berlin",
+        "date": "September 10"
+      }
+    }
+  ]
+}

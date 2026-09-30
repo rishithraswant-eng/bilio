@@ -1,0 +1,55 @@
+{
+  "timestamp_utc": "20260930T170510Z",
+  "provider": "bilio_text",
+  "mode": "offline_text_replay",
+  "limit": 0,
+  "llm_judge": false,
+  "latency_profile": "instant",
+  "fdb_commit": "3e799c45a045256f47d5f1c9cda90157e2d2ec9e",
+  "bilio_commit": "217fc2eeb4ab03573c09cc8fae432b7f60eb7e23",
+  "bilio_dirty_files": 252,
+  "python": "3.12.10",
+  "speech": {
+    "stt_provider": "deepgram",
+    "stt_model": "nova-3",
+    "tts_provider": "deepgram",
+    "tts_model": "aura-2-andromeda-en",
+    "tts_voice": ""
+  },
+  "stt_bias": "1",
+  "settle_s": "1.0",
+  "max_settle_s": "2.0",
+  "benchmark_policy": "1",
+  "bilio_mode": "benchmark",
+  "llm_mode": "fallback",
+  "llm_planner_setting": "0",
+  "turn_detector": "1",
+  "llm_planner": {
+    "enabled": false,
+    "chain": [
+      {
+        "provider": "gemini",
+        "model": "gemini-3.5-flash-lite",
+        "configured": true,
+        "cooling_down": false,
+        "last": null
+      },
+      {
+        "provider": "cerebras",
+        "model": "gpt-oss-120b",
+        "configured": true,
+        "cooling_down": false,
+        "last": null
+      }
+    ],
+    "configured": true,
+    "error": null,
+    "offline": false
+  },
+  "seeds": {
+    "mock_latency_profile": "instant",
+    "stt_temperature": 0,
+    "llm_temperature": 0,
+    "llm_seed": 7
+  }
+}

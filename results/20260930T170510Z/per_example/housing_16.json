@@ -1,0 +1,63 @@
+{
+  "example_id": "housing_16",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hmm... hi... hmm...... um...... um...... um, I have a quick question about commuting from one of the apartments I'm looking at.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um, so uh, hmm... well... i want to know how long it would take to drive from my apartment to the... uh... hospital? My wife works there and... um, I want to make sure it's not too far.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "my apartment",
+        "mode": "driving"
+      },
+      "timestamp_start": 0.411,
+      "timestamp_end": 0.713
+    }
+  ],
+  "transcript": "Sure — which city? Sure, dropping that — switching to your commute request. Working out the commute from my apartment to there. I started that calculate commute, but the system also needs the destination address — what should I use?",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — which city?",
+      "t": 0.019
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, dropping that — switching to your commute request.",
+      "t": 0.411
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Working out the commute from my apartment to there.",
+      "t": 0.411
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that calculate commute, but the system also needs the destination address — what should I use?",
+      "t": 0.713
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "my apartment",
+        "destination_address": "hospital",
+        "mode": "driving"
+      }
+    }
+  ]
+}

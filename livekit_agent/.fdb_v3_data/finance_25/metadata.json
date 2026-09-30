@@ -1,0 +1,49 @@
+{
+  "id": "finance_25",
+  "domain": "finance_billing",
+  "title": "Full Chain with Pauses and Fillers",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Hey... uh,... um, I need your help with a bunch of stuff today. I've got a whole list I wrote down.",
+      "user_annotated": "Hey... uh,... um, I need your help with a bunch of stuff today. I've got a whole list I wrote down.",
+      "ai": "Sure! Let's go through them one by one."
+    },
+    {
+      "user": "Like... okay, so first I want to... convert 800 US dollars to euros, just so I know the rate. Then... uh... set my mortgage to autopay from savings. And also I want to check the benefits of the... platinum card, because I'm thinking about switching.",
+      "user_annotated": "Like... okay, so first I want to... convert 800 US dollars to euros, just so I know the rate. Then... uh... set my mortgage to autopay from savings. And also I want to check the benefits of the... platinum card, because I'm thinking about switching.",
+      "ai": "I'll handle the conversion, update your mortgage autopay, and check platinum card benefits."
+    }
+  ],
+  "acting_notes": "Pause at the ellipses. Sound slow and methodical, like you're reading items off a handwritten list.",
+  "disfluency_features": [
+    "PAUSE",
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 800,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      }
+    },
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "savings"
+      }
+    },
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "platinum"
+      }
+    }
+  ],
+  "num_expected_calls": 3,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

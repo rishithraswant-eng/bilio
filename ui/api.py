@@ -1,4 +1,4 @@
-"""TriageLine gateway — the ONE application server (ASGI).
+"""BILIO gateway — the ONE application server (ASGI).
 
     python -m uvicorn ui.api:app --host 0.0.0.0 --port 8080 --proxy-headers
 
@@ -55,7 +55,7 @@ def load_gateway_env(root: Path = ROOT) -> None:
 load_gateway_env()
 from ui import live, mobile  # noqa: E402
 
-log = logging.getLogger("triageline.api")
+log = logging.getLogger("bilio.api")
 MAX_BODY = 8 * 1024 * 1024
 TOKEN_TTL = 8 * 3600
 STREAM_LIMIT = 90   # SSE (re)connects per owner per minute
@@ -184,7 +184,7 @@ def create_app() -> FastAPI:
                 if s:
                     await asyncio.to_thread(s.thread.join, 3)
 
-    app = FastAPI(title="TriageLine API", version="2.0.0", lifespan=lifespan,
+    app = FastAPI(title="BILIO API", version="2.0.0", lifespan=lifespan,
                   docs_url=None if production else "/docs", redoc_url=None,
                   openapi_url=None if production else "/openapi.json")
     app.state.sessions = manager
@@ -320,7 +320,7 @@ def create_app() -> FastAPI:
 
     @app.get("/api/health")
     async def health():
-        return {"ok": True, "service": "triageline", "sessions": len(manager.by_id)}
+        return {"ok": True, "service": "bilio", "sessions": len(manager.by_id)}
 
     @app.get("/api/auth/config")
     async def auth_config():

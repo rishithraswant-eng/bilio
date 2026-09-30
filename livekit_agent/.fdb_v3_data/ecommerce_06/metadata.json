@@ -1,0 +1,32 @@
+{
+  "id": "ecommerce_06",
+  "domain": "ecommerce_support",
+  "title": "Simple Cart Addition",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Uh, um... well... hey,... um...... um, I found something I want to buy and I'd like to add it to my cart.",
+      "user_annotated": "Uh, um... well... hey,... um...... um, I found something I want to buy and I'd like to add it to my cart.",
+      "ai": "Sure! What product do you want to add?"
+    },
+    {
+      "user": "Hmm... um... so like... could you add 2 of item K-2 to my cart?... um... I need one for me and one as a gift for my friend.",
+      "user_annotated": "Hmm... um... so like... could you add 2 of item K-2 to my cart?... um... I need one for me and one as a gift for my friend.",
+      "ai": "I'll add 2 units of K2 to your cart right away."
+    }
+  ],
+  "acting_notes": "Direct and clear.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "K2",
+        "quantity": 2
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

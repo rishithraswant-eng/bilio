@@ -1,0 +1,55 @@
+{
+  "example_id": "finance_17",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hello... uh... I'm calling because... um, I need to sort out a few financial things this afternoon.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Uh... i wanted to pay my credit card bill right now, but — actually, never mind that,... um, I can do it online later. For now, could you just check what benefits come with the gold card? I'm thinking about upgrading.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "gold"
+      },
+      "timestamp_start": 0.341,
+      "timestamp_end": 0.341
+    }
+  ],
+  "transcript": "Sure — what do you need? Looking up your gold card benefits. Here's what I found: gold, 2% Cashback, No Foreign Transaction Fee.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.012
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Looking up your gold card benefits.",
+      "t": 0.341
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: gold, 2% Cashback, No Foreign Transaction Fee.",
+      "t": 0.342
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "gold"
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "example_id": "travel_04",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Oh... hey there,... um, I need to update some travel documents before my trip.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Well... i need to update my visa number. Let me check my card here... the number is V-1-2-3-4-5-6. Could you put that in for me?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "visa",
+        "doc_number": "V123456"
+      },
+      "timestamp_start": 0.327,
+      "timestamp_end": 0.341
+    }
+  ],
+  "transcript": "Sure — what doc type should I use? Okay — updating that now (visa). Done — your document details are updated.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what doc type should I use?",
+      "t": 0.013
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (visa).",
+      "t": 0.327
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — your document details are updated.",
+      "t": 0.342
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "visa",
+        "doc_number": "V123456"
+      }
+    }
+  ]
+}

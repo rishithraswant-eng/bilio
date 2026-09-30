@@ -1,0 +1,100 @@
+{
+  "example_id": "ecommerce_18",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Well... oh... um... hi... I've got a few things... um, I need done and I'm hoping we can get through them all at once.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... um... so like... first, search for a gaming mouse —... um, I want to see what you have. Then add the cheapest option to my cart so I can buy it later. And while you're at it, could you also track my order P-O-9-9-9? I've been waiting on that one.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "gaming mouse"
+      },
+      "timestamp_start": 0.33,
+      "timestamp_end": 0.331
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "quantity": 1,
+        "product_id": "PROD1"
+      },
+      "timestamp_start": 0.337,
+      "timestamp_end": 0.338
+    },
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "PO999"
+      },
+      "timestamp_start": 0.344,
+      "timestamp_end": 0.344
+    }
+  ],
+  "transcript": "Sure — what do you need? Searching for gaming mouse. Here's what I found: ref PROD1, gaming mouse Premium, $99.99. Adding 1 × PROD1 to your cart. Done — added 1 × PROD1 to your cart; your cart total is 99.99. Here's what I found: ref PO999, Out for delivery.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.015
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Searching for gaming mouse.",
+      "t": 0.329
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, gaming mouse Premium, $99.99.",
+      "t": 0.337
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Adding 1 × PROD1 to your cart.",
+      "t": 0.337
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — added 1 × PROD1 to your cart; your cart total is 99.99.",
+      "t": 0.344
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PO999, Out for delivery.",
+      "t": 0.345
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "gaming mouse"
+      }
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "$RESULT_0.cheapest_product_id",
+        "quantity": 1
+      }
+    },
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "PO999"
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Deck outline — 8 slides (built by `scripts/build_deck.py`)
 
-1. **TriageLine: an assistant you can talk over.** Theme 05 asks for a real-time agent that keeps working while the caller interrupts, corrects and changes their mind. TriageLine answers immediately, runs tools in the background, and throws away anything the caller has made obsolete.
+1. **BILIO: an assistant you can talk over.** Theme 05 asks for a real-time agent that keeps working while the caller interrupts, corrects and changes their mind. BILIO answers immediately, runs tools in the background, and throws away anything the caller has made obsolete.
 2. **Architecture.** LiveKit room; Silero VAD; hosted STT (Gemini, Deepgram or Groq). ParticipantAgent: a fast path that acknowledges within milliseconds and a slow path for tools, ASR and vision. Epoch-guarded coordination and an idempotency ledger. Hosted TTS back into the room.
 3. **FDB-v3 benchmark.** Official Full-Duplex-Bench v3 at pinned commit 3e799c45 via `./run_fdb_v3.sh`, which fails loudly on runner errors or stale results. `[LIVE]` judged live pass rate and latency from `./run_fdb_v3.sh`. The offline text replay (85/100, judge off) is a diagnostic only.
 4. **Interruption and recovery.** Every correction bumps an epoch. Read-only work is cancelled and stale results are dropped. State changes are never guessed: they reconcile through the ledger. "Actually, don't do that" in the same breath performs nothing.

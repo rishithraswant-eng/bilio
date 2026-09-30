@@ -1,0 +1,81 @@
+{
+  "example_id": "ecommerce_13",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Oh... um... hey... um... I've got two quick things... um...... um, I need taken care of.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um... so well... well... first... could you add item K-2... um, to my cart? Just one of them. And then can you check on my last order too? The order ID is D-E-L-I-V.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "K2",
+        "quantity": 1
+      },
+      "timestamp_start": 0.337,
+      "timestamp_end": 0.339
+    },
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "DELIV"
+      },
+      "timestamp_start": 0.349,
+      "timestamp_end": 0.349
+    }
+  ],
+  "transcript": "Sure — what do you need? Adding 1 × K2 to your cart. Done — added 1 × K2 to your cart; your cart total is 99.99. Checking order DELIV now. Here's what I found: ref DELIV, Out for delivery.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.018
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Adding 1 × K2 to your cart.",
+      "t": 0.337
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — added 1 × K2 to your cart; your cart total is 99.99.",
+      "t": 0.349
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking order DELIV now.",
+      "t": 0.349
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref DELIV, Out for delivery.",
+      "t": 0.35
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "K2",
+        "quantity": 1
+      }
+    },
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "DELIV"
+      }
+    }
+  ]
+}

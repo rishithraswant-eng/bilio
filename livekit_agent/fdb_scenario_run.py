@@ -94,7 +94,7 @@ async def scenario_chained_calls():
 async def scenario_interruption_stale_cancel():
     """Interrupt mid-flight, revised destination — epoch bumps, stale call
     cancelled, new call carries updated args (Phase 2 logic, now against the
-    real FDB-v3 schema instead of TriageLine's own mock_env schema)."""
+    real FDB-v3 schema instead of BILIO's own mock_env schema)."""
     r = Rig()
     await r.start()
     e0 = r.adapter.epoch
@@ -114,7 +114,7 @@ async def scenario_interruption_stale_cancel():
 async def scenario_dedup_state_modifying():
     """Repeated identical state-modifying call (add_to_cart) is deduped by
     the Phase 2 op ledger, now driven through the real FDB-v3 add_to_cart
-    schema instead of TriageLine's own book_flight/create_support_ticket."""
+    schema instead of BILIO's own book_flight/create_support_ticket."""
     r = Rig()
     await r.start()
     r.adapter.agent.tools = FDB_TOOLS

@@ -13,7 +13,7 @@ open(sys.argv[2], "w").write(s[start:s.index("stage_6_save() {", start)])
 PY
 cp "$HERE/stage5_harness.sh" "$W/harness.sh"
 cd "$W"
-expect() { local mode=$1 want=$2 got; rm -f data/*/result_*; [ "$mode" = stale ] && echo '{"status":"completed"}' > data/ex2/result_triageline_text.json
+expect() { local mode=$1 want=$2 got; rm -f data/*/result_*; [ "$mode" = stale ] && echo '{"status":"completed"}' > data/ex2/result_bilio_text.json
   got=$(STUB=$([ "$mode" = stale ] && echo partial || echo "$mode") bash harness.sh 2>&1 | tail -1)
   case "$got" in "$want"*) echo "ok   $mode";; *) echo "FAIL $mode: $got"; exit 1;; esac; }
 expect ok PASSED; expect crash FAIL; expect partial FAIL; expect bad FAIL; expect stale FAIL

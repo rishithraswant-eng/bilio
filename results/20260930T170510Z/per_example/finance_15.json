@@ -1,0 +1,57 @@
+{
+  "example_id": "finance_15",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hi,... um, I just realized I need to fix something with my autopay setup. I think I set it wrong.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... i want... um, to switch my mortgage autopay to pull from checking — wait no, that's wrong too. Make it savings instead. Yeah, savings is the right one.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "savings"
+      },
+      "timestamp_start": 0.328,
+      "timestamp_end": 0.328
+    }
+  ],
+  "transcript": "Sure — what bill type should I use? Okay — updating that now (mortgage). Done — your autopay settings are updated.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what bill type should I use?",
+      "t": 0.015
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (mortgage).",
+      "t": 0.328
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — your autopay settings are updated.",
+      "t": 0.328
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "savings"
+      }
+    }
+  ]
+}

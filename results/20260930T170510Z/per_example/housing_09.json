@@ -1,0 +1,59 @@
+{
+  "example_id": "housing_09",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Well, hmm... hello,... um...... um...... um, I need some help finding apartment options. I've been looking in a few different cities.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Well... well... uh... i'm interested in a 2-bedroom in Boston — wait, actually,... um, I changed my mind. Let's look in Chicago instead, and keep the max price around 2000 per month.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Chicago",
+        "bedrooms": 2,
+        "max_price": 2000
+      },
+      "timestamp_start": 0.34,
+      "timestamp_end": 1.056
+    }
+  ],
+  "transcript": "Sure — which city? Looking for 2-bedroom apartments in Chicago under 2000. Here's what I found for Chicago: Chicago, ref APT1, $1900, beds 2.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — which city?",
+      "t": 0.018
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Looking for 2-bedroom apartments in Chicago under 2000.",
+      "t": 0.34
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found for Chicago: Chicago, ref APT1, $1900, beds 2.",
+      "t": 1.057
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Chicago",
+        "bedrooms": 2,
+        "max_price": 2000
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "id": "ecommerce_24",
+  "domain": "ecommerce_support",
+  "title": "Dual Cart Add with Quantity Correction",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Oh... oh... uh... ready? I've got my shopping list right here and... um, I know exactly what I want.",
+      "user_annotated": "Oh... oh... uh... ready? I've got my shopping list right here and... um, I know exactly what I want.",
+      "ai": "Always ready. Let's do this. What are you ordering?"
+    },
+    {
+      "user": "Like... add item K-9 to my cart,... um...... um, I want 2 of those. Then add item M-1 to the cart as well \u2014 wait... actually, for M-1 make it 5 units, I need more than I originally thought.",
+      "user_annotated": "Like... add item K-9 to my cart,... um...... um, I want 2 of those. Then add item M-1 to the cart as well \u2014 wait... actually, for M-1 make it 5 units, I need more than I originally thought.",
+      "ai": "I'll add 2 units of K9 and 5 units of M1 to the cart."
+    }
+  ],
+  "acting_notes": "Speak fast. Correct the second item's quantity on the fly.",
+  "disfluency_features": [
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "K9",
+        "quantity": 2
+      }
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "M1",
+        "quantity": 5
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "product_id": "M1",
+      "quantity": 1
+    },
+    "corrected_param": {
+      "product_id": "M1",
+      "quantity": 5
+    }
+  },
+  "latency_profile": "fast"
+}

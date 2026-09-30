@@ -1,0 +1,100 @@
+{
+  "example_id": "housing_24",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Well... hello... I'm planning a move to Dallas and... um...... um... I have a whole list of things I need help with.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um, so hmm... like... you know... okay... so first... um, I want to... update my max price to 1500 because I'm on a tighter budget. Then... uh... search for apartments in Dallas that fit that budget. And then... check the walking time from whatever you find to the grocery store, because I want to be close to one.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "max_price",
+        "value": 1500
+      },
+      "timestamp_start": 0.4,
+      "timestamp_end": 0.523
+    },
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Dallas",
+        "max_price": 1500
+      },
+      "timestamp_start": 0.536,
+      "timestamp_end": 1.337
+    },
+    {
+      "function": "calculate_commute",
+      "args": {
+        "destination_address": "the grocery store",
+        "mode": "walking",
+        "origin_address": "Dallas"
+      },
+      "timestamp_start": 1.352,
+      "timestamp_end": 1.779
+    }
+  ],
+  "transcript": "Sure — what bill type should I use? Sure, dropping that — switching to your apartments request. Okay — updating that now (max_price). Done — max_price is now 1500. Here's what I found: duration mins 25, walking.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what bill type should I use?",
+      "t": 0.007
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, dropping that — switching to your apartments request.",
+      "t": 0.4
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (max_price).",
+      "t": 0.4
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — max_price is now 1500.",
+      "t": 0.536
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: duration mins 25, walking.",
+      "t": 1.779
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "max_price",
+        "value": 1500
+      }
+    },
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Dallas"
+      }
+    },
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "$RESULT_1.apartments[0].address",
+        "destination_address": "the grocery store",
+        "mode": "walking"
+      }
+    }
+  ]
+}

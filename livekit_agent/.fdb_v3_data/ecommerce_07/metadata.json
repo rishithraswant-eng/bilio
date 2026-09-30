@@ -1,0 +1,33 @@
+{
+  "id": "ecommerce_07",
+  "domain": "ecommerce_support",
+  "title": "False Start Before Track",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Uh... um... oh, can you help me with something?... um, I need to check on one of my orders.",
+      "user_annotated": "Uh... um... oh, can you help me with something?... um, I need to check on one of my orders.",
+      "ai": "Of course! Go ahead, I'm listening."
+    },
+    {
+      "user": "Like... um... so you know... i was going... um...... um, to search for a new product but \u2014 never mind that for now. Could you just track my order instead? The ID is F-A-S-T-9-9.",
+      "user_annotated": "Like... um... so you know... i was going... um...... um, to search for a new product but \u2014 never mind that for now. Could you just track my order instead? The ID is F-A-S-T-9-9.",
+      "ai": "I'll track order FAST99 for you."
+    }
+  ],
+  "acting_notes": "Start mentioning a search, then switch to tracking.",
+  "disfluency_features": [
+    "FALSE_START"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "FAST99"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

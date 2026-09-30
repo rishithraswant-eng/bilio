@@ -1,0 +1,42 @@
+{
+  "id": "travel_09",
+  "domain": "travel_identity",
+  "title": "Destination Self-Correction",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hi,... um... I need help booking a flight for an upcoming business trip.",
+      "user_annotated": "Hi,... um... I need help booking a flight for an upcoming business trip.",
+      "ai": "Of course! Where would you like to go?"
+    },
+    {
+      "user": "Uh... i need... um, to look at flights to Paris \u2014 actually, no, scratch that. My meeting got moved to Berlin, so make that Berlin instead, on September 10th please.",
+      "user_annotated": "Uh... i need... um, to look at flights to Paris \u2014 actually, no, scratch that. My meeting got moved to Berlin, so make that Berlin instead, on September 10th please.",
+      "ai": "Searching for flights to Berlin on September 10th."
+    }
+  ],
+  "acting_notes": "Say 'Paris' then quickly correct yourself to 'Berlin', as if just remembering the change.",
+  "disfluency_features": [
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Berlin",
+        "date": "September 10"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "destination": "Paris"
+    },
+    "corrected_param": {
+      "destination": "Berlin"
+    }
+  },
+  "latency_profile": "fast"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "travel_13",
+  "domain": "travel_identity",
+  "title": "False Start then Flight Search",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hello... you there?... um, I had something I wanted to ask about.",
+      "user_annotated": "Hello... you there?... um, I had something I wanted to ask about.",
+      "ai": "I'm here! What travel plans can I help you with?"
+    },
+    {
+      "user": "You know... i was thinking about going to \u2014 oh... never mind that destination. Let me start over. Just search for flights to Denver on January 15th, that's actually what... um, I need.",
+      "user_annotated": "You know... i was thinking about going to \u2014 oh... never mind that destination. Let me start over. Just search for flights to Denver on January 15th, that's actually what... um, I need.",
+      "ai": "I will search for flights to Denver on January 15th right away."
+    }
+  ],
+  "acting_notes": "Start mentioning a destination, completely abandon it, and state the real request.",
+  "disfluency_features": [
+    "FALSE_START"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Denver",
+        "date": "January 15"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

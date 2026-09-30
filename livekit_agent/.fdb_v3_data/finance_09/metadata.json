@@ -1,0 +1,43 @@
+{
+  "id": "finance_09",
+  "domain": "finance_billing",
+  "title": "Currency Self-Correction",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hi... um... I've been looking at exchange rates and I need to convert some money.",
+      "user_annotated": "Hi... um... I've been looking at exchange rates and I need to convert some money.",
+      "ai": "Sure! What conversion do you need?"
+    },
+    {
+      "user": "I want to convert 300 US dollars to yen \u2014 actually wait... I'm mixing up my trips.... um, I meant euros, not yen. So 300 dollars to euros please.",
+      "user_annotated": "I want to convert 300 US dollars to yen \u2014 actually wait... I'm mixing up my trips.... um, I meant euros, not yen. So 300 dollars to euros please.",
+      "ai": "I'll convert 300 USD to EUR for you."
+    }
+  ],
+  "acting_notes": "Quickly correct yen to euros, as if you confused two different trip plans.",
+  "disfluency_features": [
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 300,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "to_currency": "JPY"
+    },
+    "corrected_param": {
+      "to_currency": "EUR"
+    }
+  },
+  "latency_profile": "fast"
+}

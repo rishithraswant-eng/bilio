@@ -1,0 +1,32 @@
+{
+  "id": "ecommerce_02",
+  "domain": "ecommerce_support",
+  "title": "Simple Product Search",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hmm... uh... hi... uh... I'm shopping for some new electronics and... um... I was hoping you could help me find something.",
+      "user_annotated": "Hmm... uh... hi... uh... I'm shopping for some new electronics and... um... I was hoping you could help me find something.",
+      "ai": "Sure! What are you looking for?"
+    },
+    {
+      "user": "Hmm... um... so i'm looking for a pair of wireless headphones... and I'd like... um, to keep it under 100 dollars if possible. What do you have?",
+      "user_annotated": "Hmm... um... so i'm looking for a pair of wireless headphones... and I'd like... um, to keep it under 100 dollars if possible. What do you have?",
+      "ai": "I'll search for wireless headphones under $100 for you."
+    }
+  ],
+  "acting_notes": "Friendly, normal pace.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "wireless headphones",
+        "max_price": 100
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

@@ -1,0 +1,54 @@
+{
+  "id": "travel_25",
+  "domain": "travel_identity",
+  "title": "Full Chain with Pauses",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Well... can you hear me alright? I need help with a pretty big travel request that involves several steps.",
+      "user_annotated": "Well... can you hear me alright? I need help with a pretty big travel request that involves several steps.",
+      "ai": "I hear you just fine. Let me take care of everything \u2014 go ahead and list them all out."
+    },
+    {
+      "user": "Uh... okay, so first... um, I need flights to Bangkok for March 1st. Book it for... Cameron, that's the traveler. Then I need to update my passport number to P-1-2-3, and also... my visa number to V-3-2-1.",
+      "user_annotated": "Uh... okay, so first... um, I need flights to Bangkok for March 1st. Book it for... Cameron, that's the traveler. Then I need to update my passport number to P-1-2-3, and also... my visa number to V-3-2-1.",
+      "ai": "I will book a flight to Bangkok for Cameron, and update both your passport and visa."
+    }
+  ],
+  "acting_notes": "Speak clearly. Pause briefly before names/numbers as if reading from a list or checking your phone.",
+  "disfluency_features": [
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Bangkok",
+        "date": "March 1"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Cameron"
+      }
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "passport",
+        "doc_number": "P123"
+      }
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "visa",
+        "doc_number": "V321"
+      }
+    }
+  ],
+  "num_expected_calls": 4,
+  "state_rollback_test": false,
+  "latency_profile": "slow"
+}

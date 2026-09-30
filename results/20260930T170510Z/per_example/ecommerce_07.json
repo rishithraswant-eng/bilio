@@ -1,0 +1,41 @@
+{
+  "example_id": "ecommerce_07",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Uh... um... oh, can you help me with something?... um, I need to check on one of my orders.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Like... um... so you know... i was going... um...... um, to search for a new product but — never mind that for now. Could you just track my order instead? The ID is F-A-S-T-9-9.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [],
+  "transcript": "Sure — what order id should I use? Okay, I've stopped that and dropped the request. Anything else I can do?",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what order id should I use?",
+      "t": 0.022
+    },
+    {
+      "kind": "final_response",
+      "text": "Okay, I've stopped that and dropped the request. Anything else I can do?",
+      "t": 0.331
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "FAST99"
+      }
+    }
+  ]
+}

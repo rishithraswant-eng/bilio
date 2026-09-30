@@ -36,7 +36,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--live-score", default="[pending — run ./run_fdb_v3.sh --require-judge]")
     ap.add_argument("--live-latency", default="[from results/results.md]")
-    ap.add_argument("--out", default=str(ROOT / "docs/deck/TriageLine_Theme05.pptx"))
+    ap.add_argument("--out", default=str(ROOT / "docs/deck/BILIO_Theme05.pptx"))
     a = ap.parse_args()
     items = list(slides((ROOT / "docs/DECK_OUTLINE.md").read_text()))
     if not 1 <= len(items) <= 8:
@@ -51,7 +51,7 @@ def main():
                             f"Live judged pass rate: {a.live_score}. First-response latency: {a.live_latency}.")
         body = re.sub(r"[`*]", "", body)
         k = s.shapes.add_textbox(Emu(720000), Emu(520000), Emu(9000000), Emu(400000)).text_frame
-        run(k.paragraphs[0], f"{i:02d} / {len(items):02d}   TriageLine · Theme 05", 11, ACC, "Courier New")
+        run(k.paragraphs[0], f"{i:02d} / {len(items):02d}   BILIO · Theme 05", 11, ACC, "Courier New")
         t = s.shapes.add_textbox(Emu(720000), Emu(1000000), Emu(10700000), Emu(1500000)).text_frame
         t.word_wrap = True
         run(t.paragraphs[0], title, 40 if i == 1 else 34, INK, "Georgia", italic=(i == 1))

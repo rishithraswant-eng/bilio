@@ -82,7 +82,7 @@ def issue_token(owner: str | None = None, ttl_s: int | None = None, flow: str | 
     ttl = int(ttl_s or os.environ.get("TRIAGELINE_RTC_TOKEN_TTL_S") or TOKEN_TTL_S)
     ttl = min(max(ttl, 60), 3600)
     tag = (owner or secrets.token_hex(8))[:8]
-    room = f"triageline-{tag}-{secrets.token_urlsafe(9)}"
+    room = f"bilio-{tag}-{secrets.token_urlsafe(9)}"
     identity = f"user-{tag}-{secrets.token_urlsafe(6)}"
     grants = api.VideoGrants(room_join=True, room=room, can_publish=True, can_subscribe=True,
                              can_publish_data=True, can_publish_sources=["microphone"])

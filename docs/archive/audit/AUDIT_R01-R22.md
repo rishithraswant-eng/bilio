@@ -1,4 +1,4 @@
-TriageLine: guideline alignment, bug audit, and implementation plan
+BILIO: guideline alignment, bug audit, and implementation plan
 Bottom line: your project is a useful prototype for the older Theme 5 kit, but it is not yet submission-ready under the updated participant guide. There are also significant correctness and safety bugs that the existing tests do not catch.
 
 I read the uploaded conversation, both guides, and the current implementation, then reran tests and targeted reproductions.
@@ -838,7 +838,7 @@ The safety invariants should also be tested across many event orderings, not jus
 11. Copy-paste handoff for a future coding AI
 Use this with the full report:
 
-Review TriageLine at commit f33099b and implement the attached audit in controlled phases. The current system targets the older queue-based Theme 5 kit; the updated participant guide requires a LiveKit voice agent evaluated on Full-Duplex-Bench v3.
+Review BILIO at commit f33099b and implement the attached audit in controlled phases. The current system targets the older queue-based Theme 5 kit; the updated participant guide requires a LiveKit voice agent evaluated on Full-Duplex-Bench v3.
 
 Before implementation, inspect the actual files and official benchmark contracts. Treat R01–R22 as independently reproducible findings, not as assumptions that the old B01–B38 fixes are complete.
 

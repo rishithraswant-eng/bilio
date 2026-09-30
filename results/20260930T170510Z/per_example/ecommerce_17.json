@@ -1,0 +1,60 @@
+{
+  "example_id": "ecommerce_17",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Oh... well... um... oh... hey there,... um, I was going to look at some new products but then I remembered I have an order to check on.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Like... hmm... can you cancel my — actually... never mind the cancellation,... um... I changed my mind about that. Could you just track order G-G-5 for me instead? I want to see where it is.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "GG5"
+      },
+      "timestamp_start": 0.384,
+      "timestamp_end": 0.386
+    }
+  ],
+  "transcript": "Sure — what query should I use? Sure, dropping that — switching to your order request. Checking order GG5 now. Here's what I found: ref GG5, Out for delivery.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what query should I use?",
+      "t": 0.023
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, dropping that — switching to your order request.",
+      "t": 0.384
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking order GG5 now.",
+      "t": 0.384
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref GG5, Out for delivery.",
+      "t": 0.386
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "GG5"
+      }
+    }
+  ]
+}

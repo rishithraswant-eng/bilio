@@ -1,0 +1,64 @@
+{
+  "example_id": "ecommerce_24",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Oh... oh... uh... ready? I've got my shopping list right here and... um, I know exactly what I want.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Like... add item K-9 to my cart,... um...... um, I want 2 of those. Then add item M-1 to the cart as well — wait... actually, for M-1 make it 5 units, I need more than I originally thought.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "M1",
+        "quantity": 5
+      },
+      "timestamp_start": 0.322,
+      "timestamp_end": 0.323
+    }
+  ],
+  "transcript": "Sure — what do you need? Adding 5 × M1 to your cart. Done — added 5 × M1 to your cart; your cart total is 499.95.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.01
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Adding 5 × M1 to your cart.",
+      "t": 0.322
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — added 5 × M1 to your cart; your cart total is 499.95.",
+      "t": 0.323
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "K9",
+        "quantity": 2
+      }
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "M1",
+        "quantity": 5
+      }
+    }
+  ]
+}

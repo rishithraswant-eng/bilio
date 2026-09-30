@@ -1,0 +1,32 @@
+{
+  "id": "travel_07",
+  "domain": "travel_identity",
+  "title": "Driver License Update",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hi... hmm... I recently renewed my driver license and I need to get the new number into your system.",
+      "user_annotated": "Hi... hmm... I recently renewed my driver license and I need to get the new number into your system.",
+      "ai": "Of course! I can take care of that. What's your new number?"
+    },
+    {
+      "user": "Uh,... um... the new driver license number is D-L-5-5-5. Could you swap out the old one and put this new one in there?",
+      "user_annotated": "Uh,... um... the new driver license number is D-L-5-5-5. Could you swap out the old one and put this new one in there?",
+      "ai": "I'll update your driver license to DL555 in our records."
+    }
+  ],
+  "acting_notes": "Simple and clear.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "driver_license",
+        "doc_number": "DL555"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

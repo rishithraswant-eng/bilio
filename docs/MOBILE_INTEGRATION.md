@@ -8,10 +8,10 @@ short-lived token from the gateway (`python -m ui`, i.e. `ui/api.py`). No provid
 # gateway (HTTPS in front, single replica: sessions are in memory)
 TRIAGELINE_ENV=production TRIAGELINE_ACCESS_CODE=<16+ chars> TRIAGELINE_SESSION_SECRET=<32+ chars> \
 ALLOWED_HOSTS=api.example.com TRIAGELINE_API_KEY=<32+ chars> \
-LIVEKIT_URL=wss://... LIVEKIT_API_KEY=... LIVEKIT_API_SECRET=... TRIAGELINE_AGENT_NAME=triageline \
+LIVEKIT_URL=wss://... LIVEKIT_API_KEY=... LIVEKIT_API_SECRET=... TRIAGELINE_AGENT_NAME=bilio \
   python -m ui
 # worker (same LiveKit credentials and agent name; TRIAGELINE_MODE=assistant asks before acting)
-TRIAGELINE_MODE=assistant TRIAGELINE_AGENT_NAME=triageline GEMINI_API_KEY=... \
+TRIAGELINE_MODE=assistant TRIAGELINE_AGENT_NAME=bilio GEMINI_API_KEY=... \
   python livekit_agent/cascaded_agent.py start
 ```
 Or run both with `docker compose up`.

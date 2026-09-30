@@ -1,0 +1,41 @@
+{
+  "id": "housing_18",
+  "domain": "housing_location",
+  "title": "Search + Commute Chain",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Oh... hi... I'm narrowing down my apartment options and... um...... um...... um, I need to evaluate them based on location.",
+      "user_annotated": "Oh... hi... I'm narrowing down my apartment options and... um...... um...... um, I need to evaluate them based on location.",
+      "ai": "Let's find the right one! Tell me what you need."
+    },
+    {
+      "user": "Well... like... um... so first... search for a 1-bedroom in Portland that's under 1800 per month. Then once you find the cheapest option, check how long it would take to bike from there to the coffee shop on 5th Street where... um, I work.",
+      "user_annotated": "Well... like... um... so first... search for a 1-bedroom in Portland that's under 1800 per month. Then once you find the cheapest option, check how long it would take to bike from there to the coffee shop on 5th Street where... um, I work.",
+      "ai": "I'm searching for apartments and will check the bike commute from the cheapest result."
+    }
+  ],
+  "acting_notes": "State search then immediately ask for commute from result.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Portland",
+        "bedrooms": 1,
+        "max_price": 1800
+      }
+    },
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "$RESULT_0.cheapest_apartment_address",
+        "destination_address": "coffee shop on 5th",
+        "mode": "biking"
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "slow"
+}

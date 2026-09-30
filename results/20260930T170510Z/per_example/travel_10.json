@@ -1,0 +1,57 @@
+{
+  "example_id": "travel_10",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Good afternoon... I'm trying... um, to plan a quick getaway to Miami.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um, so um, I was looking at flights to Miami on October 5th — wait, uh, my schedule just changed. My meeting got moved, so actually make it October 7th instead.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Miami",
+        "date": "October 7"
+      },
+      "timestamp_start": 0.342,
+      "timestamp_end": 0.935
+    }
+  ],
+  "transcript": "Sure — what do you need? Sure, checking flights to Miami for October 7. I found a flight to Miami: FL123 departing October 7 for $450.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.007
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to Miami for October 7.",
+      "t": 0.342
+    },
+    {
+      "kind": "final_response",
+      "text": "I found a flight to Miami: FL123 departing October 7 for $450.",
+      "t": 0.935
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Miami",
+        "date": "October 7"
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "example_id": "housing_17",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Um... well... hey... well,... um, I need to double-check how long it would take me to get to work from the apartment I'm considering.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Like, like... um... so calculate the transit time to the office from there — wait, no, actually... um, I just remembered I'd be driving. So make it driving time to the office from my house instead.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "my house",
+        "destination_address": "the office",
+        "mode": "driving"
+      },
+      "timestamp_start": 0.34,
+      "timestamp_end": 0.918
+    }
+  ],
+  "transcript": "Sure — which city? Sure, dropping that — switching to your commute request. Working out the commute from my house to the office. Here's what I found: duration mins 25, driving.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — which city?",
+      "t": 0.036
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, dropping that — switching to your commute request.",
+      "t": 0.34
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Working out the commute from my house to the office.",
+      "t": 0.34
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: duration mins 25, driving.",
+      "t": 0.918
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "my house",
+        "destination_address": "the office",
+        "mode": "driving"
+      }
+    }
+  ]
+}

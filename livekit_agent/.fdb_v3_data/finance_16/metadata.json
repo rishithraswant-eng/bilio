@@ -1,0 +1,36 @@
+{
+  "id": "finance_16",
+  "domain": "finance_billing",
+  "title": "Hesitant Exchange Query",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Oh... sorry,... um, I need a moment to collect my thoughts. I'm looking at some numbers here.",
+      "user_annotated": "Oh... sorry,... um, I need a moment to collect my thoughts. I'm looking at some numbers here.",
+      "ai": "Take your time! I'm not going anywhere."
+    },
+    {
+      "user": "Like... okay so... um, I need to know how much... let me see... 500 yen would be in US dollars. I'm trying to figure out if this online purchase is worth it.",
+      "user_annotated": "Like... okay so... um, I need to know how much... let me see... 500 yen would be in US dollars. I'm trying to figure out if this online purchase is worth it.",
+      "ai": "I'll convert 500 JPY to USD for you."
+    }
+  ],
+  "acting_notes": "Hesitate and pause before giving the amount, as if calculating in your head.",
+  "disfluency_features": [
+    "HESITATION",
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 500,
+        "from_currency": "JPY",
+        "to_currency": "USD"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

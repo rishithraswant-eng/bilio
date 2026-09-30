@@ -1,0 +1,57 @@
+{
+  "example_id": "travel_03",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hello? Is this... um, the travel booking service?",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Well... um, I've been looking at flights and... um, I was wondering if you could, like, check what's available to London around August 20th for me?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "London",
+        "date": "August 20"
+      },
+      "timestamp_start": 0.318,
+      "timestamp_end": 0.834
+    }
+  ],
+  "transcript": "Sure, checking flights to None for today. Got it — switching to London. I found a flight to London: FL123 departing August 20 for $450.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to None for today.",
+      "t": 0.016
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Got it — switching to London.",
+      "t": 0.318
+    },
+    {
+      "kind": "final_response",
+      "text": "I found a flight to London: FL123 departing August 20 for $450.",
+      "t": 0.835
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "London",
+        "date": "August 20"
+      }
+    }
+  ]
+}

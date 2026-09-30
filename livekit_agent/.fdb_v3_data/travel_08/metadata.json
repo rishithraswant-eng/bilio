@@ -1,0 +1,34 @@
+{
+  "id": "travel_08",
+  "domain": "travel_identity",
+  "title": "False Start Flight Search",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hey... hmm... can you help me with a couple of things? Actually... just one thing.",
+      "user_annotated": "Hey... hmm... can you help me with a couple of things? Actually... just one thing.",
+      "ai": "Sure! What do you need?"
+    },
+    {
+      "user": "I was going to ask about hotel options but \u2014 never mind that for now. Could you just find me flights to Seattle on November 1st instead?",
+      "user_annotated": "I was going to ask about hotel options but \u2014 never mind that for now. Could you just find me flights to Seattle on November 1st instead?",
+      "ai": "I'll search for flights to Seattle on November 1st for you."
+    }
+  ],
+  "acting_notes": "Start mentioning hotels, then drop it and ask for flights instead.",
+  "disfluency_features": [
+    "FALSE_START"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Seattle",
+        "date": "November 1"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

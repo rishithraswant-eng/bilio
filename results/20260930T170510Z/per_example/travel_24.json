@@ -1,0 +1,70 @@
+{
+  "example_id": "travel_24",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Um... good morning! I'm trying... um, to plan out every detail of my upcoming trip, so I've got a long list.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Well, great, so first... um, I need to find a flight to Vancouver on November 5th and book it under the name Skyler. Then I was also hoping you could find me a hotel near the airport for a couple of nights. And finally, I need to update my visa number to V-4-4.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Update My Visa",
+        "date": "November 5"
+      },
+      "timestamp_start": 0.325,
+      "timestamp_end": 0.691
+    }
+  ],
+  "transcript": "Sure, checking flights to None for today. Got it — switching to Update My Visa. I found a flight to Update My Visa: FL123 departing November 5 for $450.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to None for today.",
+      "t": 0.024
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Got it — switching to Update My Visa.",
+      "t": 0.325
+    },
+    {
+      "kind": "final_response",
+      "text": "I found a flight to Update My Visa: FL123 departing November 5 for $450.",
+      "t": 0.692
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Vancouver",
+        "date": "November 5"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Skyler"
+      }
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "visa",
+        "doc_number": "V44"
+      }
+    }
+  ]
+}

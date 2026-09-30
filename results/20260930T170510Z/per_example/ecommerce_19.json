@@ -1,0 +1,81 @@
+{
+  "example_id": "ecommerce_19",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Um, hmm... hello... uh,... um...... um...... um, I need to order some stuff for work but I keep changing my mind on the details.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um... so you know... search for a laptop — wait... no,... um...... um, I actually need a tablet, not a laptop. And add 2 of them to the cart. Actually, just add 1 instead, I only have budget for one right now.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "tablet"
+      },
+      "timestamp_start": 0.376,
+      "timestamp_end": 0.377
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "quantity": 1,
+        "product_id": "PROD1"
+      },
+      "timestamp_start": 0.382,
+      "timestamp_end": 0.383
+    }
+  ],
+  "transcript": "Sure — what order id should I use? Sure, dropping that — switching to your products request. Searching for tablet. Here's what I found: ref PROD1, tablet Premium, $99.99. Done — added 1 × PROD1 to your cart; your cart total is 99.99.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what order id should I use?",
+      "t": 0.016
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, dropping that — switching to your products request.",
+      "t": 0.376
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Searching for tablet.",
+      "t": 0.376
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, tablet Premium, $99.99.",
+      "t": 0.382
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — added 1 × PROD1 to your cart; your cart total is 99.99.",
+      "t": 0.383
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "tablet"
+      }
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "$RESULT_0.products[0].product_id",
+        "quantity": 1
+      }
+    }
+  ]
+}

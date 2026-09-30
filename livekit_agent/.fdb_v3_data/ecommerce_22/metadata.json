@@ -1,0 +1,45 @@
+{
+  "id": "ecommerce_22",
+  "domain": "ecommerce_support",
+  "title": "Heavy Fillers + Multi-Order Track",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Uh... oh, hi... oh, I've got multiple orders out and... um, I also want to look at something new.",
+      "user_annotated": "Uh... oh, hi... oh, I've got multiple orders out and... um, I also want to look at something new.",
+      "ai": "Hello! Let's get through everything. What do you need?"
+    },
+    {
+      "user": "Um, so you know... um... so um, first could you track order A-1 for me? And like,... um, I also need to check on order B-2 while we're at it. Oh and uh, could you search for a cozy blanket too? I've been meaning to get one.",
+      "user_annotated": "Um, so you know... um... so um, first could you track order A-1 for me? And like,... um, I also need to check on order B-2 while we're at it. Oh and uh, could you search for a cozy blanket too? I've been meaning to get one.",
+      "ai": "Tracking both orders and searching for a blanket."
+    }
+  ],
+  "acting_notes": "Use heavy fillers between tasks. Sound casual.",
+  "disfluency_features": [
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "A1"
+      }
+    },
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "B2"
+      }
+    },
+    {
+      "function": "search_products",
+      "args": {
+        "query": "blanket"
+      }
+    }
+  ],
+  "num_expected_calls": 3,
+  "state_rollback_test": false,
+  "latency_profile": "fast"
+}

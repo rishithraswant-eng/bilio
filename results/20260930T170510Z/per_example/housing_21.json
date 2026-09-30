@@ -1,0 +1,77 @@
+{
+  "example_id": "housing_21",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Um... hmm... hmm... hi again... I'm back with more changes.... um... I keep going back and forth on what I want.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Well, hmm... you know... i want to search for a place with 2 bedrooms. Wait... actually... um, I meant 3 bedrooms, we decided we need a home office. Also check the transit time to the train station — actually, I'd rather walk, so make that walking time.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "bedrooms": 3
+      },
+      "timestamp_start": 0.372,
+      "timestamp_end": 0.713
+    },
+    {
+      "function": "calculate_commute",
+      "args": {
+        "destination_address": "the train station",
+        "mode": "walking"
+      },
+      "timestamp_start": 0.725,
+      "timestamp_end": 1.345
+    }
+  ],
+  "transcript": "Sure — what do you need? Looking for 3-bedroom apartments. The search apartments needs more details (city and max price) - continuing with the next step. I started that calculate commute, but the system also needs the origin address — what should I use?",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.033
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Looking for 3-bedroom apartments.",
+      "t": 0.372
+    },
+    {
+      "kind": "filler_speech",
+      "text": "The search apartments needs more details (city and max price) - continuing with the next step.",
+      "t": 0.725
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that calculate commute, but the system also needs the origin address — what should I use?",
+      "t": 1.346
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "bedrooms": 3
+      }
+    },
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "$RESULT_0.apartments[0].address",
+        "destination_address": "train station",
+        "mode": "walking"
+      }
+    }
+  ]
+}

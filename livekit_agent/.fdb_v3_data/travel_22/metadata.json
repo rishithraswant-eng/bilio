@@ -1,0 +1,50 @@
+{
+  "id": "travel_22",
+  "domain": "travel_identity",
+  "title": "Destination + Date Self-Correction with Booking",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Hi... uh,... um, I need to get a flight booked but I keep changing my mind about the details.",
+      "user_annotated": "Hi... uh,... um, I need to get a flight booked but I keep changing my mind about the details.",
+      "ai": "Hello! No worries. Let's figure it out together."
+    },
+    {
+      "user": "You know... alright... so let's search for flights... um, to Sydney for September 1st \u2014 no wait, my plans changed. Make that Melbourne on September 4th instead. And once you find a good option, go ahead and book it for Alex Chen.",
+      "user_annotated": "You know... alright... so let's search for flights... um, to Sydney for September 1st \u2014 no wait, my plans changed. Make that Melbourne on September 4th instead. And once you find a good option, go ahead and book it for Alex Chen.",
+      "ai": "I will search for flights to Melbourne for September 4th and book it for Alex Chen."
+    }
+  ],
+  "acting_notes": "Correct both the city and the date at the same time, then smoothly add the booking request.",
+  "disfluency_features": [
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Melbourne",
+        "date": "September 4"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Alex Chen"
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "destination": "Sydney",
+      "date": "September 1"
+    },
+    "corrected_param": {
+      "destination": "Melbourne",
+      "date": "September 4"
+    }
+  },
+  "latency_profile": "normal"
+}

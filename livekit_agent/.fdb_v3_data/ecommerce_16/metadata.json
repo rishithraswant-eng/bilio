@@ -1,0 +1,35 @@
+{
+  "id": "ecommerce_16",
+  "domain": "ecommerce_support",
+  "title": "Search with Hesitation Before Item",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Um... hmm... hmm... hi,... um...... um...... um, I need help finding a specific type of product for my kitchen.",
+      "user_annotated": "Um... hmm... hmm... hi,... um...... um...... um, I need help finding a specific type of product for my kitchen.",
+      "ai": "Of course! What are you looking for?"
+    },
+    {
+      "user": "Hmm... like, uh... i need a new... let me think about what it's called... a coffee maker! Yeah... I'm looking... um, for a coffee maker. Something under 50 dollars would be ideal.",
+      "user_annotated": "Hmm... like, uh... i need a new... let me think about what it's called... a coffee maker! Yeah... I'm looking... um, for a coffee maker. Something under 50 dollars would be ideal.",
+      "ai": "I'll search for coffee makers under $50."
+    }
+  ],
+  "acting_notes": "Hesitate and pause before saying 'coffee maker'.",
+  "disfluency_features": [
+    "HESITATION",
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "coffee maker",
+        "max_price": 50
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

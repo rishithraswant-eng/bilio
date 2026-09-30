@@ -1,0 +1,59 @@
+{
+  "example_id": "finance_08",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hey... hmm... I've got a quick conversion question... um... for you.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "I'm trying to figure out how much money I'd have if... um... I converted... let me think... about 200 euros into US dollars. What would that come out to?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 200,
+        "from_currency": "EUR",
+        "to_currency": "USD"
+      },
+      "timestamp_start": 0.324,
+      "timestamp_end": 0.324
+    }
+  ],
+  "transcript": "Sure — what do you need? Checking the EUR to USD rate. Here's what I found: converted amount 220.00000000000003, rate 1.1.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.009
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking the EUR to USD rate.",
+      "t": 0.324
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: converted amount 220.00000000000003, rate 1.1.",
+      "t": 0.325
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 200,
+        "from_currency": "EUR",
+        "to_currency": "USD"
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-TriageLine cascaded voice agent for the official FDB-v3 benchmark.
+BILIO cascaded voice agent for the official FDB-v3 benchmark.
 
 MODEL / PROVIDER DECLARATION (guide: "clear declaration of the model provider or custom agent")
 ------------------------------------------------------------------------------------------------
@@ -84,7 +84,7 @@ load_dotenv(os.path.join(_HERE, ".env.local"))
 # Construct a fresh official backend per room: no state may cross conversations.
 from mock_apis import MockAPIRegistry
 
-log = logging.getLogger("triageline.cascaded_agent")
+log = logging.getLogger("bilio.cascaded_agent")
 
 MODE = os.environ.get("TRIAGELINE_MODE", "benchmark").strip().lower()
 if MODE not in ("benchmark", "assistant"):

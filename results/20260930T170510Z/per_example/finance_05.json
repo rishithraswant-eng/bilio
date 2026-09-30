@@ -1,0 +1,57 @@
+{
+  "example_id": "finance_05",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hi... well... I've been meaning to set up automatic payments and... um, I finally have a minute to do it.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "You know... i want to set my credit card bill to autopay... and have it pull from my checking account every month. Can you do that?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "credit_card",
+        "source_account": "checking"
+      },
+      "timestamp_start": 0.316,
+      "timestamp_end": 0.317
+    }
+  ],
+  "transcript": "Sure — what bill type should I use? Okay — updating that now (credit_card). Done — your autopay settings are updated.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what bill type should I use?",
+      "t": 0.01
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (credit_card).",
+      "t": 0.316
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — your autopay settings are updated.",
+      "t": 0.317
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "credit_card",
+        "source_account": "checking"
+      }
+    }
+  ]
+}

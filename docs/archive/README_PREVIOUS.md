@@ -1,8 +1,8 @@
-# TriageLine: an interruptible real-time agent (Samsung PRISM · Theme 05) 
+# BILIO: an interruptible real-time agent (Samsung PRISM · Theme 05) 
 
-TriageLine is a dual-process voice agent built on the official Theme 5 harness. A fast path answers within milliseconds. A slow path does the real work (ASR, vision, async tools). A coordination layer handles barge-ins without acting on stale results.
+BILIO is a dual-process voice agent built on the official Theme 5 harness. A fast path answers within milliseconds. A slow path does the real work (ASR, vision, async tools). A coordination layer handles barge-ins without acting on stale results.
 
-| Public scenario | Baseline | TriageLine |
+| Public scenario | Baseline | BILIO |
 |---|---:|---:|
 | pub_01 simple search | 100 | **100** |
 | pub_02 interruption (Boston → NYC) | ~90 | **100** |
@@ -55,7 +55,7 @@ A zero-dependency web UI on top of the real harness and scorer:
 
 - **Run**: any scenario with either agent. Shows a lane timeline (user, fast path, slow-path tool bars with cancellations, answer), the transcript with slot snapshots, and every scorer checkpoint.
 - **Compose**: write your own utterance and barge-in, optionally with an unseen tool, and watch the agent handle it.
-- **Suite**: baseline vs TriageLine across all scenarios.
+- **Suite**: baseline vs BILIO across all scenarios.
 
 ## Layout
 

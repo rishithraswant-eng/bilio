@@ -1,0 +1,33 @@
+{
+  "id": "finance_01",
+  "domain": "finance_billing",
+  "title": "Simple Currency Exchange",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hey... uh,... um, I have a quick question about some international money stuff.",
+      "user_annotated": "Hey... uh,... um, I have a quick question about some international money stuff.",
+      "ai": "Sure! I can help with that. What do you need?"
+    },
+    {
+      "user": "Like... i'm trying to figure out how much 500 US dollars would be if I converted it to euros. Could you check that for me?",
+      "user_annotated": "Like... i'm trying to figure out how much 500 US dollars would be if I converted it to euros. Could you check that for me?",
+      "ai": "Let me calculate that conversion for you right away."
+    }
+  ],
+  "acting_notes": "Friendly and casual.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 500,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

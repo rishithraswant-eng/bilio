@@ -1,0 +1,57 @@
+{
+  "example_id": "ecommerce_05",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hmm... well... um... hi there.... um, I need help finding something for my home office.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um, so like, uh... I'm looking... um, for a new... let me think... a desk. Something under 300 dollars if you have any options like that.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "desk",
+        "max_price": 300
+      },
+      "timestamp_start": 0.336,
+      "timestamp_end": 0.341
+    }
+  ],
+  "transcript": "Sure — what do you need? Searching for desk under 300. Here's what I found: ref PROD1, desk Premium, $290.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.004
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Searching for desk under 300.",
+      "t": 0.336
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, desk Premium, $290.",
+      "t": 0.343
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "desk",
+        "max_price": 300
+      }
+    }
+  ]
+}

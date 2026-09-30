@@ -27,7 +27,7 @@
 1. `PYTHON=python3.12 ./run_fdb_v3.sh --limit 5 --require-judge` with LiveKit + speech keys + OPENAI_API_KEY (judge), then the full run. Commit `results/<stamp>/` summary and update `submission.yaml: reported_scores.live_livekit_judged`.
 2. Check `results/results.md` per-turn timing; if response median is > 1.5 s, switch speech to Deepgram (streaming) or lower `TRIAGELINE_SETTLE_S`.
 3. Live-room checks: talk over TTS, correct mid-sentence, disconnect/rejoin; confirm zero duplicate state changes in `agent_tool_calls.log`.
-4. The deck is built (`docs/deck/TriageLine_Theme05.pptx` + PDF, 8 slides); rebuild it with the live numbers via `scripts/build_deck.py`. The PWA interruption clip is recorded (`docs/video/pwa_interrupt.mp4`). Screen-record the live FDB-v3 run and a phone call, cut to 3–5 min following `docs/VIDEO_SHOTLIST.md`, and submit via the form.
+4. The deck is built (`docs/deck/BILIO_Theme05.pptx` + PDF, 8 slides); rebuild it with the live numbers via `scripts/build_deck.py`. The PWA interruption clip is recorded (`docs/video/pwa_interrupt.mp4`). Screen-record the live FDB-v3 run and a phone call, cut to 3–5 min following `docs/VIDEO_SHOTLIST.md`, and submit via the form.
 
 ## Known limits (state them, don't hide them)
 Tools are simulated; access code is pilot access, not user identity; sessions are process-local (one replica); web client, not a native SDK app.

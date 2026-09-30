@@ -27,7 +27,7 @@ def main(argv=None) -> None:
     import uvicorn
     host = os.environ.get("HOST", "127.0.0.1")
     port = int(os.environ.get("PORT", "8080"))
-    print(f"TriageLine on http://{host}:{port}   (/live.html PWA · /rtc.html voice · /console evaluation)", flush=True)
+    print(f"BILIO on http://{host}:{port}   (/live.html PWA · /rtc.html voice · /console evaluation)", flush=True)
     uvicorn.run("ui.api:app", host=host, port=port, workers=1, proxy_headers=True,
                 forwarded_allow_ips=os.environ.get("FORWARDED_ALLOW_IPS", "127.0.0.1"),
                 log_level=os.environ.get("LOG_LEVEL", "info"))

@@ -1,0 +1,62 @@
+{
+  "example_id": "housing_23",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hmm... well... hi... uh...... um, I need to make some changes to my apartment search but I'm not totally sure what I want yet.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Well, well, uh... can we search for places in — no wait, before we search, let me update my minimum bedrooms... um, to 2. Actually, on second thought, make it 3 bedrooms. We decided we need more space.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "min_bedrooms",
+        "value": 2
+      },
+      "timestamp_start": 0.337,
+      "timestamp_end": 0.441
+    }
+  ],
+  "transcript": "Sure — which city? Sure, dropping that — switching to your filter request. Okay — updating that now (min_bedrooms). Done — min_bedrooms is now 2.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — which city?",
+      "t": 0.017
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, dropping that — switching to your filter request.",
+      "t": 0.337
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (min_bedrooms).",
+      "t": 0.337
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — min_bedrooms is now 2.",
+      "t": 0.441
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "min_bedrooms",
+        "value": 3
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "id": "finance_12",
+  "domain": "finance_billing",
+  "title": "Amount Self-Correction",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Uh... good day.... um, I need to do a currency conversion before I buy something online from Europe.",
+      "user_annotated": "Uh... good day.... um, I need to do a currency conversion before I buy something online from Europe.",
+      "ai": "Good day! I can help with that. What conversion do you need?"
+    },
+    {
+      "user": "Well, i want to calculate how much 100 euros would be in US dollars \u2014 oh wait, I was looking at the wrong invoice. It's actually 150 euros, not 100. So 150 euros to US dollars.",
+      "user_annotated": "Well, i want to calculate how much 100 euros would be in US dollars \u2014 oh wait, I was looking at the wrong invoice. It's actually 150 euros, not 100. So 150 euros to US dollars.",
+      "ai": "I will calculate the exchange for 150 EUR to USD."
+    }
+  ],
+  "acting_notes": "Correct the amount clearly, as if you just looked at a different document.",
+  "disfluency_features": [
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 150,
+        "from_currency": "EUR",
+        "to_currency": "USD"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "amount": 100
+    },
+    "corrected_param": {
+      "amount": 150
+    }
+  },
+  "latency_profile": "normal"
+}

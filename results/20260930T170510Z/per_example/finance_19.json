@@ -1,0 +1,64 @@
+{
+  "example_id": "finance_19",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hey,... um... I keep going back and forth on this conversion, so I apologize in advance if I change my mind.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Okay so... um... I want to convert 200 euros to yen — no wait, I just remembered I need British pounds, not yen. And actually, let me change the amount too, make it 300 euros instead of 200.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 300,
+        "from_currency": "EUR",
+        "to_currency": "GBP"
+      },
+      "timestamp_start": 0.342,
+      "timestamp_end": 0.344
+    }
+  ],
+  "transcript": "Sure — what filter name should I use? Sure, dropping that — switching to your rate request. Checking the EUR to GBP rate. Here's what I found: converted amount 330.0, rate 1.1.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what filter name should I use?",
+      "t": 0.022
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, dropping that — switching to your rate request.",
+      "t": 0.342
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking the EUR to GBP rate.",
+      "t": 0.342
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: converted amount 330.0, rate 1.1.",
+      "t": 0.344
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 300,
+        "from_currency": "EUR",
+        "to_currency": "GBP"
+      }
+    }
+  ]
+}

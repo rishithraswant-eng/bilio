@@ -4,7 +4,7 @@
 
 This file tracks two things:
 
-1. How TriageLine meets the **updated Theme 05 participant guide**
+1. How BILIO meets the **updated Theme 05 participant guide**
    (`docs/guides/Theme05_Participant_Guide_UPDATED.txt`). That guide replaces the older queue-based kit
    (`docs/guides/Theme5_Guide_OLDER_KIT.txt`).
 2. The status of every finding in the independent audit (`docs/audit/AUDIT_R01-R22.md`).
@@ -17,8 +17,8 @@ are never reported as FDB-v3 results.
 
 | Guide requirement | Where | Status |
 |---|---|---|
-| LiveKit voice agent (custom architecture allowed) | `fdb_v3/triageline_agent.py` | see §3 |
-| Cascaded or realtime pipeline following the benchmark's templates | `fdb_v3/triageline_agent.py` (Silero VAD + STT + TriageLine coordinator + TTS) | see §3 |
+| LiveKit voice agent (custom architecture allowed) | `fdb_v3/bilio_agent.py` | see §3 |
+| Cascaded or realtime pipeline following the benchmark's templates | `fdb_v3/bilio_agent.py` (Silero VAD + STT + BILIO coordinator + TTS) | see §3 |
 | FDB-v3 12 tools across 4 domains, logged in the official telemetry format | `fdb_v3/tools.py` | see §3 |
 | One-command reproduction (install, configure, evaluate) | `scripts/reproduce_fdb_v3.sh` | see §3 |
 | Declared model provider | `submission.yaml`, `README.md` | see §3 |

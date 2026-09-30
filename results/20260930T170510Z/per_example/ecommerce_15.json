@@ -1,0 +1,55 @@
+{
+  "example_id": "ecommerce_15",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Uh... uh, uh... hey... well, sorry to bother you.... um, I have a question about a delivery.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Uh... um, so well... can you, uh, track order B-O-B-1-2 for me?... um, I ordered it a few days ago and it should be arriving... soon, but I just want to make sure.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "BOB12"
+      },
+      "timestamp_start": 0.334,
+      "timestamp_end": 0.335
+    }
+  ],
+  "transcript": "Sure — what do you need? Checking order BOB12 now. Here's what I found: ref BOB12, Out for delivery.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.008
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking order BOB12 now.",
+      "t": 0.334
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref BOB12, Out for delivery.",
+      "t": 0.336
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "BOB12"
+      }
+    }
+  ]
+}

@@ -40,7 +40,7 @@ from dataclasses import dataclass, field
 from typing import Any, Dict, List, Optional
 from urllib.parse import quote
 
-log = logging.getLogger("triageline.providers")
+log = logging.getLogger("bilio.providers")
 
 GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta"
 
@@ -273,8 +273,8 @@ def _call_openai(name: str, model: str, system: str, user: str, tools: Optional[
         body["tool_choice"] = "auto"
     headers = {"Authorization": f"Bearer {key}"} if key else {}
     if name == "openrouter":
-        headers["HTTP-Referer"] = os.environ.get("TRIAGELINE_PUBLIC_URL", "https://github.com/RomitDeokar/TriageLine")
-        headers["X-Title"] = "TriageLine"
+        headers["HTTP-Referer"] = os.environ.get("TRIAGELINE_PUBLIC_URL", "https://github.com/RomitDeokar/BILIO")
+        headers["X-Title"] = "BILIO"
     data = _post(name, url + "/chat/completions", body, headers, timeout)
     choices = data.get("choices") or []
     if not choices:

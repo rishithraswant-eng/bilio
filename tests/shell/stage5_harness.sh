@@ -2,7 +2,7 @@ set -euo pipefail
 OUT_DIR=$PWD/out; mkdir -p $OUT_DIR; LOG=$OUT_DIR/run.log; : > $LOG
 log(){ echo "$*" >> $LOG; }; fail(){ echo "FAIL: $*"; exit 1; }
 judge_preflight(){ :; }; limit_dir(){ echo "$PWD/data"; }
-PY=python3; USE_LLM=0; FORCE=0; OFFLINE_TEXT=1; PROVIDER=triageline; REQUIRE_JUDGE=0; ROOT_DIR=$PWD; V3=$PWD; AGENT_PID=
+PY=python3; USE_LLM=0; FORCE=0; OFFLINE_TEXT=1; PROVIDER=bilio; REQUIRE_JUDGE=0; ROOT_DIR=$PWD; V3=$PWD; AGENT_PID=
 mkdir -p livekit_agent
 cat > livekit_agent/fdb_v3_offline_replay.py <<PYX
 import sys, json, pathlib, os

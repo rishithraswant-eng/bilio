@@ -1,0 +1,47 @@
+{
+  "id": "travel_18",
+  "domain": "travel_identity",
+  "title": "Search + Book + Passport Update",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Hi... um... I have a few things I need to get done before my big trip next month.",
+      "user_annotated": "Hi... um... I have a few things I need to get done before my big trip next month.",
+      "ai": "I'm ready! Let's go through your list."
+    },
+    {
+      "user": "Hmm... alright, first... um, I need to find flights to Dubai on April 10th. Then go ahead and book the cheapest option \u2014 the name on the ticket should be Casey Lee. Oh, and I almost forgot, I also need to update my passport number to E-7-7-2-2-1-1.",
+      "user_annotated": "Hmm... alright, first... um, I need to find flights to Dubai on April 10th. Then go ahead and book the cheapest option \u2014 the name on the ticket should be Casey Lee. Oh, and I almost forgot, I also need to update my passport number to E-7-7-2-2-1-1.",
+      "ai": "I'll search for flights, book the cheapest one for Casey Lee, and update your passport."
+    }
+  ],
+  "acting_notes": "Deliver all three requests in one continuous flow. Use 'oh and I almost forgot' as a natural transition.",
+  "disfluency_features": [
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Dubai",
+        "date": "April 10"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Casey Lee"
+      }
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "passport",
+        "doc_number": "E772211"
+      }
+    }
+  ],
+  "num_expected_calls": 3,
+  "state_rollback_test": false,
+  "latency_profile": "slow"
+}

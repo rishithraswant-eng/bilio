@@ -1,0 +1,36 @@
+{
+  "id": "housing_16",
+  "domain": "housing_location",
+  "title": "Hesitant Commute Check",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hmm... hi... hmm...... um...... um...... um, I have a quick question about commuting from one of the apartments I'm looking at.",
+      "user_annotated": "Hmm... hi... hmm...... um...... um...... um, I have a quick question about commuting from one of the apartments I'm looking at.",
+      "ai": "Sure! What route do you want me to check?"
+    },
+    {
+      "user": "Um, so uh, hmm... well... i want to know how long it would take to drive from my apartment to the... uh... hospital? My wife works there and... um, I want to make sure it's not too far.",
+      "user_annotated": "Um, so uh, hmm... well... i want to know how long it would take to drive from my apartment to the... uh... hospital? My wife works there and... um, I want to make sure it's not too far.",
+      "ai": "I'll calculate the driving commute to the hospital."
+    }
+  ],
+  "acting_notes": "Pause before saying 'hospital'.",
+  "disfluency_features": [
+    "FILLER",
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "my apartment",
+        "destination_address": "hospital",
+        "mode": "driving"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

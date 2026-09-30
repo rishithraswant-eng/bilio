@@ -1,0 +1,47 @@
+{
+  "id": "travel_20",
+  "domain": "travel_identity",
+  "title": "Conditional Booking Under Budget",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Uh... hi there, I'm trying... um, to figure out the most cost-effective way to handle my upcoming travel.",
+      "user_annotated": "Uh... hi there, I'm trying... um, to figure out the most cost-effective way to handle my upcoming travel.",
+      "ai": "Hi! I can definitely help you find the best options. What's the plan?"
+    },
+    {
+      "user": "Uh... here's the thing.... um, I need to fly to Toronto on July 20th. If there happens to be a flight under 300 dollars, go ahead and book it for Riley Kim. But if everything's too expensive, then just forget the flight and update my driver license to D-L-8-8 instead.",
+      "user_annotated": "Uh... here's the thing.... um, I need to fly to Toronto on July 20th. If there happens to be a flight under 300 dollars, go ahead and book it for Riley Kim. But if everything's too expensive, then just forget the flight and update my driver license to D-L-8-8 instead.",
+      "ai": "I'll search for flights to Toronto. If I find one under $300, I'll book it for Riley Kim; otherwise, I'll update your license."
+    }
+  ],
+  "acting_notes": "Speak clearly. The if-then logic should sound intentional and thought-out.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Toronto",
+        "date": "July 20"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Riley Kim"
+      },
+      "note": "Only if flight < $300"
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "driver_license",
+        "doc_number": "DL88"
+      },
+      "note": "Only if no cheap flight"
+    }
+  ],
+  "num_expected_calls": 3,
+  "state_rollback_test": false,
+  "latency_profile": "slow"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "ecommerce_13",
+  "domain": "ecommerce_support",
+  "title": "Cart + Track Combo",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Oh... um... hey... um... I've got two quick things... um...... um, I need taken care of.",
+      "user_annotated": "Oh... um... hey... um... I've got two quick things... um...... um, I need taken care of.",
+      "ai": "Sure! Go ahead and tell me what you need."
+    },
+    {
+      "user": "Um... so well... well... first... could you add item K-2... um, to my cart? Just one of them. And then can you check on my last order too? The order ID is D-E-L-I-V.",
+      "user_annotated": "Um... so well... well... first... could you add item K-2... um, to my cart? Just one of them. And then can you check on my last order too? The order ID is D-E-L-I-V.",
+      "ai": "Adding K2 to your cart and tracking order DELIV."
+    }
+  ],
+  "acting_notes": "Speak quickly and decisively.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "K2",
+        "quantity": 1
+      }
+    },
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "DELIV"
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "fast"
+}

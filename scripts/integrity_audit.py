@@ -109,7 +109,7 @@ def _distinctive(v: str) -> bool:
 def split_source(path: Path):
     """(code_strings, comment_text) — string literals in code vs comments/docstrings."""
     code, comments = [], []
-    toks = list(tokenize.generate_tokens(io.StringIO(path.read_text()).readline))
+    toks = list(tokenize.generate_tokens(io.StringIO(path.read_text(encoding="utf-8")).readline))
     prev = None
     for t in toks:
         if t.type == tokenize.COMMENT:

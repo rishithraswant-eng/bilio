@@ -1,0 +1,83 @@
+{
+  "example_id": "finance_21",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hey... well... I've got a couple of things... um, I need help with, but I'm still thinking through the details so bear with me.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Alright, so first... um, I want to know what the... uh... benefits are for the gold card, because I'm comparing a few options. And then I also need to convert, um, 500 US dollars to yen because I'm buying something from Japan.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "gold"
+      },
+      "timestamp_start": 0.316,
+      "timestamp_end": 0.317
+    },
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 500,
+        "from_currency": "USD",
+        "to_currency": "JPY"
+      },
+      "timestamp_start": 0.324,
+      "timestamp_end": 0.325
+    }
+  ],
+  "transcript": "Sure — what do you need? Looking up your gold card benefits. Here's what I found: gold, 2% Cashback, No Foreign Transaction Fee. Checking the USD to JPY rate. Here's what I found: converted amount 450.0, rate 0.9.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.013
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Looking up your gold card benefits.",
+      "t": 0.316
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: gold, 2% Cashback, No Foreign Transaction Fee.",
+      "t": 0.324
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking the USD to JPY rate.",
+      "t": 0.324
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: converted amount 450.0, rate 0.9.",
+      "t": 0.325
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "gold"
+      }
+    },
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 500,
+        "from_currency": "USD",
+        "to_currency": "JPY"
+      }
+    }
+  ]
+}

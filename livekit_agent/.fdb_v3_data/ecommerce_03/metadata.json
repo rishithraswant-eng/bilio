@@ -1,0 +1,34 @@
+{
+  "id": "ecommerce_03",
+  "domain": "ecommerce_support",
+  "title": "Cart Addition with Fillers",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Well... well... oh... hey there,... um, I already know what I want to buy, I just need help adding it.",
+      "user_annotated": "Well... well... oh... hey there,... um, I already know what I want to buy, I just need help adding it.",
+      "ai": "Hello! Ready to shop? Just tell me what you need."
+    },
+    {
+      "user": "Hmm... uh... hmm... um... can you, like, add product P-9-9 to my cart? I just need one of them for now.",
+      "user_annotated": "Hmm... uh... hmm... um... can you, like, add product P-9-9 to my cart? I just need one of them for now.",
+      "ai": "I'll add one of product P99 to your cart."
+    }
+  ],
+  "acting_notes": "Use 'um' and 'like' naturally.",
+  "disfluency_features": [
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "P99",
+        "quantity": 1
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

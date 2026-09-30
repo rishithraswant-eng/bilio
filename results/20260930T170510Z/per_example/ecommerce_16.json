@@ -1,0 +1,57 @@
+{
+  "example_id": "ecommerce_16",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Um... hmm... hmm... hi,... um...... um...... um, I need help finding a specific type of product for my kitchen.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... like, uh... i need a new... let me think about what it's called... a coffee maker! Yeah... I'm looking... um, for a coffee maker. Something under 50 dollars would be ideal.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "coffee maker",
+        "max_price": 50
+      },
+      "timestamp_start": 0.344,
+      "timestamp_end": 0.346
+    }
+  ],
+  "transcript": "Sure — what query should I use? Searching for coffee maker under 50. Here's what I found: ref PROD1, coffee maker Premium, $40.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what query should I use?",
+      "t": 0.022
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Searching for coffee maker under 50.",
+      "t": 0.344
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, coffee maker Premium, $40.",
+      "t": 0.346
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "coffee maker",
+        "max_price": 50
+      }
+    }
+  ]
+}

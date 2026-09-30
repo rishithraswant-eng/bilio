@@ -201,11 +201,11 @@ PASS dedup:duplicate_add_to_cart_blocked_while_pending
 
 ## 8. Architecture verdict
 
-> "Is `livekit_agent/` actually connected to the existing TriageLine intelligence, or is it currently a standalone wrapper?"
+> "Is `livekit_agent/` actually connected to the existing BILIO intelligence, or is it currently a standalone wrapper?"
 
 **Neither cleanly.** It's split:
-- `triage_livekit_agent.py` **is** connected to the existing TriageLine intelligence (`legacy/core`'s DialogueEngine + CommitStateMachine) via `triage_brain.py`, and that connection is real and tested (`test_4`).
-- `cascaded_agent.py` (the file the audit brief and `run_fdb_v3.sh` treat as *the* FDB-v3 agent) is **not** connected to either the TriageLine engine or to `agent.agent.ParticipantAgent`'s epoch/dedup system. It's a standalone LLM-tool-calling wrapper around `mock_apis.py`.
+- `triage_livekit_agent.py` **is** connected to the existing BILIO intelligence (`legacy/core`'s DialogueEngine + CommitStateMachine) via `triage_brain.py`, and that connection is real and tested (`test_4`).
+- `cascaded_agent.py` (the file the audit brief and `run_fdb_v3.sh` treat as *the* FDB-v3 agent) is **not** connected to either the BILIO engine or to `agent.agent.ParticipantAgent`'s epoch/dedup system. It's a standalone LLM-tool-calling wrapper around `mock_apis.py`.
 - The one piece that bridges LiveKit-shaped events to `agent.agent.ParticipantAgent` (`adapter.py`) is real and tested but **not wired into any process that LiveKit actually launches.**
 
 So the specific chain LiveKit → cascaded_agent → adapter → existing coordination logic → tools is **NOT a real execution path today.** Two of its four links (`cascaded_agent` → `adapter`, and `adapter`'s LiveKit-facing half) don't exist as live connections; the other two links (`adapter` → `ParticipantAgent`, and `ParticipantAgent` → tools) are real but only reachable from a standalone scenario script.
@@ -268,8 +268,8 @@ So the specific chain LiveKit → cascaded_agent → adapter → existing coordi
 | FDB tools | PARTIAL | 12/12 defined and internally consistent; 0/12 confirmed against the official FDB-v3 set; 7/9 local scenarios pass. |
 | Chained calls | PARTIAL | 1 of 2 chained scenarios passes; the other fails (`step1_search_flights_issued`). |
 | Fast/slow path | PARTIAL | Real concurrency exists in Path C (filler speech vs. tool execution); Path A (the actual launch entrypoint) has none of it. |
-| TriageLine integration | PARTIAL, SPLIT | Real in Path B (`triage_livekit_agent.py` ↔ `legacy/core`, tested via `test_4`); absent in Path A; unreachable-from-LiveKit in Path C. |
+| BILIO integration | PARTIAL, SPLIT | Real in Path B (`triage_livekit_agent.py` ↔ `legacy/core`, tested via `test_4`); absent in Path A; unreachable-from-LiveKit in Path C. |
 
 ## OVERALL VERDICT: **PARTIALLY REAL**
 
-The interruption/epoch/dedup engine and the TriageLine deliberation engine are both genuinely implemented and locally tested — this is not scaffold dressed up as substance. But the specific integration the competition (and this audit) cares about — a single LiveKit agent that runs the FDB-v3 tool set *through* the tested interruption/dedup logic — does not exist as one running path. It exists as two tested-but-separate halves plus a third, unrelated LLM-tool-calling agent that is the one thing actually reachable via `python cascaded_agent.py`. Closing that gap (P0 items 1–2 above) is the single highest-leverage fix available before worrying about FDB-v3 data/credentials at all.
+The interruption/epoch/dedup engine and the BILIO deliberation engine are both genuinely implemented and locally tested — this is not scaffold dressed up as substance. But the specific integration the competition (and this audit) cares about — a single LiveKit agent that runs the FDB-v3 tool set *through* the tested interruption/dedup logic — does not exist as one running path. It exists as two tested-but-separate halves plus a third, unrelated LLM-tool-calling agent that is the one thing actually reachable via `python cascaded_agent.py`. Closing that gap (P0 items 1–2 above) is the single highest-leverage fix available before worrying about FDB-v3 data/credentials at all.

@@ -1,0 +1,96 @@
+{
+  "example_id": "ecommerce_20",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Well, uh... well... hey... I'm trying to be smart about my spending so... um, I have a conditional request for you.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Uh... like, you know... um... so search for a coffee maker first. If you find one that's under 50 dollars, go ahead and add 2... um, to the cart because they'd make great gifts. But if everything's over 50, just forget the coffee maker and track order W-W-W for me instead.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "coffee maker",
+        "max_price": 50
+      },
+      "timestamp_start": 0.377,
+      "timestamp_end": 0.378
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "quantity": 2,
+        "product_id": "PROD1"
+      },
+      "timestamp_start": 0.384,
+      "timestamp_end": 0.384
+    },
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "WWW"
+      },
+      "timestamp_start": 0.392,
+      "timestamp_end": 0.393
+    }
+  ],
+  "transcript": "Sure — what do you need? Searching for coffee maker under 50. Here's what I found: ref PROD1, coffee maker Premium, $40. Adding 2 × PROD1 to your cart. Done — added 2 × PROD1 to your cart; your cart total is 199.98. Here's what I found: ref WWW, Out for delivery.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.019
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Searching for coffee maker under 50.",
+      "t": 0.377
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, coffee maker Premium, $40.",
+      "t": 0.384
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Adding 2 × PROD1 to your cart.",
+      "t": 0.384
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — added 2 × PROD1 to your cart; your cart total is 199.98.",
+      "t": 0.392
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref WWW, Out for delivery.",
+      "t": 0.393
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "coffee maker"
+      }
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "$RESULT_0.products[0].product_id",
+        "quantity": 2
+      },
+      "note": "Only if price < 50, otherwise track order WWW"
+    }
+  ]
+}

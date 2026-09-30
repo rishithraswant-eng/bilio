@@ -1,0 +1,43 @@
+{
+  "id": "housing_09",
+  "domain": "housing_location",
+  "title": "City Self-Correction",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Well, hmm... hello,... um...... um...... um, I need some help finding apartment options. I've been looking in a few different cities.",
+      "user_annotated": "Well, hmm... hello,... um...... um...... um, I need some help finding apartment options. I've been looking in a few different cities.",
+      "ai": "I'm on it. Where should I start searching?"
+    },
+    {
+      "user": "Well... well... uh... i'm interested in a 2-bedroom in Boston \u2014 wait, actually,... um, I changed my mind. Let's look in Chicago instead, and keep the max price around 2000 per month.",
+      "user_annotated": "Well... well... uh... i'm interested in a 2-bedroom in Boston \u2014 wait, actually,... um, I changed my mind. Let's look in Chicago instead, and keep the max price around 2000 per month.",
+      "ai": "I will search for 2-bedroom apartments in Chicago up to $2000."
+    }
+  ],
+  "acting_notes": "Quickly correct Boston to Chicago.",
+  "disfluency_features": [
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Chicago",
+        "bedrooms": 2,
+        "max_price": 2000
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "city": "Boston"
+    },
+    "corrected_param": {
+      "city": "Chicago"
+    }
+  },
+  "latency_profile": "fast"
+}

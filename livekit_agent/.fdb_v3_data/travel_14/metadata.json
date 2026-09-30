@@ -1,0 +1,35 @@
+{
+  "id": "travel_14",
+  "domain": "travel_identity",
+  "title": "Hesitation with Date",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Well... good evening! I'm starting... um, to plan a vacation and could really use your help.",
+      "user_annotated": "Well... good evening! I'm starting... um, to plan a vacation and could really use your help.",
+      "ai": "Good evening! I'd love to help you plan. Where are you thinking of going?"
+    },
+    {
+      "user": "Um... so i want to look at flights to Seoul, and the date... um, I was thinking of is... let me think... I'm pretty sure it's March 22nd. Yeah, could you search for that?",
+      "user_annotated": "Um... so i want to look at flights to Seoul, and the date... um, I was thinking of is... let me think... I'm pretty sure it's March 22nd. Yeah, could you search for that?",
+      "ai": "I will check for flights to Seoul on March 22nd."
+    }
+  ],
+  "acting_notes": "Pause as if you are trying to remember the exact date you decided on.",
+  "disfluency_features": [
+    "HESITATION",
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Seoul",
+        "date": "March 22"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

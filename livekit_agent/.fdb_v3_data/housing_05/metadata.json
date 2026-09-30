@@ -1,0 +1,36 @@
+{
+  "id": "housing_05",
+  "domain": "housing_location",
+  "title": "Pet-Friendly Search with Hesitation",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Um, oh... well... um, hi there. I've been having... um, the hardest time finding a place that allows my dog.",
+      "user_annotated": "Um, oh... well... um, hi there. I've been having... um, the hardest time finding a place that allows my dog.",
+      "ai": "Hello! I know that can be tricky. Let me help you look."
+    },
+    {
+      "user": "You know... you know... you know... well... i need... um, a pet-friendly apartment in Miami, and my budget is about... let me check... 1500 a month. Is there anything in that range?",
+      "user_annotated": "You know... you know... you know... well... i need... um, a pet-friendly apartment in Miami, and my budget is about... let me check... 1500 a month. Is there anything in that range?",
+      "ai": "Searching for pet-friendly apartments in Miami under $1500."
+    }
+  ],
+  "acting_notes": "Hesitate before saying the price.",
+  "disfluency_features": [
+    "HESITATION",
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Miami",
+        "max_price": 1500,
+        "pets_allowed": true
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

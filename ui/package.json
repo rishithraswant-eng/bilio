@@ -1,5 +1,5 @@
 {
-  "name": "triageline-voice-client",
+  "name": "bilio-voice-client",
   "private": true,
   "scripts": {
     "build": "esbuild rtc.js --bundle --minify --format=esm --target=es2022 --outfile=static/rtc.bundle.js",

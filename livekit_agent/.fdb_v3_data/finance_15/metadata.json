@@ -1,0 +1,42 @@
+{
+  "id": "finance_15",
+  "domain": "finance_billing",
+  "title": "Autopay Correction",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hi,... um, I just realized I need to fix something with my autopay setup. I think I set it wrong.",
+      "user_annotated": "Hi,... um, I just realized I need to fix something with my autopay setup. I think I set it wrong.",
+      "ai": "Sure! What needs fixing?"
+    },
+    {
+      "user": "Hmm... i want... um, to switch my mortgage autopay to pull from checking \u2014 wait no, that's wrong too. Make it savings instead. Yeah, savings is the right one.",
+      "user_annotated": "Hmm... i want... um, to switch my mortgage autopay to pull from checking \u2014 wait no, that's wrong too. Make it savings instead. Yeah, savings is the right one.",
+      "ai": "I'll set your mortgage autopay to pull from savings."
+    }
+  ],
+  "acting_notes": "Correct 'checking' to 'savings' quickly, as if catching your own mistake.",
+  "disfluency_features": [
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "savings"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "source_account": "checking"
+    },
+    "corrected_param": {
+      "source_account": "savings"
+    }
+  },
+  "latency_profile": "normal"
+}

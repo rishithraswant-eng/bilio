@@ -1,0 +1,40 @@
+{
+  "id": "housing_10",
+  "domain": "housing_location",
+  "title": "Commute + Filter Update",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Oh... hi... um... I found an interesting listing and I'd like to do a couple of things to evaluate it.",
+      "user_annotated": "Oh... hi... um... I found an interesting listing and I'd like to do a couple of things to evaluate it.",
+      "ai": "Hello! Sure, what do you need?"
+    },
+    {
+      "user": "Um... so well... uh... like... first, could you check how long the transit commute would be from 500 Central Ave... um, to the University? And also, while you're at it, update my preferred neighborhood in the search to Northside.",
+      "user_annotated": "Um... so well... uh... like... first, could you check how long the transit commute would be from 500 Central Ave... um, to the University? And also, while you're at it, update my preferred neighborhood in the search to Northside.",
+      "ai": "I'll calculate the transit time and update your neighborhood preference."
+    }
+  ],
+  "acting_notes": "Say both commands in one flowing sentence.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "500 Central Ave",
+        "destination_address": "University",
+        "mode": "transit"
+      }
+    },
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "neighborhood",
+        "value": "Northside"
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

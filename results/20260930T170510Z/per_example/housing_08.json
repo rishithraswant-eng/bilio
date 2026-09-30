@@ -1,0 +1,62 @@
+{
+  "example_id": "housing_08",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Well, uh, well... good morning! I'm still working on finding the right apartment and... um, I wanted to make some changes.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Like, you know... you know... i want to check the listings in — actually... before... um...... um, I do that, could you just update my search filter so that it only shows me places that allow pets? I have a cat.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "pets_allowed",
+        "value": true
+      },
+      "timestamp_start": 0.352,
+      "timestamp_end": 0.491
+    }
+  ],
+  "transcript": "Sure — which city? Sure, dropping that — switching to your filter request. Okay — updating that now (pets_allowed). Done — pets_allowed is now True.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — which city?",
+      "t": 0.02
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, dropping that — switching to your filter request.",
+      "t": 0.352
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (pets_allowed).",
+      "t": 0.352
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — pets_allowed is now True.",
+      "t": 0.491
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "pets_allowed",
+        "value": true
+      }
+    }
+  ]
+}

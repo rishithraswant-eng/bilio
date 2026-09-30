@@ -1,0 +1,63 @@
+{
+  "example_id": "travel_06",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hey... uh... I've decided on my trip and I'm ready... um, to book something.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Uh... yeah, so I want to fly to Denver on January 15th. Go ahead and book it under my name, it's Taylor Reed.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Denver",
+        "date": "January 15"
+      },
+      "timestamp_start": 0.326,
+      "timestamp_end": 0.894
+    }
+  ],
+  "transcript": "On it — finding flights to None for today first. Got it — switching to Denver. I found a flight to Denver: FL123 departing January 15 for $450. Whose name should I book it under?",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "On it — finding flights to None for today first.",
+      "t": 0.014
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Got it — switching to Denver.",
+      "t": 0.326
+    },
+    {
+      "kind": "final_response",
+      "text": "I found a flight to Denver: FL123 departing January 15 for $450. Whose name should I book it under?",
+      "t": 0.895
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Denver",
+        "date": "January 15"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Taylor Reed"
+      }
+    }
+  ]
+}

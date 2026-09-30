@@ -1,0 +1,57 @@
+{
+  "example_id": "ecommerce_14",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Uh... hmm... well... uh... hello there,... um, I found a couple of things I want to buy on your website.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... well... um... so uh, yeah, so... um, I already found what I want. Can you add, like, 2 of item P-5-2 to my cart? I want to get one for myself and one as a gift.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "P52",
+        "quantity": 2
+      },
+      "timestamp_start": 0.333,
+      "timestamp_end": 0.334
+    }
+  ],
+  "transcript": "Sure — what do you need? Adding 2 × P52 to your cart. Done — added 2 × P52 to your cart; your cart total is 199.98.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.011
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Adding 2 × P52 to your cart.",
+      "t": 0.333
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — added 2 × P52 to your cart; your cart total is 199.98.",
+      "t": 0.335
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "P52",
+        "quantity": 2
+      }
+    }
+  ]
+}

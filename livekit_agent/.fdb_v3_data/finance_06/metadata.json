@@ -1,0 +1,34 @@
+{
+  "id": "finance_06",
+  "domain": "finance_billing",
+  "title": "Card Benefits with Hesitation",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Uh... um, hi there.... um, I was looking at your different credit card options on the website.",
+      "user_annotated": "Uh... um, hi there.... um, I was looking at your different credit card options on the website.",
+      "ai": "Hello! Great, we have several options. What would you like to know?"
+    },
+    {
+      "user": "Um, so uh, I was wondering what the benefits are for the... travel card? I think that's the one my coworker recommended to me.",
+      "user_annotated": "Um, so uh, I was wondering what the benefits are for the... travel card? I think that's the one my coworker recommended to me.",
+      "ai": "I'll look up the benefits for the travel card right now."
+    }
+  ],
+  "acting_notes": "Sound casual. Pause briefly before saying 'travel card' as if remembering the name.",
+  "disfluency_features": [
+    "FILLER",
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "travel"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

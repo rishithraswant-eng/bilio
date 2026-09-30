@@ -1,0 +1,46 @@
+{
+  "id": "finance_18",
+  "domain": "finance_billing",
+  "title": "Exchange + Autopay + Benefits Chain",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Hey... um... I've been putting off dealing with my finances and now I have a bunch of things piled up. Can you help me knock them all out?",
+      "user_annotated": "Hey... um... I've been putting off dealing with my finances and now I have a bunch of things piled up. Can you help me knock them all out?",
+      "ai": "I'm ready! Let's get through them all. What do you need?"
+    },
+    {
+      "user": "Um... so alright, so first,... um, I need to know how much 1000 US dollars would be in euros. Then I want to change my credit card autopay so it pulls from savings instead. And finally, can you tell me what kind of benefits the premium card has?",
+      "user_annotated": "Um... so alright, so first,... um, I need to know how much 1000 US dollars would be in euros. Then I want to change my credit card autopay so it pulls from savings instead. And finally, can you tell me what kind of benefits the premium card has?",
+      "ai": "I'll handle the conversion, update your autopay, and check the premium card benefits."
+    }
+  ],
+  "acting_notes": "State all three requests in one continuous flow, like going through a to-do list.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 1000,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      }
+    },
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "credit_card",
+        "source_account": "savings"
+      }
+    },
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "premium"
+      }
+    }
+  ],
+  "num_expected_calls": 3,
+  "state_rollback_test": false,
+  "latency_profile": "slow"
+}

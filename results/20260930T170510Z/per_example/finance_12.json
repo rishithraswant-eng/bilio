@@ -1,0 +1,72 @@
+{
+  "example_id": "finance_12",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Uh... good day.... um, I need to do a currency conversion before I buy something online from Europe.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Well, i want to calculate how much 100 euros would be in US dollars — oh wait, I was looking at the wrong invoice. It's actually 150 euros, not 100. So 150 euros to US dollars.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "from_currency": "Europe"
+      },
+      "timestamp_start": 0.01,
+      "timestamp_end": 0.011
+    },
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 150,
+        "from_currency": "EUR",
+        "to_currency": "USD"
+      },
+      "timestamp_start": 0.326,
+      "timestamp_end": 0.327
+    }
+  ],
+  "transcript": "Checking the Europe to rate. I started that get exchange rate, but the system also needs the amount and to currency — what should I use? Checking the EUR to USD rate. Here's what I found: converted amount 165.0, rate 1.1.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Checking the Europe to rate.",
+      "t": 0.01
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that get exchange rate, but the system also needs the amount and to currency — what should I use?",
+      "t": 0.012
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking the EUR to USD rate.",
+      "t": 0.326
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: converted amount 165.0, rate 1.1.",
+      "t": 0.327
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 150,
+        "from_currency": "EUR",
+        "to_currency": "USD"
+      }
+    }
+  ]
+}

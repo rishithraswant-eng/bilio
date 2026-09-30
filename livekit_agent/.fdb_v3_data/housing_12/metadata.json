@@ -1,0 +1,36 @@
+{
+  "id": "housing_12",
+  "domain": "housing_location",
+  "title": "Hesitation with Transit Mode",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hmm... well... hey... uh... I'm moving to a new city soon and... um... I really need to plan out how I'd get around.",
+      "user_annotated": "Hmm... well... hey... uh... I'm moving to a new city soon and... um... I really need to plan out how I'd get around.",
+      "ai": "Great! How can I help you with that?"
+    },
+    {
+      "user": "Like... you know... hmm... could you calculate the commute from my apartment to the airport? I'd be going by... let me see... transit... since... um, I probably won't have a car right away.",
+      "user_annotated": "Like... you know... hmm... could you calculate the commute from my apartment to the airport? I'd be going by... let me see... transit... since... um, I probably won't have a car right away.",
+      "ai": "I'll calculate the transit commute to the airport."
+    }
+  ],
+  "acting_notes": "Hesitate as if thinking about transportation.",
+  "disfluency_features": [
+    "HESITATION",
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "apartment",
+        "destination_address": "airport",
+        "mode": "transit"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

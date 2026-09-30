@@ -1,0 +1,48 @@
+{
+  "id": "housing_20",
+  "domain": "housing_location",
+  "title": "Conditional Search Logic",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Um... hello... oh... I'm trying... um... to make a smart decision about where to live, and it depends on the commute.",
+      "user_annotated": "Um... hello... oh... I'm trying... um... to make a smart decision about where to live, and it depends on the commute.",
+      "ai": "Hi there! Tell me your plan."
+    },
+    {
+      "user": "Uh... hmm... you know... um... so here's what I'm thinking. Search for places in Austin under 2000. Then check the commute to my office. If it's under 15 minutes, that's perfect. But if it's longer, then raise my budget to 2500 so... um, I can look at places closer to work.",
+      "user_annotated": "Uh... hmm... you know... um... so here's what I'm thinking. Search for places in Austin under 2000. Then check the commute to my office. If it's under 15 minutes, that's perfect. But if it's longer, then raise my budget to 2500 so... um, I can look at places closer to work.",
+      "ai": "I'll search, check the commute, and adjust your budget if needed."
+    }
+  ],
+  "acting_notes": "Speak clearly. Emphasize the if-then logic.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Austin",
+        "max_price": 2000
+      }
+    },
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "$RESULT_0.apartments[0].address",
+        "destination_address": "my office",
+        "mode": "driving"
+      }
+    },
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "max_price",
+        "value": 2500
+      },
+      "note": "Only if commute > 15 min"
+    }
+  ],
+  "num_expected_calls": 3,
+  "state_rollback_test": false,
+  "latency_profile": "slow"
+}

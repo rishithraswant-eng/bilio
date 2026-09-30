@@ -1,0 +1,41 @@
+{
+  "id": "travel_23",
+  "domain": "travel_identity",
+  "title": "Heavy Fillers + Document Updates",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Hey... oh... you there?... um, I need to get a couple of important documents updated before I leave the country.",
+      "user_annotated": "Hey... oh... you there?... um, I need to get a couple of important documents updated before I leave the country.",
+      "ai": "Yes, I'm here. What documents do you need updated?"
+    },
+    {
+      "user": "Hmm... um... so I need to, like, update my passport number to P-1-1-2-2 because I just renewed it. And then, uh, I also got a new driver license, so could you change that one to D-L-9-0-9-0 as well?",
+      "user_annotated": "Hmm... um... so I need to, like, update my passport number to P-1-1-2-2 because I just renewed it. And then, uh, I also got a new driver license, so could you change that one to D-L-9-0-9-0 as well?",
+      "ai": "I'll update both your passport and driver license right away."
+    }
+  ],
+  "acting_notes": "Use lots of filler words \u2014 'um', 'like', 'uh'. Sound hesitant but determined to get through the list.",
+  "disfluency_features": [
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "passport",
+        "doc_number": "P1122"
+      }
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "driver_license",
+        "doc_number": "DL9090"
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

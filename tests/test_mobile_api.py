@@ -33,9 +33,9 @@ def test_scoped_signed_participant_tokens(lk, monkeypatch):
     assert "roomAdmin" not in c["video"] and "roomCreate" not in c["video"]
     assert c["exp"] - c["nbf"] == 600
     assert "roomConfig" not in c                        # no agent_name -> automatic dispatch
-    monkeypatch.setenv("TRIAGELINE_AGENT_NAME", "triageline-assistant")
+    monkeypatch.setenv("TRIAGELINE_AGENT_NAME", "bilio-assistant")
     c = _claims(mobile.issue_token()["token"])
-    assert c["roomConfig"]["agents"][0]["agentName"] == "triageline-assistant"
+    assert c["roomConfig"]["agents"][0]["agentName"] == "bilio-assistant"
 
 
 def test_rejects_bad_livekit_urls(monkeypatch):
@@ -81,7 +81,7 @@ def test_rtc_token_for_signed_in_user_is_fresh_per_call(lk):
         assert c.post("/api/rtc/token", json={}).status_code == 401
         c.post("/api/auth/login", json={})
         a, b = c.post("/api/rtc/token", json={}).json(), c.post("/api/rtc/token", json={}).json()
-        assert a["room"] != b["room"] and a["room"].startswith("triageline-")
+        assert a["room"] != b["room"] and a["room"].startswith("bilio-")
 
 
 def test_production_hides_console_and_details(lk, monkeypatch):
@@ -112,7 +112,7 @@ def test_console_available_in_development(monkeypatch):
         r = c.get("/api/scenarios")
         assert r.status_code == 200 and len(r.json()) >= 1
         path = r.json()[0]["path"]
-        r = c.post("/api/run", json={"path": path, "agent": "triageline", "time_scale": 8})
+        r = c.post("/api/run", json={"path": path, "agent": "bilio", "time_scale": 8})
         assert r.status_code == 200, r.text
         assert "trace" in r.json()
         assert c.post("/api/run", json={"path": "../etc/passwd"}).status_code == 400
@@ -136,11 +136,11 @@ def test_triage_flow_dispatches_the_extension_worker(lk, monkeypatch):
     # the extension (Triage Line) is reachable from the same gateway through a closed flow choice
     with pytest.raises(mobile.NotConfigured):
         mobile.issue_token(flow="triage")               # no worker name configured -> refuse, never mis-route
-    monkeypatch.setenv("TRIAGELINE_AGENT_NAME", "triageline-assistant")
-    monkeypatch.setenv("TRIAGELINE_TRIAGE_AGENT_NAME", "triageline-triage")
+    monkeypatch.setenv("TRIAGELINE_AGENT_NAME", "bilio-assistant")
+    monkeypatch.setenv("TRIAGELINE_TRIAGE_AGENT_NAME", "bilio-triage")
     t = mobile.issue_token(flow="triage")
     assert t["flow"] == "triage"
-    assert _claims(t["token"])["roomConfig"]["agents"][0]["agentName"] == "triageline-triage"
+    assert _claims(t["token"])["roomConfig"]["agents"][0]["agentName"] == "bilio-triage"
     assert _claims(mobile.issue_token(flow="bogus")["token"])["roomConfig"]["agents"][0]["agentName"] == \
-        "triageline-assistant"                            # unknown flow falls back to the assistant, never a free name
+        "bilio-assistant"                            # unknown flow falls back to the assistant, never a free name
     assert mobile.flows() == {"assistant": True, "triage": True}

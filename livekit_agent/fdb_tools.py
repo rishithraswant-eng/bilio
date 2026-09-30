@@ -11,7 +11,7 @@ NOT available in this sandbox (no network, no FDB Google-Drive data bundle):
     interruption scenario definitions. These are NOT in the repo and are not
     invented here — see livekit_agent/logs/tool_integration.log for exactly
     what was and wasn't found. The scenarios this session runs are
-    hand-written, TriageLine-style, covering the same shapes FDB-v3 exercises
+    hand-written, BILIO-style, covering the same shapes FDB-v3 exercises
     (single call, 2-3-call chain, correction mid-turn, duplicate state change)
     but are explicitly NOT "the official FDB-v3 examples."
 
@@ -19,7 +19,7 @@ Schema shape matches harness/mock_env.py's TOOL_REGISTRY convention so
 agent/nlu.py's existing schema-driven arg-filling (build_args/_fill/_arg_for)
 can be used unmodified — see fdb_compat_check.py for the generalization check.
 "kind" (read_only / state_modifying) is inferred from what each mock function
-actually mutates; FDB-v3 itself doesn't label this, so TriageLine's own
+actually mutates; FDB-v3 itself doesn't label this, so BILIO's own
 book-keeping convention is applied here to get dedup/op-ledger behavior.
 """
 

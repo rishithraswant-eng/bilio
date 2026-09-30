@@ -1,0 +1,70 @@
+{
+  "example_id": "ecommerce_08",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Oh, um... hello... well... I've been meaning to buy a new keyboard and... um...... um, I finally have time to look.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Uh... hmm... you know... uh... i want a mechanical keyboard... and I'm trying... um, to keep my budget under... 200 dollars. Do you have anything like that?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "keyboard"
+      },
+      "timestamp_start": 0.017,
+      "timestamp_end": 0.019
+    },
+    {
+      "function": "search_products",
+      "args": {
+        "query": "mechanical keyboard",
+        "max_price": 200
+      },
+      "timestamp_start": 0.36,
+      "timestamp_end": 0.36
+    }
+  ],
+  "transcript": "Searching for keyboard. Here's what I found: ref PROD1, keyboard Premium, $99.99. Searching for mechanical keyboard under 200. Here's what I found: ref PROD1, mechanical keyboard Premium, $190.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Searching for keyboard.",
+      "t": 0.016
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, keyboard Premium, $99.99.",
+      "t": 0.019
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Searching for mechanical keyboard under 200.",
+      "t": 0.359
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, mechanical keyboard Premium, $190.",
+      "t": 0.361
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "mechanical keyboards",
+        "max_price": 200
+      }
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "example_id": "finance_16",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Oh... sorry,... um, I need a moment to collect my thoughts. I'm looking at some numbers here.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Like... okay so... um, I need to know how much... let me see... 500 yen would be in US dollars. I'm trying to figure out if this online purchase is worth it.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 500,
+        "from_currency": "JPY",
+        "to_currency": "USD"
+      },
+      "timestamp_start": 0.338,
+      "timestamp_end": 0.338
+    }
+  ],
+  "transcript": "Sure — what query should I use? Sure, dropping that — switching to your rate request. Checking the JPY to USD rate. Here's what I found: converted amount 450.0, rate 0.9.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what query should I use?",
+      "t": 0.012
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, dropping that — switching to your rate request.",
+      "t": 0.338
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking the JPY to USD rate.",
+      "t": 0.338
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: converted amount 450.0, rate 0.9.",
+      "t": 0.339
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 500,
+        "from_currency": "JPY",
+        "to_currency": "USD"
+      }
+    }
+  ]
+}

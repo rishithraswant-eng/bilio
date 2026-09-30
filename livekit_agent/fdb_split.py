@@ -15,7 +15,7 @@ from pathlib import Path
 
 
 def side(scenario_id: str) -> str:
-    h = int(hashlib.sha256(("triageline-split-v1:" + scenario_id).encode()).hexdigest(), 16)
+    h = int(hashlib.sha256(("bilio-split-v1:" + scenario_id).encode()).hexdigest(), 16)
     return "dev" if h % 2 == 0 else "heldout"
 
 

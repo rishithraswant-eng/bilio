@@ -1,0 +1,41 @@
+{
+  "id": "finance_21",
+  "domain": "finance_billing",
+  "title": "Hesitant Multi-Task",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Hey... well... I've got a couple of things... um, I need help with, but I'm still thinking through the details so bear with me.",
+      "user_annotated": "Hey... well... I've got a couple of things... um, I need help with, but I'm still thinking through the details so bear with me.",
+      "ai": "No problem at all! Take your time."
+    },
+    {
+      "user": "Alright, so first... um, I want to know what the... uh... benefits are for the gold card, because I'm comparing a few options. And then I also need to convert, um, 500 US dollars to yen because I'm buying something from Japan.",
+      "user_annotated": "Alright, so first... um, I want to know what the... uh... benefits are for the gold card, because I'm comparing a few options. And then I also need to convert, um, 500 US dollars to yen because I'm buying something from Japan.",
+      "ai": "I'll check gold card benefits and convert 500 USD to JPY."
+    }
+  ],
+  "acting_notes": "Use fillers between the two requests. Sound like you're thinking and speaking at the same time.",
+  "disfluency_features": [
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "gold"
+      }
+    },
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 500,
+        "from_currency": "USD",
+        "to_currency": "JPY"
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

@@ -1,0 +1,104 @@
+{
+  "example_id": "finance_18",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hey... um... I've been putting off dealing with my finances and now I have a bunch of things piled up. Can you help me knock them all out?",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um... so alright, so first,... um, I need to know how much 1000 US dollars would be in euros. Then I want to change my credit card autopay so it pulls from savings instead. And finally, can you tell me what kind of benefits the premium card has?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 1000,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      },
+      "timestamp_start": 0.337,
+      "timestamp_end": 0.339
+    },
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "credit_card",
+        "source_account": "savings"
+      },
+      "timestamp_start": 0.344,
+      "timestamp_end": 0.345
+    },
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "premium"
+      },
+      "timestamp_start": 0.35,
+      "timestamp_end": 0.35
+    }
+  ],
+  "transcript": "Sure — what do you need? Checking the USD to EUR rate. Here's what I found: converted amount 900.0, rate 0.9. Okay — updating that now (credit_card). Done — your autopay settings are updated. Here's what I found: premium, 2% Cashback, No Foreign Transaction Fee.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.027
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking the USD to EUR rate.",
+      "t": 0.337
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: converted amount 900.0, rate 0.9.",
+      "t": 0.344
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (credit_card).",
+      "t": 0.344
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — your autopay settings are updated.",
+      "t": 0.35
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: premium, 2% Cashback, No Foreign Transaction Fee.",
+      "t": 0.351
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 1000,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      }
+    },
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "credit_card",
+        "source_account": "savings"
+      }
+    },
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "premium"
+      }
+    }
+  ]
+}

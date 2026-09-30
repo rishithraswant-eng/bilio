@@ -1,0 +1,59 @@
+{
+  "example_id": "finance_09",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hi... um... I've been looking at exchange rates and I need to convert some money.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "I want to convert 300 US dollars to yen — actually wait... I'm mixing up my trips.... um, I meant euros, not yen. So 300 dollars to euros please.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 300,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      },
+      "timestamp_start": 0.333,
+      "timestamp_end": 0.335
+    }
+  ],
+  "transcript": "Sure — what do you need? Checking the USD to EUR rate. Here's what I found: converted amount 270.0, rate 0.9.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.019
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking the USD to EUR rate.",
+      "t": 0.333
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: converted amount 270.0, rate 0.9.",
+      "t": 0.335
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 300,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      }
+    }
+  ]
+}

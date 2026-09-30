@@ -1,6 +1,6 @@
 > **Superseded (2026-09-26):** the blockers below (no PyPI egress, Stage 1 stop, 191/191, 52/100) are out of date. pip/clone/gdown all work; `run_fdb_v3.sh` runs end to end; legacy suite 209 passed; current numbers in `results/results.md`.
 
-# TriageLine Theme 05 — Readiness Report
+# BILIO Theme 05 — Readiness Report
 
 ## AFTER FIXES (this verification pass)
 

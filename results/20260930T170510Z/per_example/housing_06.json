@@ -1,0 +1,59 @@
+{
+  "example_id": "housing_06",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hmm... um... oh... hey... I've got... um... a quick question about how walkable my neighborhood is.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Well... um... so hmm... i was wondering how long it would take to walk from Oak Street to the Gym. I'm trying to figure out if... um, I can walk there in the mornings.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "Oak Street",
+        "destination_address": "Gym",
+        "mode": "walking"
+      },
+      "timestamp_start": 0.347,
+      "timestamp_end": 0.987
+    }
+  ],
+  "transcript": "Sure — what do you need? Working out the commute from Oak Street to Gym. Here's what I found: duration mins 25, walking.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.009
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Working out the commute from Oak Street to Gym.",
+      "t": 0.347
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: duration mins 25, walking.",
+      "t": 0.987
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "Oak Street",
+        "destination_address": "Gym",
+        "mode": "walking"
+      }
+    }
+  ]
+}

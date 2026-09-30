@@ -1,0 +1,102 @@
+{
+  "example_id": "ecommerce_21",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Uh... hmm... um, hello... um... I hope you can help me because I have a few things I need done and I'm a bit disorganized today.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um... so hmm... hmm... well... could you track order B-O-B for me first? Then... um,... um, I also want to search for a nice watch under 200 dollars. And once you find something good, uh, go ahead and add it to my cart.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "BOB"
+      },
+      "timestamp_start": 0.35,
+      "timestamp_end": 0.35
+    },
+    {
+      "function": "search_products",
+      "args": {
+        "query": "watch",
+        "max_price": 200
+      },
+      "timestamp_start": 0.36,
+      "timestamp_end": 0.361
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "quantity": 1,
+        "product_id": "PROD1"
+      },
+      "timestamp_start": 0.367,
+      "timestamp_end": 0.368
+    }
+  ],
+  "transcript": "Sure — what do you need? Checking order BOB now. Here's what I found: ref BOB, Out for delivery. Searching for watch under 200. Here's what I found: ref PROD1, watch Premium, $190. Done — added 1 × PROD1 to your cart; your cart total is 99.99.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.027
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking order BOB now.",
+      "t": 0.35
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref BOB, Out for delivery.",
+      "t": 0.36
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Searching for watch under 200.",
+      "t": 0.36
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, watch Premium, $190.",
+      "t": 0.367
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — added 1 × PROD1 to your cart; your cart total is 99.99.",
+      "t": 0.368
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "BOB"
+      }
+    },
+    {
+      "function": "search_products",
+      "args": {
+        "query": "watch",
+        "max_price": 200
+      }
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "$RESULT_1.products[0].product_id",
+        "quantity": 1
+      }
+    }
+  ]
+}

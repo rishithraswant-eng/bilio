@@ -1,0 +1,48 @@
+{
+  "id": "travel_12",
+  "domain": "travel_identity",
+  "title": "Passenger Name Self-Correction",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hey... um... I need to book a flight for someone. Let me give you the details.",
+      "user_annotated": "Hey... um... I need to book a flight for someone. Let me give you the details.",
+      "ai": "Sure thing. Go ahead, I'm listening."
+    },
+    {
+      "user": "You know... we need flights to Portland on March 3rd. Book it for Robin \u2014 oh wait... I was looking at the wrong email. The ticket is actually for Morgan Smith, not Robin.",
+      "user_annotated": "You know... we need flights to Portland on March 3rd. Book it for Robin \u2014 oh wait... I was looking at the wrong email. The ticket is actually for Morgan Smith, not Robin.",
+      "ai": "I'll search for flights to Portland on March 3rd and book for Morgan Smith."
+    }
+  ],
+  "acting_notes": "Correct the passenger name quickly and clearly, as if you mixed up two requests.",
+  "disfluency_features": [
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Portland",
+        "date": "March 3"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Morgan Smith"
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "passenger_name": "Robin"
+    },
+    "corrected_param": {
+      "passenger_name": "Morgan Smith"
+    }
+  },
+  "latency_profile": "normal"
+}

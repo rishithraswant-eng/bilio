@@ -1,0 +1,33 @@
+{
+  "id": "finance_17",
+  "domain": "finance_billing",
+  "title": "False Start then Benefits Check",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hello... uh... I'm calling because... um, I need to sort out a few financial things this afternoon.",
+      "user_annotated": "Hello... uh... I'm calling because... um, I need to sort out a few financial things this afternoon.",
+      "ai": "Hello! I am ready to help. What would you like to start with?"
+    },
+    {
+      "user": "Uh... i wanted to pay my credit card bill right now, but \u2014 actually, never mind that,... um, I can do it online later. For now, could you just check what benefits come with the gold card? I'm thinking about upgrading.",
+      "user_annotated": "Uh... i wanted to pay my credit card bill right now, but \u2014 actually, never mind that,... um, I can do it online later. For now, could you just check what benefits come with the gold card? I'm thinking about upgrading.",
+      "ai": "I'll look up the benefits for the gold card for you."
+    }
+  ],
+  "acting_notes": "Start asking about payment, drop it completely, and start the new request about card benefits.",
+  "disfluency_features": [
+    "FALSE_START"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "gold"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

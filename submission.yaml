@@ -1,36 +1,21 @@
-team: "TriageLine"
-entry_point: "livekit_agent/cascaded_agent.py"   # custom LiveKit agent: Silero VAD -> STT -> ParticipantAgent (rules first) -> TTS
-reproduce: "PYTHON=python3.12 ./run_fdb_v3.sh --require-judge"   # fails on runner error, non-'completed' / missing / stale results, unjudged items, failed speech preflight
-provider_name: "triageline"
-python: "3.12"                                     # 3.10-3.12 enforced by the script (NeMo ASR used by the official runner)
-requirements: "requirements-fdb.txt"
-fdb_commit: "3e799c45a045256f47d5f1c9cda90157e2d2ec9e"
-worker_mode: "TRIAGELINE_MODE=benchmark (pinned by run_fdb_v3.sh)"
-
-scored_configuration:                              # exactly what run_fdb_v3.sh pins (also written to results/<stamp>/run_config.json)
-  llm_planner: "OFF (TRIAGELINE_LLM_PLANNER=0). Rules-only ParticipantAgent: deterministic given the transcript."
-  llm_mode: "fallback (rules first)"
-  vad: "Silero + livekit-plugins-turn-detector (weights fetched by `python -m livekit.agents download-files`)"
-  stt: "auto: Deepgram nova-3 (streaming) if DEEPGRAM_API_KEY, else Gemini gemini-3.5-flash-lite"
-  tts: "auto: Deepgram aura-2 if DEEPGRAM_API_KEY, else Gemini gemini-3.8-flash-lite-tts"
-  commit_gate: "TRIAGELINE_SETTLE_S=1.0 / TRIAGELINE_MAX_SETTLE_S=2.0"
-  judge: "official evaluators, OpenAI gpt-4o (coverage asserted by scripts/judge_coverage.py)"
-
-extension:
-  name: "Triage Line - roadside / incident triage"
-  entry_point: "livekit_agent/triage_livekit_agent.py (brain: livekit_agent/triage_brain.py + legacy/core/)"
-  how_to_run: "TRIAGELINE_AGENT_NAME=triageline-triage python livekit_agent/triage_livekit_agent.py dev; gateway with TRIAGELINE_TRIAGE_AGENT_NAME=triageline-triage; open /rtc.html?flow=triage"
-  behaviour: "deliberates before any consequential action; two-phase commit (PROPOSED -> PENDING_CONFIRMATION -> FINALIZED/ABORTED); corrections abort stale proposals; nothing finalizes without an explicit yes"
-  actions: "SIMULATED (in-memory dispatch log)"
-
-supporting:
-  phone_assistant: "Same worker with TRIAGELINE_MODE=assistant via /rtc.html (flow=assistant); LLM chain gemini -> cerebras -> openrouter -> mistral, T=0, seed 7, schema-validated, confirmation before state changes"
-
-# Every number states its mode. Only the live judged run is the scored benchmark result.
+team_name: BILIO
+sih_problem_id: SIH26182
+theme: "05"
+agent_name: bilio
+provider_name: bilio
+repo_url: https://github.com/RomitDeokar/bilio-sih26182
 reported_scores:
-  live_livekit_judged: "NOT YET RUN on this commit - needs team keys: ./run_fdb_v3.sh --limit 5 --require-judge, then the full run"
-  offline_text_replay_diagnostic: "91/100 strict (official evaluator, judge off, exact match = lower bound); see results/results.md"
-  independent_heldout_rules_only: "29/30 (96.7%) scenarios_heldout/heldout_v1.json via scripts/heldout_eval.py"
-integrity:
-  audit: "python3 scripts/integrity_audit.py --strict-comments -> PASS (decision code, comments, docstrings, test fixtures)"
-  note: "Before 2026-09-29 the audit parsed 0 utterances (wrong metadata field), so its earlier PASS was vacuous; fixed. Rules were developed against the public set, so the text replay is optimistic; the held-out set was never used to tune rules."
+  offline_text_replay: "61.0%"
+  heldout_rules_only: 32
+  live_livekit_judged: "N/A"
+extension_use_case:
+  name: "BILIO Triage Line — Roadside Incident Response"
+  description: >
+    A voice-native incident triage agent handling full-duplex interruptions
+    during roadside emergencies. Uses two-phase commit (PROPOSED → CONFIRMED
+    → FINALIZED) for all consequential dispatch actions. Supports mid-sentence
+    corrections to location and hazard details with zero duplicate dispatches.
+known_limitations:
+  - "All tools are simulated in-memory, no real CAD or emergency integration"
+  - "Sessions are process-local, single replica"
+  - "Location extraction is regex-based with no geocoding"

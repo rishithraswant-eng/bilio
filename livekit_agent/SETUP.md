@@ -1,4 +1,4 @@
-# livekit_agent — TriageLine custom LiveKit agent for FDB-v3
+# livekit_agent — BILIO custom LiveKit agent for FDB-v3
 
 > Current setup: see README §B and docs/FREE_API_KEYS.md. The notes below are historical (the agent is no longer the unmodified template; it uses ParticipantAgent, no LLM).
 

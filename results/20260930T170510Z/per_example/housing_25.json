@@ -1,0 +1,89 @@
+{
+  "example_id": "housing_25",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hmm... well... hey... uh, are you ready for a big request? I've got several things... um, I need done all at once.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "You know... you know... alright... first set the filter so pets are allowed... and set the max price to 3000. Then search for places in San Francisco — wait, actually, change the max price to 3500 instead. San Francisco is expensive so... um, I need more room in the budget.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "pets_allowed",
+        "value": true
+      },
+      "timestamp_start": 0.334,
+      "timestamp_end": 0.497
+    },
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "San Francisco",
+        "max_price": 3500
+      },
+      "timestamp_start": 0.508,
+      "timestamp_end": 1.07
+    }
+  ],
+  "transcript": "Sure — what do you need? Okay — updating that now (pets_allowed). Done — pets_allowed is now True. Looking for apartments in San Francisco under 3500. I started that search apartments, but the system also needs the bedrooms — what should I use?",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.031
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (pets_allowed).",
+      "t": 0.334
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — pets_allowed is now True.",
+      "t": 0.508
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Looking for apartments in San Francisco under 3500.",
+      "t": 0.508
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that search apartments, but the system also needs the bedrooms — what should I use?",
+      "t": 1.07
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "pets_allowed",
+        "value": true
+      }
+    },
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "max_price",
+        "value": 3500
+      }
+    },
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "San Francisco"
+      }
+    }
+  ]
+}

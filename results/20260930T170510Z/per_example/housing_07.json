@@ -1,0 +1,57 @@
+{
+  "example_id": "housing_07",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hmm... oh... oh... can you help me with a commute question?... um, I want to make sure this place works before I sign a lease.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... hmm... well... uh... so... um... I was wondering what the, like, transit time would be from Central Ave to the University. I'd be taking public transportation every day.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "mode": "driving"
+      },
+      "timestamp_start": 0.014,
+      "timestamp_end": 0.56
+    }
+  ],
+  "transcript": "Working out the commute from there to there. Got it — switching to None. I started that calculate commute, but the system also needs the origin address and destination address — what should I use?",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Working out the commute from there to there.",
+      "t": 0.014
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Got it — switching to None.",
+      "t": 0.321
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that calculate commute, but the system also needs the origin address and destination address — what should I use?",
+      "t": 0.56
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "Central Ave",
+        "destination_address": "University",
+        "mode": "transit"
+      }
+    }
+  ]
+}

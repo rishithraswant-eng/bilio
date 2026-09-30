@@ -1,0 +1,85 @@
+{
+  "example_id": "housing_10",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Oh... hi... um... I found an interesting listing and I'd like to do a couple of things to evaluate it.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um... so well... uh... like... first, could you check how long the transit commute would be from 500 Central Ave... um, to the University? And also, while you're at it, update my preferred neighborhood in the search to Northside.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "500 Central Ave",
+        "destination_address": "University",
+        "mode": "transit"
+      },
+      "timestamp_start": 0.332,
+      "timestamp_end": 0.861
+    },
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "neighborhood",
+        "value": "Northside"
+      },
+      "timestamp_start": 0.87,
+      "timestamp_end": 0.942
+    }
+  ],
+  "transcript": "Sure — what do you need? Working out the commute from 500 Central Ave to University. Here's what I found: duration mins 25, transit. Okay — updating that now (neighborhood). Done — neighborhood is now Northside.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.019
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Working out the commute from 500 Central Ave to University.",
+      "t": 0.332
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: duration mins 25, transit.",
+      "t": 0.87
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (neighborhood).",
+      "t": 0.87
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — neighborhood is now Northside.",
+      "t": 0.943
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "500 Central Ave",
+        "destination_address": "University",
+        "mode": "transit"
+      }
+    },
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "neighborhood",
+        "value": "Northside"
+      }
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "example_id": "finance_07",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Well... hello? Can you hear me? I need some help with my account.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Uh... i was going... um, to ask about my account balance but — never mind, I'll check online later. For now, could you change the mortgage autopay so it pulls from my savings account?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "savings"
+      },
+      "timestamp_start": 0.39,
+      "timestamp_end": 0.392
+    }
+  ],
+  "transcript": "Sure — what do you need? Okay — updating that now (mortgage). Done — your autopay settings are updated.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.038
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (mortgage).",
+      "t": 0.389
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — your autopay settings are updated.",
+      "t": 0.393
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "savings"
+      }
+    }
+  ]
+}

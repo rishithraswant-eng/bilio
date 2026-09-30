@@ -1,0 +1,39 @@
+{
+  "id": "ecommerce_20",
+  "domain": "ecommerce_support",
+  "title": "Conditional Logic: Price Check then Cart",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Well, uh... well... hey... I'm trying to be smart about my spending so... um, I have a conditional request for you.",
+      "user_annotated": "Well, uh... well... hey... I'm trying to be smart about my spending so... um, I have a conditional request for you.",
+      "ai": "Hi! I can handle that. Tell me your plan."
+    },
+    {
+      "user": "Uh... like, you know... um... so search for a coffee maker first. If you find one that's under 50 dollars, go ahead and add 2... um, to the cart because they'd make great gifts. But if everything's over 50, just forget the coffee maker and track order W-W-W for me instead.",
+      "user_annotated": "Uh... like, you know... um... so search for a coffee maker first. If you find one that's under 50 dollars, go ahead and add 2... um, to the cart because they'd make great gifts. But if everything's over 50, just forget the coffee maker and track order W-W-W for me instead.",
+      "ai": "I will check the price and take the right action."
+    }
+  ],
+  "acting_notes": "Speak clearly so the conditional is easy to understand.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "coffee maker"
+      }
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "$RESULT_0.products[0].product_id",
+        "quantity": 2
+      },
+      "note": "Only if price < 50, otherwise track order WWW"
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "slow"
+}

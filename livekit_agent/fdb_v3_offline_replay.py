@@ -196,7 +196,7 @@ def main():
     ap.add_argument("--interactive", action="store_true", help="key-free text console, no dataset needed")
     ap.add_argument("--say", action="append", help="run a text request with bundled tools; repeat for follow-ups")
     ap.add_argument("--data", default=str(ROOT / "livekit_agent" / "fdb_v3_data_released"))
-    ap.add_argument("--provider", default="triageline")
+    ap.add_argument("--provider", default="bilio")
     ap.add_argument("--limit", type=int, default=0)
     ap.add_argument("--only", default="")
     ap.add_argument("--text", action="store_true",
@@ -204,8 +204,8 @@ def main():
     a = ap.parse_args()
     global TEXT_MODE
     TEXT_MODE = a.text
-    if a.text and a.provider == "triageline":
-        a.provider = "triageline_text"
+    if a.text and a.provider == "bilio":
+        a.provider = "bilio_text"
     # Explicit offline means no hosted planner even if keys are exported in the shell.
     os.environ["TRIAGELINE_LLM_PLANNER"] = "0"
     if a.interactive or a.say:

@@ -1,0 +1,45 @@
+{
+  "id": "finance_19",
+  "domain": "finance_billing",
+  "title": "Double Self-Correction in Exchange",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Hey,... um... I keep going back and forth on this conversion, so I apologize in advance if I change my mind.",
+      "user_annotated": "Hey,... um... I keep going back and forth on this conversion, so I apologize in advance if I change my mind.",
+      "ai": "No worries at all! Take your time and I'll adjust as we go."
+    },
+    {
+      "user": "Okay so... um... I want to convert 200 euros to yen \u2014 no wait, I just remembered I need British pounds, not yen. And actually, let me change the amount too, make it 300 euros instead of 200.",
+      "user_annotated": "Okay so... um... I want to convert 200 euros to yen \u2014 no wait, I just remembered I need British pounds, not yen. And actually, let me change the amount too, make it 300 euros instead of 200.",
+      "ai": "I'll convert 300 EUR to GBP for you."
+    }
+  ],
+  "acting_notes": "Make two corrections: first the target currency, then the amount. Sound natural, like you're updating in real-time.",
+  "disfluency_features": [
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 300,
+        "from_currency": "EUR",
+        "to_currency": "GBP"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "amount": 200,
+      "to_currency": "JPY"
+    },
+    "corrected_param": {
+      "amount": 300,
+      "to_currency": "GBP"
+    }
+  },
+  "latency_profile": "normal"
+}

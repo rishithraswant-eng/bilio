@@ -1,0 +1,34 @@
+{
+  "id": "ecommerce_15",
+  "domain": "ecommerce_support",
+  "title": "Order Track with Pause and Filler",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Uh... uh, uh... hey... well, sorry to bother you.... um, I have a question about a delivery.",
+      "user_annotated": "Uh... uh, uh... hey... well, sorry to bother you.... um, I have a question about a delivery.",
+      "ai": "No bother at all! What do you need?"
+    },
+    {
+      "user": "Uh... um, so well... can you, uh, track order B-O-B-1-2 for me?... um, I ordered it a few days ago and it should be arriving... soon, but I just want to make sure.",
+      "user_annotated": "Uh... um, so well... can you, uh, track order B-O-B-1-2 for me?... um, I ordered it a few days ago and it should be arriving... soon, but I just want to make sure.",
+      "ai": "I'll track order BOB12 for you right away."
+    }
+  ],
+  "acting_notes": "Use a filler before 'track' and pause before 'soon'.",
+  "disfluency_features": [
+    "FILLER",
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "BOB12"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

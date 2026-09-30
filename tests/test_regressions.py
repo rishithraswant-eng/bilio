@@ -371,7 +371,8 @@ def test_b23_low_confidence_label_not_used(monkeypatch):
             await r.settle(0.1)
             await r.say("What is this port used for?")
             await r.settle(0.1)
-            assert "hdmi" not in r.calls("lookup_manual")[0]["args"]["query"].lower()
+            calls = r.calls("lookup_manual")
+            assert len(calls) == 0
     run(go())
 
 

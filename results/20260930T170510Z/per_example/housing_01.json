@@ -1,0 +1,72 @@
+{
+  "example_id": "housing_01",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Oh, hey... oh... I'm looking for a new place... um...... um, to live and could really use some help narrowing things down.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "You know... hmm... uh... i'm trying... um...... um... to find a 2-bedroom apartment in Seattle, and I'd like to keep the rent under 2500 a month if possible. Could you see what's available?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "place to live"
+      },
+      "timestamp_start": 0.02,
+      "timestamp_end": 0.021
+    },
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Seattle",
+        "bedrooms": 2,
+        "max_price": 2500
+      },
+      "timestamp_start": 0.354,
+      "timestamp_end": 1.089
+    }
+  ],
+  "transcript": "Searching for place to live. Here's what I found: ref PROD1, place to live Premium, $99.99. Looking for 2-bedroom apartments in Seattle under 2500. Here's what I found for Seattle: Seattle, ref APT1, $2400, beds 2.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Searching for place to live.",
+      "t": 0.02
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, place to live Premium, $99.99.",
+      "t": 0.021
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Looking for 2-bedroom apartments in Seattle under 2500.",
+      "t": 0.354
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found for Seattle: Seattle, ref APT1, $2400, beds 2.",
+      "t": 1.09
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Seattle",
+        "bedrooms": 2,
+        "max_price": 2500
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "id": "housing_06",
+  "domain": "housing_location",
+  "title": "Walking Commute Check",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hmm... um... oh... hey... I've got... um... a quick question about how walkable my neighborhood is.",
+      "user_annotated": "Hmm... um... oh... hey... I've got... um... a quick question about how walkable my neighborhood is.",
+      "ai": "Sure! Walking distance is important. What do you want to check?"
+    },
+    {
+      "user": "Well... um... so hmm... i was wondering how long it would take to walk from Oak Street to the Gym. I'm trying to figure out if... um, I can walk there in the mornings.",
+      "user_annotated": "Well... um... so hmm... i was wondering how long it would take to walk from Oak Street to the Gym. I'm trying to figure out if... um, I can walk there in the mornings.",
+      "ai": "I'll check the walking commute from Oak Street to the Gym."
+    }
+  ],
+  "acting_notes": "Simple and direct.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "Oak Street",
+        "destination_address": "Gym",
+        "mode": "walking"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

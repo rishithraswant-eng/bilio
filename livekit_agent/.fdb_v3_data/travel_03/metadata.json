@@ -1,0 +1,34 @@
+{
+  "id": "travel_03",
+  "domain": "travel_identity",
+  "title": "Flight Search with Fillers",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hello? Is this... um, the travel booking service?",
+      "user_annotated": "Hello? Is this... um, the travel booking service?",
+      "ai": "Hi there! Yes it is. What can I do for you?"
+    },
+    {
+      "user": "Well... um, I've been looking at flights and... um, I was wondering if you could, like, check what's available to London around August 20th for me?",
+      "user_annotated": "Well... um, I've been looking at flights and... um, I was wondering if you could, like, check what's available to London around August 20th for me?",
+      "ai": "I'll search for flights to London on August 20th for you."
+    }
+  ],
+  "acting_notes": "Use 'um' and 'like' naturally, as if slightly unsure.",
+  "disfluency_features": [
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "London",
+        "date": "August 20"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

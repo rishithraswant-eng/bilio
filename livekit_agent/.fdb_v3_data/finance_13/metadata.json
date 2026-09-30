@@ -1,0 +1,42 @@
+{
+  "id": "finance_13",
+  "domain": "finance_billing",
+  "title": "Hesitation with Account Choice",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hi... um... I need to reorganize which accounts my bills are pulling from. It's gotten kind of messy.",
+      "user_annotated": "Hi... um... I need to reorganize which accounts my bills are pulling from. It's gotten kind of messy.",
+      "ai": "Hi! I can help you sort that out. What changes do you need?"
+    },
+    {
+      "user": "Uh... i want to set my credit card bill to pay from... uh... savings, that makes more sense. And then my mortgage should pull from checking instead.",
+      "user_annotated": "Uh... i want to set my credit card bill to pay from... uh... savings, that makes more sense. And then my mortgage should pull from checking instead.",
+      "ai": "I'll update the credit card to pull from savings, and the mortgage to pull from checking."
+    }
+  ],
+  "acting_notes": "Hesitate as if thinking about which account makes sense for each bill.",
+  "disfluency_features": [
+    "HESITATION",
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "credit_card",
+        "source_account": "savings"
+      }
+    },
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "checking"
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

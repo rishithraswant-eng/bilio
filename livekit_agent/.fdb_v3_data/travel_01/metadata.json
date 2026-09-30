@@ -1,0 +1,32 @@
+{
+  "id": "travel_01",
+  "domain": "travel_identity",
+  "title": "Simple Flight Search",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hey... oh,... um, I need some help planning a trip I've been thinking about.",
+      "user_annotated": "Hey... oh,... um, I need some help planning a trip I've been thinking about.",
+      "ai": "Of course! I'd love to help. Where are you headed?"
+    },
+    {
+      "user": "Well... i'm trying to go to Tokyo, and I was thinking about leaving around July 15th. Could you look up what flights are available for that day?",
+      "user_annotated": "Well... i'm trying to go to Tokyo, and I was thinking about leaving around July 15th. Could you look up what flights are available for that day?",
+      "ai": "I'll search for flights to Tokyo on July 15th right away."
+    }
+  ],
+  "acting_notes": "Friendly, casual tone. Speak naturally as if chatting with a friend.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Tokyo",
+        "date": "July 15"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "ecommerce_21",
+  "domain": "ecommerce_support",
+  "title": "Hesitant Tracking Chain",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Uh... hmm... um, hello... um... I hope you can help me because I have a few things I need done and I'm a bit disorganized today.",
+      "user_annotated": "Uh... hmm... um, hello... um... I hope you can help me because I have a few things I need done and I'm a bit disorganized today.",
+      "ai": "I'm here to help! Go ahead and tell me everything."
+    },
+    {
+      "user": "Um... so hmm... hmm... well... could you track order B-O-B for me first? Then... um,... um, I also want to search for a nice watch under 200 dollars. And once you find something good, uh, go ahead and add it to my cart.",
+      "user_annotated": "Um... so hmm... hmm... well... could you track order B-O-B for me first? Then... um,... um, I also want to search for a nice watch under 200 dollars. And once you find something good, uh, go ahead and add it to my cart.",
+      "ai": "Tracking the order, searching for a watch, and adding it to the cart."
+    }
+  ],
+  "acting_notes": "Use fillers between requests. Sound like you're thinking of each step in real time.",
+  "disfluency_features": [
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "BOB"
+      }
+    },
+    {
+      "function": "search_products",
+      "args": {
+        "query": "watch",
+        "max_price": 200
+      }
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "$RESULT_1.products[0].product_id",
+        "quantity": 1
+      }
+    }
+  ],
+  "num_expected_calls": 3,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

@@ -1,0 +1,57 @@
+{
+  "example_id": "travel_19",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hey... hmm... let's plan something fun.... um... I keep going back and forth on the details so bear with me.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... okay so, I want to look at flights to Rome — no wait, I changed my mind, let's do Milan instead. And I was thinking June 1st, but actually, June 3rd works better for me.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Milan",
+        "date": "June 3"
+      },
+      "timestamp_start": 0.329,
+      "timestamp_end": 1.05
+    }
+  ],
+  "transcript": "Sure — what do you need? Sure, checking flights to Milan for June 3. I found a flight to Milan: FL123 departing June 3 for $450.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.062
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to Milan for June 3.",
+      "t": 0.329
+    },
+    {
+      "kind": "final_response",
+      "text": "I found a flight to Milan: FL123 departing June 3 for $450.",
+      "t": 1.051
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Milan",
+        "date": "June 3"
+      }
+    }
+  ]
+}

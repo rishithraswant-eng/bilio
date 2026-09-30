@@ -1,0 +1,83 @@
+{
+  "example_id": "finance_10",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Well... hi there, I've got... um, a couple of questions about my finances that I'm hoping you can help with.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "First off... could you tell me what the benefits are for the travel card? I'm considering applying. And then separately,... um, I also need to know how much 200 British pounds would be in Japanese yen.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "travel"
+      },
+      "timestamp_start": 0.319,
+      "timestamp_end": 0.321
+    },
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 200,
+        "from_currency": "GBP",
+        "to_currency": "JPY"
+      },
+      "timestamp_start": 0.326,
+      "timestamp_end": 0.327
+    }
+  ],
+  "transcript": "Sure — what do you need? Looking up your travel card benefits. Here's what I found: travel, 2% Cashback, No Foreign Transaction Fee. Checking the GBP to JPY rate. Here's what I found: converted amount 180.0, rate 0.9.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.011
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Looking up your travel card benefits.",
+      "t": 0.319
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: travel, 2% Cashback, No Foreign Transaction Fee.",
+      "t": 0.326
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking the GBP to JPY rate.",
+      "t": 0.326
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: converted amount 180.0, rate 0.9.",
+      "t": 0.327
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "travel"
+      }
+    },
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 200,
+        "from_currency": "GBP",
+        "to_currency": "JPY"
+      }
+    }
+  ]
+}

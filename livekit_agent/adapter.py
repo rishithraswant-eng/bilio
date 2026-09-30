@@ -1,5 +1,5 @@
 """livekit_agent/adapter.py — thin translation layer between LiveKit Agents and
-TriageLine's existing `agent.agent.ParticipantAgent`.
+BILIO's existing `agent.agent.ParticipantAgent`.
 
 This file contains NO interruption *classification* or dedup logic of its own.
 It does own the transport-level concurrency: tool calls run as independent
@@ -59,7 +59,7 @@ from typing import Any, Awaitable, Callable, Dict, Optional
 
 from agent.agent import ParticipantAgent
 
-log = logging.getLogger("triageline.livekit_adapter")
+log = logging.getLogger("bilio.livekit_adapter")
 
 ToolExecutor = Callable[[str, str, Dict[str, Any]], Awaitable[None]]
 # (call_id, api_name, args) -> None; executor is responsible for eventually

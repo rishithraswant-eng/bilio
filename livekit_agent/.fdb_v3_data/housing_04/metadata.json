@@ -1,0 +1,34 @@
+{
+  "id": "housing_04",
+  "domain": "housing_location",
+  "title": "Apartment Search with Pause",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hmm... uh... hey... oh...... um... I just started apartment hunting in Denver and I need help finding options.",
+      "user_annotated": "Hmm... uh... hey... oh...... um... I just started apartment hunting in Denver and I need help finding options.",
+      "ai": "Sure! Denver has great options. What are you looking for?"
+    },
+    {
+      "user": "Well... hmm... uh, you know... i'm looking for an apartment in Denver that has... 1 bedroom. I'm living alone so... um, I don't need anything too big.",
+      "user_annotated": "Well... hmm... uh, you know... i'm looking for an apartment in Denver that has... 1 bedroom. I'm living alone so... um, I don't need anything too big.",
+      "ai": "Searching for 1-bedroom apartments in Denver for you."
+    }
+  ],
+  "acting_notes": "Pause naturally to think about how many bedrooms.",
+  "disfluency_features": [
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Denver",
+        "bedrooms": 1
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

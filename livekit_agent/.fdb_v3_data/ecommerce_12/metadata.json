@@ -1,0 +1,35 @@
+{
+  "id": "ecommerce_12",
+  "domain": "ecommerce_support",
+  "title": "Hesitation with Category",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Well... oh, hey... um, I'm looking for a gift for my friend's birthday and I'm not totally sure what... um, to get.",
+      "user_annotated": "Well... oh, hey... um, I'm looking for a gift for my friend's birthday and I'm not totally sure what... um, to get.",
+      "ai": "Great! What kind of gift are you thinking about?"
+    },
+    {
+      "user": "Like... you know... uh... i'm thinking something in the... let me think... electronics section would be great. He's really into gadgets and tech stuff.",
+      "user_annotated": "Like... you know... uh... i'm thinking something in the... let me think... electronics section would be great. He's really into gadgets and tech stuff.",
+      "ai": "I will search the electronics section for gift ideas."
+    }
+  ],
+  "acting_notes": "Hesitate while deciding on the category.",
+  "disfluency_features": [
+    "HESITATION",
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "gift",
+        "category": "electronics"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

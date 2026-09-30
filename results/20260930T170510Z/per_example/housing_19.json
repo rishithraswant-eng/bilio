@@ -1,0 +1,57 @@
+{
+  "example_id": "housing_19",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Uh... hey,... um... I need to check a commute route but I keep changing my mind about where I'd be going.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Well... uh... calculate the transit time to the office — wait, no,... um, I wouldn't be going to the office, I'd be going to the gym. And actually, now that I think about it, I'd drive there, not take transit. So make it driving to the gym from my house.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "mode": "driving"
+      },
+      "timestamp_start": 0.017,
+      "timestamp_end": 0.325
+    }
+  ],
+  "transcript": "Working out the commute from there to there. Okay — still on it. I started that calculate commute, but the system also needs the origin address and destination address — what should I use?",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Working out the commute from there to there.",
+      "t": 0.017
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — still on it.",
+      "t": 0.324
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that calculate commute, but the system also needs the origin address and destination address — what should I use?",
+      "t": 0.325
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "my house",
+        "destination_address": "the gym",
+        "mode": "driving"
+      }
+    }
+  ]
+}

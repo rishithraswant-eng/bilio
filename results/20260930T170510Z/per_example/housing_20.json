@@ -1,0 +1,78 @@
+{
+  "example_id": "housing_20",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Um... hello... oh... I'm trying... um... to make a smart decision about where to live, and it depends on the commute.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Uh... hmm... you know... um... so here's what I'm thinking. Search for places in Austin under 2000. Then check the commute to my office. If it's under 15 minutes, that's perfect. But if it's longer, then raise my budget to 2500 so... um, I can look at places closer to work.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "destination_address": "work",
+        "mode": "driving"
+      },
+      "timestamp_start": 0.352,
+      "timestamp_end": 0.712
+    }
+  ],
+  "transcript": "Working out the commute from there to live. Got it — switching to work. Got it — switching to Austin. I started that calculate commute, but the system also needs the origin address — what should I use?",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Working out the commute from there to live.",
+      "t": 0.048
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Got it — switching to work.",
+      "t": 0.352
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Got it — switching to Austin.",
+      "t": 0.352
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that calculate commute, but the system also needs the origin address — what should I use?",
+      "t": 0.713
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Austin",
+        "max_price": 2000
+      }
+    },
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "$RESULT_0.apartments[0].address",
+        "destination_address": "my office",
+        "mode": "driving"
+      }
+    },
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "max_price",
+        "value": 2500
+      },
+      "note": "Only if commute > 15 min"
+    }
+  ]
+}

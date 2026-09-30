@@ -1,0 +1,60 @@
+{
+  "example_id": "ecommerce_09",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Oh... hi... um... I need to find something for an outdoor trip I've got coming up.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Like... well... hmm... could you search for running shoes — actually no...... um, I just remembered I already have running shoes. Search for hiking boots instead, that's what I actually need.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "hiking boots"
+      },
+      "timestamp_start": 0.408,
+      "timestamp_end": 0.422
+    }
+  ],
+  "transcript": "Sure, checking flights to None for today. Sure, dropping that — switching to your products request. Searching for hiking boots. Here's what I found: ref PROD1, hiking boots Premium, $99.99.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to None for today.",
+      "t": 0.014
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, dropping that — switching to your products request.",
+      "t": 0.407
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Searching for hiking boots.",
+      "t": 0.407
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, hiking boots Premium, $99.99.",
+      "t": 0.423
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "hiking boots"
+      }
+    }
+  ]
+}

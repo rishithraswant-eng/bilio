@@ -1,0 +1,45 @@
+{
+  "id": "travel_24",
+  "domain": "travel_identity",
+  "title": "Unsupported Tool Request (Hotel)",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Um... good morning! I'm trying... um, to plan out every detail of my upcoming trip, so I've got a long list.",
+      "user_annotated": "Um... good morning! I'm trying... um, to plan out every detail of my upcoming trip, so I've got a long list.",
+      "ai": "Good morning! I'm happy to help. Let's go through your list one by one."
+    },
+    {
+      "user": "Well, great, so first... um, I need to find a flight to Vancouver on November 5th and book it under the name Skyler. Then I was also hoping you could find me a hotel near the airport for a couple of nights. And finally, I need to update my visa number to V-4-4.",
+      "user_annotated": "Well, great, so first... um, I need to find a flight to Vancouver on November 5th and book it under the name Skyler. Then I was also hoping you could find me a hotel near the airport for a couple of nights. And finally, I need to update my visa number to V-4-4.",
+      "ai": "I will book the flight for Skyler and update your visa. Unfortunately, I'm not able to search for hotels at the moment."
+    }
+  ],
+  "acting_notes": "Include the hotel request naturally in the flow. The system should handle it gracefully.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Vancouver",
+        "date": "November 5"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Skyler"
+      }
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "visa",
+        "doc_number": "V44"
+      }
+    }
+  ],
+  "num_expected_calls": 3,
+  "state_rollback_test": false,
+  "latency_profile": "slow"
+}

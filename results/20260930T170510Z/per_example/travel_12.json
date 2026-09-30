@@ -1,0 +1,77 @@
+{
+  "example_id": "travel_12",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hey... um... I need to book a flight for someone. Let me give you the details.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "You know... we need flights to Portland on March 3rd. Book it for Robin — oh wait... I was looking at the wrong email. The ticket is actually for Morgan Smith, not Robin.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Portland",
+        "date": "March 3"
+      },
+      "timestamp_start": 0.328,
+      "timestamp_end": 0.95
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "flight_id": "FL123",
+        "passenger_name": "Morgan Smith"
+      },
+      "timestamp_start": 0.95,
+      "timestamp_end": 0.951
+    }
+  ],
+  "transcript": "On it — finding flights to None for today first. Got it — switching to Portland. Found FL123 at March 3 for $450 — booking it for Morgan Smith now. Done — you're booked on FL123 to Portland for Morgan Smith. Booking reference B789.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "On it — finding flights to None for today first.",
+      "t": 0.014
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Got it — switching to Portland.",
+      "t": 0.328
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Found FL123 at March 3 for $450 — booking it for Morgan Smith now.",
+      "t": 0.95
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — you're booked on FL123 to Portland for Morgan Smith. Booking reference B789.",
+      "t": 0.951
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Portland",
+        "date": "March 3"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Morgan Smith"
+      }
+    }
+  ]
+}

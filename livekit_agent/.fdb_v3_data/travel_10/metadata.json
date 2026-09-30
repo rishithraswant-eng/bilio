@@ -1,0 +1,43 @@
+{
+  "id": "travel_10",
+  "domain": "travel_identity",
+  "title": "Date Correction with Fillers",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Good afternoon... I'm trying... um, to plan a quick getaway to Miami.",
+      "user_annotated": "Good afternoon... I'm trying... um, to plan a quick getaway to Miami.",
+      "ai": "Good afternoon! That sounds lovely. When are you thinking?"
+    },
+    {
+      "user": "Um, so um, I was looking at flights to Miami on October 5th \u2014 wait, uh, my schedule just changed. My meeting got moved, so actually make it October 7th instead.",
+      "user_annotated": "Um, so um, I was looking at flights to Miami on October 5th \u2014 wait, uh, my schedule just changed. My meeting got moved, so actually make it October 7th instead.",
+      "ai": "Got it, searching for flights to Miami on October 7th."
+    }
+  ],
+  "acting_notes": "Use fillers naturally and correct the date from 5th to 7th.",
+  "disfluency_features": [
+    "FILLER",
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Miami",
+        "date": "October 7"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "date": "October 5"
+    },
+    "corrected_param": {
+      "date": "October 7"
+    }
+  },
+  "latency_profile": "normal"
+}

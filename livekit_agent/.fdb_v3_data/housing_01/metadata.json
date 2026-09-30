@@ -1,0 +1,33 @@
+{
+  "id": "housing_01",
+  "domain": "housing_location",
+  "title": "Simple Apartment Search",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Oh, hey... oh... I'm looking for a new place... um...... um, to live and could really use some help narrowing things down.",
+      "user_annotated": "Oh, hey... oh... I'm looking for a new place... um...... um, to live and could really use some help narrowing things down.",
+      "ai": "Great! I'd be happy to help you find something. What are you looking for?"
+    },
+    {
+      "user": "You know... hmm... uh... i'm trying... um...... um... to find a 2-bedroom apartment in Seattle, and I'd like to keep the rent under 2500 a month if possible. Could you see what's available?",
+      "user_annotated": "You know... hmm... uh... i'm trying... um...... um... to find a 2-bedroom apartment in Seattle, and I'd like to keep the rent under 2500 a month if possible. Could you see what's available?",
+      "ai": "I'll search for 2-bedroom apartments in Seattle under $2500 right away."
+    }
+  ],
+  "acting_notes": "Friendly, casual tone.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Seattle",
+        "bedrooms": 2,
+        "max_price": 2500
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "ecommerce_14",
+  "domain": "ecommerce_support",
+  "title": "Filler-Heavy Cart Addition",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Uh... hmm... well... uh... hello there,... um, I found a couple of things I want to buy on your website.",
+      "user_annotated": "Uh... hmm... well... uh... hello there,... um, I found a couple of things I want to buy on your website.",
+      "ai": "Hello! What can I help you add?"
+    },
+    {
+      "user": "Hmm... well... um... so uh, yeah, so... um, I already found what I want. Can you add, like, 2 of item P-5-2 to my cart? I want to get one for myself and one as a gift.",
+      "user_annotated": "Hmm... well... um... so uh, yeah, so... um, I already found what I want. Can you add, like, 2 of item P-5-2 to my cart? I want to get one for myself and one as a gift.",
+      "ai": "I'll add 2 units of P52 to the cart."
+    }
+  ],
+  "acting_notes": "Speak casually with fillers.",
+  "disfluency_features": [
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "P52",
+        "quantity": 2
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

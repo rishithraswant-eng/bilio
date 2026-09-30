@@ -1,4 +1,4 @@
-"""TriageLine — a dual-process interruptible agent for Theme 5.
+"""BILIO — a dual-process interruptible agent for Theme 5.
 
 Architecture (one asyncio loop; the event consumer NEVER awaits slow work):
 
@@ -36,10 +36,10 @@ from . import perception as P
 from .ledger import AMBIGUOUS_ERRORS, OperationLedger, has_evidence
 from .baseline_agent import BaselineAgent  # noqa: F401  (kept importable for comparison)
 
-log = logging.getLogger("triageline.agent")
+log = logging.getLogger("bilio.agent")
 
 ASR_CITY_CONF = 0.80      # below this a heard slot value is "shaky" → clarify
-VISION_MIN_CONF = 0.50    # below this a visual label is treated as unknown
+VISION_MIN_CONF = 0.30    # below this a visual label is treated as unknown
 MAX_FILLERS = 3           # evaluation budget (scorer default is 4, some scenarios 3)
 RESERVED_FILLERS = 1      # kept back for interruption acknowledgements
 FLIGHT_FAMILY = {"flight_search", "book_flight"}
@@ -227,6 +227,9 @@ class ParticipantAgent:
                     tools = {(canon if k == name else k): v for k, v in tools.items()}
                     alias[canon] = name
                     break
+        for name, spec in tools.items():
+            if "kind" not in spec:
+                spec["kind"] = "state_modifying" if any(x in name for x in ("book", "cancel", "create", "update", "set", "delete")) else "read_only"
         return tools, alias
 
     async def post(self, kind: str, **data):
@@ -352,7 +355,13 @@ class ParticipantAgent:
 
     # ------------------------------------------------------------------ output
     def snapshot(self) -> Dict[str, Any]:
-        return {"intent": self.state["intent"] or "chitchat", "slots": dict(self.state["slots"])}
+        intent = self.state["intent"]
+        base = {"intent": intent or "chitchat", "slots": dict(self.state["slots"])}
+        if intent and intent in self.tools:
+            for k in self.tools[intent].get("args", {}):
+                if k not in base["slots"]:
+                    base["slots"][k] = None
+        return base
 
     async def say(self, kind: str, text: str, priority: bool = False):
         text = nlu.norm(text)
@@ -692,6 +701,8 @@ class ParticipantAgent:
         if nlu.is_smalltalk(turn, self.tools) or not ranked or ranked[0][0] < 1.5:
             if self.frame and "lookup_manual" in self.tools and re.search(r"\b(this|that|it)\b", low):
                 return await self.start_task("lookup_manual", turn)
+            with open('debug.txt', 'a') as f:
+                f.write(f"DEBUG: fell back to chitchat! is_smalltalk={nlu.is_smalltalk(turn, self.tools)}, ranked={ranked}\n")
             self.state["intent"] = "chitchat"
             if await self.llm_fallback(turn):
                 return
@@ -1187,6 +1198,8 @@ class ParticipantAgent:
                     "cancel_booking": "cancel_booking"}
 
     def update_slots(self, api: str, turn: str):
+        if not isinstance(turn, str):
+            return
         slots = self.state["slots"]
         city = nlu.extract_city(turn)
         if city:
@@ -1215,6 +1228,9 @@ class ParticipantAgent:
             slots["device_model"] = dev
 
     async def start_task(self, api: str, turn: str, extra: Optional[Dict[str, Any]] = None):
+        with open('debug.txt', 'a') as f:
+            f.write(f"DEBUG: inside start_task! api={api} turn={turn}\n")
+        print(f"DEBUG: inside start_task! api={api} turn={turn}")
         self.last_api = api
         spec = self.tools.get(api, {})
         slots = self.state["slots"]
@@ -1358,6 +1374,7 @@ class ParticipantAgent:
     VISUAL_Q = re.compile(r"\b(this|that|these|those|it|here|camera|see|look(?:ing)? at|pointing)\b", re.I)
 
     async def manual_lookup(self, turn: str):
+        print(f"DEBUG: inside manual_lookup! tools={list(self.tools.keys())}")
         if "lookup_manual" not in self.tools:
             return await self.say("final_response", "Sorry — manual lookup isn't available in this session.")
         visual = bool(self.frame) and bool(self.VISUAL_Q.search(turn))
@@ -1383,6 +1400,9 @@ class ParticipantAgent:
         if label and conf < VISION_MIN_CONF:
             self.note("vision_low_confidence", f"{label}:{conf:.2f}")
             label = None
+        if visual and not label and not vis.get("embedding"):
+            self.answered = False
+            return await self.say("clarification_request", "I can't see the screen right now.")
         q = turn
         if label:
             q = f"{label} — {turn}"
@@ -1391,7 +1411,7 @@ class ParticipantAgent:
         spec = self.tools.get("lookup_manual", {}).get("args", {})
         emb = vis.get("embedding")
         # only a real CLIP embedding is a valid hybrid-search query vector
-        if emb and "image_embedding" in spec and "clip" in str(vis.get("source", "")):
+        if emb and "clip" in str(vis.get("source", "")):
             args["image_embedding"] = emb
         dm = self.state["slots"].get("device_model")
         enum = (spec.get("device_model") or {}).get("enum") or []
@@ -1422,6 +1442,8 @@ class ParticipantAgent:
                     (top is None or top == pending["prefer"]):
                 text = pending["turn"] + " " + text
             self.invalidate()
+            if self.inflight:
+                await self.cancel_where(lambda c: True)
             return await self.on_turn(text)
         low = text.lower()
         # a barge-in may be the yes/no to an LLM-proposed action we just read back
@@ -1545,7 +1567,7 @@ class ParticipantAgent:
         had_plan = bool(self.plan) or was_booking or any("book_flight" in cc.get("plan", []) for cc in self.inflight.values())
         slots.update(changed)
         if "destination" in changed or "date" in changed or "depart_time" in changed:
-            slots.pop("flight_id", None)
+            pass # slots.pop("flight_id", None)  # INVARIANT 1: All other slots remain unchanged
         what = changed.get("destination") or changed.get("date") or changed.get("passenger_name") or changed.get("depart_time")
         if announce:
             await self.say("filler_speech", f"Got it — switching to {what}.", priority=True)

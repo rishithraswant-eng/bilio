@@ -1,0 +1,41 @@
+{
+  "id": "finance_22",
+  "domain": "finance_billing",
+  "title": "Heavy Fillers + Dual Autopay",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Oh, um, hey. I just looked at my bank statements and I think my autopay settings are all messed up.",
+      "user_annotated": "Oh, um, hey. I just looked at my bank statements and I think my autopay settings are all messed up.",
+      "ai": "Hi! Let's fix that. What changes do you need?"
+    },
+    {
+      "user": "Well... like, first... um, I want to change my mortgage autopay so it pulls from, uh, savings \u2014 that's the right account for that. And then, um, I also want to set my credit card payment to come from checking.",
+      "user_annotated": "Well... like, first... um, I want to change my mortgage autopay so it pulls from, uh, savings \u2014 that's the right account for that. And then, um, I also want to set my credit card payment to come from checking.",
+      "ai": "I'll update your mortgage to pull from savings and your credit card to pull from checking."
+    }
+  ],
+  "acting_notes": "Use lots of filler words. Sound casual and a bit scattered, like you're sorting through it in your head.",
+  "disfluency_features": [
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "savings"
+      }
+    },
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "credit_card",
+        "source_account": "checking"
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

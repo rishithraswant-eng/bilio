@@ -1,4 +1,4 @@
-# TriageLine — Theme 05: Interruptible Real-Time Agents
+# BILIO — Theme 05: Interruptible Real-Time Agents
 
 A voice-native agent that keeps responding while it works, drops stale work the moment the user
 corrects themselves, and never duplicates or silently loses a state change. It is scored on
@@ -63,7 +63,7 @@ The run **fails loudly**, never scores a partial run, when any of these happen:
 - the judge is unreachable under `--require-judge`
 - any single argument/response check fell back to exact match (`scripts/judge_coverage.py`)
 
-It deletes this provider's earlier `result_triageline.json` / audio in the data dir before inference, so an old
+It deletes this provider's earlier `result_bilio.json` / audio in the data dir before inference, so an old
 result can never be scored. Keep them with `KEEP_OLD_RESULTS=1` (without `--force`).
 
 `./run_fdb_v3.sh --offline-text` runs without keys: official transcripts → the same adapter/agent → the official
@@ -80,7 +80,7 @@ evaluators. It is a diagnostic only.
 | TTS | `auto`: **Deepgram `aura-2`** if keyed, else Gemini `gemini-3.8-flash-lite-tts` | hosted |
 | Judge | official evaluators, OpenAI `gpt-4o` | hosted |
 
-Provider name `triageline` → `result_triageline.json`. Gemini model names change often: the speech preflight
+Provider name `bilio` → `result_bilio.json`. Gemini model names change often: the speech preflight
 catches a wrong name before inference. Override with `TRIAGELINE_STT_MODEL` / `TRIAGELINE_TTS_MODEL`
 (e.g. `gemini-2.5-flash` on older projects). One free Gemini key serving both STT and TTS for 100 recordings may
 hit rate limits, so prefer Deepgram ($200 signup credit) for the scored run.
@@ -121,8 +121,8 @@ shell as the benchmark worker. **All actions are simulated** (in-memory dispatch
 python3 livekit_agent/adapter_tests/test_4_triage_line_interruption.py   # correction aborts + re-deliberates
 python3 livekit_agent/adapter_tests/test_8_triage_confirmation_safety.py # confirmation-safety probes E-01..E-07
 # live, end to end (LiveKit keys + one speech key):
-TRIAGELINE_AGENT_NAME=triageline-triage python livekit_agent/triage_livekit_agent.py dev
-TRIAGELINE_TRIAGE_AGENT_NAME=triageline-triage python -m ui     # open /rtc.html?flow=triage, choose "Triage Line"
+TRIAGELINE_AGENT_NAME=bilio-triage python livekit_agent/triage_livekit_agent.py dev
+TRIAGELINE_TRIAGE_AGENT_NAME=bilio-triage python -m ui     # open /rtc.html?flow=triage, choose "Triage Line"
 ```
 
 The gateway maps the closed choice `flow=triage` to `TRIAGELINE_TRIAGE_AGENT_NAME`. The client never names an

@@ -1,0 +1,45 @@
+{
+  "id": "housing_11",
+  "domain": "housing_location",
+  "title": "Bedroom and Price Correction",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hmm... hmm... well... hi... uh... I'm still searching for places in Austin but... um... I think I need to adjust what I'm looking for.",
+      "user_annotated": "Hmm... hmm... well... hi... uh... I'm still searching for places in Austin but... um... I think I need to adjust what I'm looking for.",
+      "ai": "Let's keep searching! What adjustments?"
+    },
+    {
+      "user": "Uh... well... i was thinking a 1-bedroom under 1200... but actually, no wait \u2014 my partner is moving in with me, so we need a 2-bedroom, and we can go up... um, to 1600 a month.",
+      "user_annotated": "Uh... well... i was thinking a 1-bedroom under 1200... but actually, no wait \u2014 my partner is moving in with me, so we need a 2-bedroom, and we can go up... um, to 1600 a month.",
+      "ai": "Searching for 2-bedroom apartments in Austin under $1600."
+    }
+  ],
+  "acting_notes": "Correct both bedroom count and price naturally.",
+  "disfluency_features": [
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Austin",
+        "bedrooms": 2,
+        "max_price": 1600
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "bedrooms": 1,
+      "max_price": 1200
+    },
+    "corrected_param": {
+      "bedrooms": 2,
+      "max_price": 1600
+    }
+  },
+  "latency_profile": "normal"
+}

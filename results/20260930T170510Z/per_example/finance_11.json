@@ -1,0 +1,71 @@
+{
+  "example_id": "finance_11",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hey... well,... um... I realized I need to change where one of my payments is coming from.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um, so um, so I want to set my credit card payment to pull from, like, my savings account instead of where it is now. Could you switch that over for me?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "i_realized_i_need",
+        "value": "change"
+      },
+      "timestamp_start": 0.014,
+      "timestamp_end": 0.155
+    },
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "credit_card",
+        "source_account": "savings"
+      },
+      "timestamp_start": 0.34,
+      "timestamp_end": 0.341
+    }
+  ],
+  "transcript": "Okay — updating that now (i_realized_i_need). Done — i_realized_i_need is now change. Okay — updating that now (credit_card). Done — your autopay settings are updated.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (i_realized_i_need).",
+      "t": 0.013
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — i_realized_i_need is now change.",
+      "t": 0.155
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (credit_card).",
+      "t": 0.34
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — your autopay settings are updated.",
+      "t": 0.341
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "credit_card",
+        "source_account": "savings"
+      }
+    }
+  ]
+}

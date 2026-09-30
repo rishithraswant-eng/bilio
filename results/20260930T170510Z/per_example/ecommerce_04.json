@@ -1,0 +1,55 @@
+{
+  "example_id": "ecommerce_04",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Um... um, well... good afternoon... I've been waiting on... um, a package and it still hasn't arrived.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "You know... uh... like... where is my package? Let me find... um... the order number here... the order number is X-Y-Z-8-8. Could you check what's going on with it?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "XYZ88"
+      },
+      "timestamp_start": 0.317,
+      "timestamp_end": 0.317
+    }
+  ],
+  "transcript": "Sure — what order id should I use? Checking order XYZ88 now. Here's what I found: ref XYZ88, Out for delivery.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what order id should I use?",
+      "t": 0.005
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking order XYZ88 now.",
+      "t": 0.317
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref XYZ88, Out for delivery.",
+      "t": 0.317
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "XYZ88"
+      }
+    }
+  ]
+}

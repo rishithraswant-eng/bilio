@@ -1,0 +1,70 @@
+{
+  "example_id": "travel_16",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hey... sorry... um, to bother you. I've been going back and forth on this trip plan all day.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... like... I've been thinking about it and... um, I need to book flights to, um, Vegas. I'm looking at going around, uh, August 8th if there's anything available.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "date": "today"
+      },
+      "timestamp_start": 0.035,
+      "timestamp_end": 0.308
+    },
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Las Vegas",
+        "date": "August 8"
+      },
+      "timestamp_start": 0.334,
+      "timestamp_end": 0.915
+    }
+  ],
+  "transcript": "Sure, checking flights to None for today. I started that flight search, but the system also needs the destination — what should I use? Sure, checking flights to Las Vegas for August 8. I found a flight to Las Vegas: FL123 departing August 8 for $450.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to None for today.",
+      "t": 0.035
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that flight search, but the system also needs the destination — what should I use?",
+      "t": 0.334
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to Las Vegas for August 8.",
+      "t": 0.334
+    },
+    {
+      "kind": "final_response",
+      "text": "I found a flight to Las Vegas: FL123 departing August 8 for $450.",
+      "t": 0.915
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Las Vegas",
+        "date": "August 8"
+      }
+    }
+  ]
+}

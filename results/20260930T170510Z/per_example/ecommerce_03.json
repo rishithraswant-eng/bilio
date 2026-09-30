@@ -1,0 +1,57 @@
+{
+  "example_id": "ecommerce_03",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Well... well... oh... hey there,... um, I already know what I want to buy, I just need help adding it.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... uh... hmm... um... can you, like, add product P-9-9 to my cart? I just need one of them for now.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "P99",
+        "quantity": 1
+      },
+      "timestamp_start": 0.329,
+      "timestamp_end": 0.329
+    }
+  ],
+  "transcript": "Sure — what do you need? Adding 1 × P99 to your cart. Done — added 1 × P99 to your cart; your cart total is 99.99.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.006
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Adding 1 × P99 to your cart.",
+      "t": 0.329
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — added 1 × P99 to your cart; your cart total is 99.99.",
+      "t": 0.329
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "P99",
+        "quantity": 1
+      }
+    }
+  ]
+}

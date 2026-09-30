@@ -1,0 +1,100 @@
+{
+  "example_id": "ecommerce_25",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Um... um, hey... let's buy some stuff. I've got a whole list of things... um, I need to do today.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "You know... well... can... um, I return my — never mind, forget the return. Let me focus on what I actually need. Track order C-A-T for me. Then search for cat food because I'm running low. And add 3 of whatever you find to my cart.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "CAT"
+      },
+      "timestamp_start": 0.353,
+      "timestamp_end": 0.354
+    },
+    {
+      "function": "search_products",
+      "args": {
+        "query": "cat food"
+      },
+      "timestamp_start": 0.36,
+      "timestamp_end": 0.36
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "quantity": 3,
+        "product_id": "PROD1"
+      },
+      "timestamp_start": 0.365,
+      "timestamp_end": 0.366
+    }
+  ],
+  "transcript": "Sure — what do you need? Checking order CAT now. Here's what I found: ref CAT, Out for delivery. Searching for cat food. Here's what I found: ref PROD1, cat food Premium, $99.99. Done — added 3 × PROD1 to your cart; your cart total is 299.97.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.016
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking order CAT now.",
+      "t": 0.353
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref CAT, Out for delivery.",
+      "t": 0.36
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Searching for cat food.",
+      "t": 0.36
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, cat food Premium, $99.99.",
+      "t": 0.365
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — added 3 × PROD1 to your cart; your cart total is 299.97.",
+      "t": 0.367
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "CAT"
+      }
+    },
+    {
+      "function": "search_products",
+      "args": {
+        "query": "cat food"
+      }
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "$RESULT_1.products[0].product_id",
+        "quantity": 3
+      }
+    }
+  ]
+}

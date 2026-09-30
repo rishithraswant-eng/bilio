@@ -1,0 +1,1472 @@
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=flight_search turn=Book a flight to
+DEBUG: inside start_task! api=flight_search turn=Book a flight to I said Boston.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is broken, please open a support ticket.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is broken, please open a support ticket.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=weather_lookup turn=What's the weather in Seattle?
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston at 2:45 pm and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Boston for Alice. Actually make it Seattle.
+DEBUG: inside start_task! api=flight_search turn=Find flights from Seattle to Boston.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Please find and book a flight to Seattle for bob smith.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Seattle for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find and book the cheapest flight to Boston for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=cancel_booking turn={'booking_id': 'B1'}
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. KAT73
+DEBUG: inside start_task! api=search_apartments turn=Search for um, 2 bedroom apartments in Denver under 2500.
+DEBUG: inside start_task! api=search_apartments turn=Find 2 bedroom apartments in Austin under 2000, actually 3 bedrooms
+DEBUG: inside start_task! api=search_apartments turn=Find 2 bedroom apartments in Austin under 2000
+DEBUG: inside start_task! api=search_apartments turn=actually 3 bedrooms
+DEBUG: inside start_task! api=track_order turn=Track order KAT73
+DEBUG: inside start_task! api=track_order turn=Track order KAT73
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel Q-R-T-4-1-7
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel The order ID is Q-R-T-4-1-7
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel QRT417
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=search_products turn=Actually, search for headphones under 100
+DEBUG: inside start_task! api=add_to_cart turn=add two of item R84 to my cart
+DEBUG: inside start_task! api=track_order turn=the ID is 417QRT where's my package
+DEBUG: inside start_task! api=track_order turn=where is it? the order number is XYC88
+DEBUG: inside start_task! api=add_to_cart turn=put, like, 3 of product R-8-4 in the basket
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=track_order turn=Hi! Track order KAT73 please.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter')]
+DEBUG: inside start_task! api=search_apartments turn=find me an apartment in Austin
+DEBUG: inside start_task! api=search_apartments turn=Search for 2 bedroom apartments in Denver under 2500
+DEBUG: inside start_task! api=calculate_commute turn=then calculate the commute from whatever you find to Union Station
+DEBUG: inside start_task! api=update_search_filter turn=update the search filter to pet friendly.
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for parking to true
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for laundry to in-unit.
+DEBUG: inside start_task! api=search_products turn=Search for headphones under 100
+DEBUG: inside start_task! api=search_products turn=Search for headphones under 100
+DEBUG: inside start_task! api=add_to_cart turn=add it to my cart.
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver
+DEBUG: inside start_task! api=track_order turn=track order QRS765
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=flight_search turn=Do not book a flight to Boston for Priya.
+DEBUG: inside start_task! api=flight_search turn=Only search flights to Boston, don't book.
+DEBUG: inside start_task! api=flight_search turn=Show me the options to Boston without booking.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Find flights to Miami
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver and book the 8 AM one for Alice.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=weather_lookup turn=What is the weather in Seattle?
+DEBUG: inside start_task! api=lookup_manual turn=Tell me about USB ports in the laptop manual.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver. SUV.
+DEBUG: inside start_task! api=flight_search turn=book a flight to to Boston
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Denver
+DEBUG: inside start_task! api=flight_search turn=Hello, find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver and book the 2:45 PM one for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=lookup_manual turn=Tell me about USB ports in the laptop manual.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is blinking red, please open a support ticket.
+DEBUG: inside start_task! api=search_products turn=so I'm after some bluetooth speakers... and, uh, I'd prefer... to stay under 80 dollars ideally. Anything like that?
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for balcony to true
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for gym to yes.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=add_to_cart turn=Please add two to my cart.
+DEBUG: inside start_task! api=update_search_filter turn=First set my max price to 1300.
+DEBUG: inside start_task! api=search_apartments turn=Then search for apartments in Denver. And
+DEBUG: inside start_task! api=calculate_commute turn=then check the biking time from that place to the library.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=search_products turn=find a desk lamp
+DEBUG: inside start_task! api=track_order turn=track order ZZ901
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=search_apartments turn=Find apartments in Portland
+DEBUG: inside start_task! api=search_apartments turn=Find apartments in Portland 2 bedrooms under 2200
+DEBUG: inside start_task! api=search_products turn=Search for a desk under 200 dollars
+DEBUG: inside start_task! api=add_to_cart turn=then put it in the basket
+DEBUG: inside start_task! api=add_to_cart turn=Add PROD1 to my cart
+DEBUG: inside start_task! api=get_exchange_rate turn=what's the exchange rate from USD to EUR
+DEBUG: inside start_task! api=track_order turn=track my order QRT417
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is broken, please open a support ticket.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is broken, please open a support ticket.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=weather_lookup turn=What's the weather in Seattle?
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston at 2:45 pm and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Boston for Alice. Actually make it Seattle.
+DEBUG: inside start_task! api=flight_search turn=Find flights from Seattle to Boston.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Please find and book a flight to Seattle for bob smith.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Seattle for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find and book the cheapest flight to Boston for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=cancel_booking turn={'booking_id': 'B1'}
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. KAT73
+DEBUG: inside start_task! api=search_apartments turn=Search for um, 2 bedroom apartments in Denver under 2500.
+DEBUG: inside start_task! api=search_apartments turn=Find 2 bedroom apartments in Austin under 2000, actually 3 bedrooms
+DEBUG: inside start_task! api=search_apartments turn=Find 2 bedroom apartments in Austin under 2000
+DEBUG: inside start_task! api=track_order turn=Track order KAT73
+DEBUG: inside start_task! api=track_order turn=Track order KAT73
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel Q-R-T-4-1-7
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel The order ID is Q-R-T-4-1-7
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel QRT417
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=search_products turn=Actually, search for headphones under 100
+DEBUG: inside start_task! api=add_to_cart turn=add two of item R84 to my cart
+DEBUG: inside start_task! api=track_order turn=the ID is 417QRT where's my package
+DEBUG: inside start_task! api=track_order turn=where is it? the order number is XYC88
+DEBUG: inside start_task! api=add_to_cart turn=put, like, 3 of product R-8-4 in the basket
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=track_order turn=Hi! Track order KAT73 please.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter')]
+DEBUG: inside start_task! api=search_apartments turn=find me an apartment in Austin
+DEBUG: inside start_task! api=search_apartments turn=Search for 2 bedroom apartments in Denver under 2500
+DEBUG: inside start_task! api=calculate_commute turn=then calculate the commute from whatever you find to Union Station
+DEBUG: inside start_task! api=update_search_filter turn=update the search filter to pet friendly.
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for parking to true
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for laundry to in-unit.
+DEBUG: inside start_task! api=search_products turn=Search for headphones under 100
+DEBUG: inside start_task! api=search_products turn=Search for headphones under 100
+DEBUG: inside start_task! api=add_to_cart turn=add it to my cart.
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver
+DEBUG: inside start_task! api=track_order turn=track order QRS765
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=flight_search turn=Do not book a flight to Boston for Priya.
+DEBUG: inside start_task! api=flight_search turn=Only search flights to Boston, don't book.
+DEBUG: inside start_task! api=flight_search turn=Show me the options to Boston without booking.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Find flights to Miami
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver and book the 8 AM one for Alice.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=weather_lookup turn=What is the weather in Seattle?
+DEBUG: inside start_task! api=lookup_manual turn=Tell me about USB ports in the laptop manual.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver. SUV.
+DEBUG: inside start_task! api=flight_search turn=book a flight to to Boston
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Denver
+DEBUG: inside start_task! api=flight_search turn=Hello, find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver and book the 2:45 PM one for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=lookup_manual turn=Tell me about USB ports in the laptop manual.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is blinking red, please open a support ticket.
+DEBUG: inside start_task! api=search_products turn=so I'm after some bluetooth speakers... and, uh, I'd prefer... to stay under 80 dollars ideally. Anything like that?
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for balcony to true
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for gym to yes.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=add_to_cart turn=Please add two to my cart.
+DEBUG: inside start_task! api=update_search_filter turn=First set my max price to 1300.
+DEBUG: inside start_task! api=search_apartments turn=Then search for apartments in Denver. And
+DEBUG: inside start_task! api=calculate_commute turn=then check the biking time from that place to the library.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=search_products turn=find a desk lamp
+DEBUG: inside start_task! api=track_order turn=track order ZZ901
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=search_apartments turn=Find apartments in Portland
+DEBUG: inside start_task! api=search_apartments turn=Find apartments in Portland 2 bedrooms under 2200
+DEBUG: inside start_task! api=search_products turn=Search for a desk under 200 dollars
+DEBUG: inside start_task! api=add_to_cart turn=then put it in the basket
+DEBUG: inside start_task! api=add_to_cart turn=Add PROD1 to my cart
+DEBUG: inside start_task! api=get_exchange_rate turn=what's the exchange rate from USD to EUR
+DEBUG: inside start_task! api=track_order turn=track my order QRT417
+DEBUG: inside start_task! api=cancel_booking turn={'booking_id': 'B1'}
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is broken, please open a support ticket.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is broken, please open a support ticket.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=weather_lookup turn=What's the weather in Seattle?
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston at 2:45 pm and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Boston for Alice. Actually make it Seattle.
+DEBUG: inside start_task! api=flight_search turn=Find flights from Seattle to Boston.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Please find and book a flight to Seattle for bob smith.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Seattle for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find and book the cheapest flight to Boston for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=cancel_booking turn={'booking_id': 'B1'}
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. KAT73
+DEBUG: inside start_task! api=search_apartments turn=Search for um, 2 bedroom apartments in Denver under 2500.
+DEBUG: inside start_task! api=search_apartments turn=Find 2 bedroom apartments in Austin under 2000, actually 3 bedrooms
+DEBUG: inside start_task! api=search_apartments turn=Find 2 bedroom apartments in Austin under 2000
+DEBUG: inside start_task! api=track_order turn=Track order KAT73
+DEBUG: inside start_task! api=track_order turn=Track order KAT73
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel Q-R-T-4-1-7
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel The order ID is Q-R-T-4-1-7
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel QRT417
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=search_products turn=Actually, search for headphones under 100
+DEBUG: inside start_task! api=add_to_cart turn=add two of item R84 to my cart
+DEBUG: inside start_task! api=track_order turn=the ID is 417QRT where's my package
+DEBUG: inside start_task! api=track_order turn=where is it? the order number is XYC88
+DEBUG: inside start_task! api=add_to_cart turn=put, like, 3 of product R-8-4 in the basket
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=track_order turn=Hi! Track order KAT73 please.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter')]
+DEBUG: inside start_task! api=search_apartments turn=find me an apartment in Austin
+DEBUG: inside start_task! api=search_apartments turn=Search for 2 bedroom apartments in Denver under 2500
+DEBUG: inside start_task! api=calculate_commute turn=then calculate the commute from whatever you find to Union Station
+DEBUG: inside start_task! api=update_search_filter turn=update the search filter to pet friendly.
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for parking to true
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for laundry to in-unit.
+DEBUG: inside start_task! api=search_products turn=Search for headphones under 100
+DEBUG: inside start_task! api=search_products turn=Search for headphones under 100
+DEBUG: inside start_task! api=add_to_cart turn=add it to my cart.
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver
+DEBUG: inside start_task! api=track_order turn=track order QRS765
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=flight_search turn=Do not book a flight to Boston for Priya.
+DEBUG: inside start_task! api=flight_search turn=Only search flights to Boston, don't book.
+DEBUG: inside start_task! api=flight_search turn=Show me the options to Boston without booking.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Find flights to Miami
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver and book the 8 AM one for Alice.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=weather_lookup turn=What is the weather in Seattle?
+DEBUG: inside start_task! api=lookup_manual turn=Tell me about USB ports in the laptop manual.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver. SUV.
+DEBUG: inside start_task! api=flight_search turn=book a flight to to Boston
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Denver
+DEBUG: inside start_task! api=flight_search turn=Hello, find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver and book the 2:45 PM one for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=lookup_manual turn=Tell me about USB ports in the laptop manual.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is blinking red, please open a support ticket.
+DEBUG: inside start_task! api=search_products turn=so I'm after some bluetooth speakers... and, uh, I'd prefer... to stay under 80 dollars ideally. Anything like that?
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for balcony to true
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for gym to yes.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=add_to_cart turn=Please add two to my cart.
+DEBUG: inside start_task! api=update_search_filter turn=First set my max price to 1300.
+DEBUG: inside start_task! api=search_apartments turn=Then search for apartments in Denver. And
+DEBUG: inside start_task! api=calculate_commute turn=then check the biking time from that place to the library.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=search_products turn=find a desk lamp
+DEBUG: inside start_task! api=track_order turn=track order ZZ901
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=search_apartments turn=Find apartments in Portland
+DEBUG: inside start_task! api=search_apartments turn=Find apartments in Portland 2 bedrooms under 2200
+DEBUG: inside start_task! api=search_products turn=Search for a desk under 200 dollars
+DEBUG: inside start_task! api=add_to_cart turn=then put it in the basket
+DEBUG: inside start_task! api=add_to_cart turn=Add PROD1 to my cart
+DEBUG: inside start_task! api=get_exchange_rate turn=what's the exchange rate from USD to EUR
+DEBUG: inside start_task! api=track_order turn=track my order QRT417
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is broken, please open a support ticket.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is broken, please open a support ticket.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=weather_lookup turn=What's the weather in Seattle?
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston at 2:45 pm and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Boston for Alice. Actually make it Seattle.
+DEBUG: inside start_task! api=flight_search turn=Find flights from Seattle to Boston.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Please find and book a flight to Seattle for bob smith.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Seattle for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find and book the cheapest flight to Boston for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. KAT73
+DEBUG: inside start_task! api=search_apartments turn=Search for um, 2 bedroom apartments in Denver under 2500.
+DEBUG: inside start_task! api=search_apartments turn=Find 2 bedroom apartments in Austin under 2000, actually 3 bedrooms
+DEBUG: inside start_task! api=search_apartments turn=Find 2 bedroom apartments in Austin under 2000
+DEBUG: inside start_task! api=track_order turn=Track order KAT73
+DEBUG: inside start_task! api=track_order turn=Track order KAT73
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel Q-R-T-4-1-7
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel The order ID is Q-R-T-4-1-7
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel QRT417
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=search_products turn=Actually, search for headphones under 100
+DEBUG: inside start_task! api=add_to_cart turn=add two of item R84 to my cart
+DEBUG: inside start_task! api=track_order turn=the ID is 417QRT where's my package
+DEBUG: inside start_task! api=track_order turn=where is it? the order number is XYC88
+DEBUG: inside start_task! api=add_to_cart turn=put, like, 3 of product R-8-4 in the basket
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=track_order turn=Hi! Track order KAT73 please.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter')]
+DEBUG: inside start_task! api=search_apartments turn=find me an apartment in Austin
+DEBUG: inside start_task! api=search_apartments turn=Search for 2 bedroom apartments in Denver under 2500
+DEBUG: inside start_task! api=calculate_commute turn=then calculate the commute from whatever you find to Union Station
+DEBUG: inside start_task! api=update_search_filter turn=update the search filter to pet friendly.
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for parking to true
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for laundry to in-unit.
+DEBUG: inside start_task! api=search_products turn=Search for headphones under 100
+DEBUG: inside start_task! api=search_products turn=Search for headphones under 100
+DEBUG: inside start_task! api=add_to_cart turn=add it to my cart.
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver
+DEBUG: inside start_task! api=track_order turn=track order QRS765
+DEBUG: inside start_task! api=flight_search turn=Can you find flights to Chicago for Friday?
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=flight_search turn=Do not book a flight to Boston for Priya.
+DEBUG: inside start_task! api=flight_search turn=Only search flights to Boston, don't book.
+DEBUG: inside start_task! api=flight_search turn=Show me the options to Boston without booking.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Find flights to Miami
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver and book the 8 AM one for Alice.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=weather_lookup turn=What is the weather in Seattle?
+DEBUG: inside start_task! api=lookup_manual turn=Tell me about USB ports in the laptop manual.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver. SUV.
+DEBUG: inside start_task! api=flight_search turn=book a flight to to Boston
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Denver
+DEBUG: inside start_task! api=flight_search turn=Hello, find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver and book the 2:45 PM one for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=lookup_manual turn=Tell me about USB ports in the laptop manual.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is blinking red, please open a support ticket.
+DEBUG: inside start_task! api=search_products turn=so I'm after some bluetooth speakers... and, uh, I'd prefer... to stay under 80 dollars ideally. Anything like that?
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for balcony to true
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for gym to yes.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=add_to_cart turn=Please add two to my cart.
+DEBUG: inside start_task! api=update_search_filter turn=First set my max price to 1300.
+DEBUG: inside start_task! api=search_apartments turn=Then search for apartments in Denver. And
+DEBUG: inside start_task! api=calculate_commute turn=then check the biking time from that place to the library.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=search_products turn=find a desk lamp
+DEBUG: inside start_task! api=track_order turn=track order ZZ901
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=search_apartments turn=Find apartments in Portland
+DEBUG: inside start_task! api=search_apartments turn=Find apartments in Portland 2 bedrooms under 2200
+DEBUG: inside start_task! api=search_products turn=Search for a desk under 200 dollars
+DEBUG: inside start_task! api=add_to_cart turn=then put it in the basket
+DEBUG: inside start_task! api=add_to_cart turn=Add PROD1 to my cart
+DEBUG: inside start_task! api=get_exchange_rate turn=what's the exchange rate from USD to EUR
+DEBUG: inside start_task! api=track_order turn=track my order QRT417
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston and book for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is broken, please open a support ticket.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is broken, please open a support ticket.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=weather_lookup turn=What's the weather in Seattle?
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston at 2:45 pm and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Boston for Alice. Actually make it Seattle.
+DEBUG: inside start_task! api=flight_search turn=Find flights from Seattle to Boston.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=flight_search turn=Please find and book a flight to Seattle for bob smith.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Seattle for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find and book the cheapest flight to Boston for Alice.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Boston and book it for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. Let me find the order number here. It's MNV64.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order.
+DEBUG: inside start_task! api=track_order turn=Hi, I want to track my order. KAT73
+DEBUG: inside start_task! api=search_apartments turn=Search for um, 2 bedroom apartments in Denver under 2500.
+DEBUG: inside start_task! api=search_apartments turn=Find 2 bedroom apartments in Austin under 2000, actually 3 bedrooms
+DEBUG: inside start_task! api=search_apartments turn=Find 2 bedroom apartments in Austin under 2000
+DEBUG: inside start_task! api=track_order turn=Track order KAT73
+DEBUG: inside start_task! api=track_order turn=Track order KAT73
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel Q-R-T-4-1-7
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel The order ID is Q-R-T-4-1-7
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel QRT417
+DEBUG: inside start_task! api=track_order turn=Please check on my parcel
+DEBUG: inside start_task! api=search_products turn=Actually, search for headphones under 100
+DEBUG: inside start_task! api=add_to_cart turn=add two of item R84 to my cart
+DEBUG: inside start_task! api=track_order turn=the ID is 417QRT where's my package
+DEBUG: inside start_task! api=track_order turn=where is it? the order number is XYC88
+DEBUG: inside start_task! api=add_to_cart turn=put, like, 3 of product R-8-4 in the basket
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=track_order turn=Hi! Track order KAT73 please.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter')]
+DEBUG: inside start_task! api=search_apartments turn=find me an apartment in Austin
+DEBUG: inside start_task! api=search_apartments turn=Search for 2 bedroom apartments in Denver under 2500
+DEBUG: inside start_task! api=calculate_commute turn=then calculate the commute from whatever you find to Union Station
+DEBUG: inside start_task! api=update_search_filter turn=update the search filter to pet friendly.
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for parking to true
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for laundry to in-unit.
+DEBUG: inside start_task! api=search_products turn=Search for headphones under 100
+DEBUG: inside start_task! api=search_products turn=Search for headphones under 100
+DEBUG: inside start_task! api=add_to_cart turn=add it to my cart.
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=add two of item P52 to my cart
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart please
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Add 2 of item P52 to my cart
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver
+DEBUG: inside start_task! api=track_order turn=track order QRS765
+DEBUG: inside start_task! api=flight_search turn=Can you find flights to Chicago for Friday?
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=modify_autopay turn=hmm could you sort out the autopay thing for the utilities from checking
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=flight_search turn=Do not book a flight to Boston for Priya.
+DEBUG: inside start_task! api=flight_search turn=Only search flights to Boston, don't book.
+DEBUG: inside start_task! api=flight_search turn=Show me the options to Boston without booking.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Find flights to Miami
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver and book the 8 AM one for Alice.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver, compact class.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=weather_lookup turn=What is the weather in Seattle?
+DEBUG: inside start_task! api=lookup_manual turn=Tell me about USB ports in the laptop manual.
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver.
+DEBUG: inside start_task! api=reserve_rental_car turn=Reserve a rental car in Denver. SUV.
+DEBUG: inside start_task! api=flight_search turn=book a flight to to Boston
+DEBUG: inside start_task! api=flight_search turn=Book a flight to Denver
+DEBUG: inside start_task! api=flight_search turn=Hello, find flights to Boston.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Denver and book the 2:45 PM one for Alice.
+DEBUG: inside start_task! api=cancel_booking turn=Cancel booking BK-0001.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Find flights to Boston
+DEBUG: inside start_task! api=lookup_manual turn=What is this port used for?
+DEBUG: inside start_task! api=lookup_manual turn=Tell me about USB ports in the laptop manual.
+DEBUG: inside start_task! api=create_support_ticket turn=My TV is blinking red, please open a support ticket.
+DEBUG: inside start_task! api=search_products turn=so I'm after some bluetooth speakers... and, uh, I'd prefer... to stay under 80 dollars ideally. Anything like that?
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for balcony to true
+DEBUG: inside start_task! api=update_search_filter turn=Set the filter for gym to yes.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=add_to_cart turn=Please add two to my cart.
+DEBUG: inside start_task! api=update_search_filter turn=First set my max price to 1300.
+DEBUG: inside start_task! api=search_apartments turn=Then search for apartments in Denver. And
+DEBUG: inside start_task! api=calculate_commute turn=then check the biking time from that place to the library.
+DEBUG: inside start_task! api=track_order turn=Track order QX4410 please.
+DEBUG: inside start_task! api=search_products turn=find a desk lamp
+DEBUG: inside start_task! api=track_order turn=track order ZZ901
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=track_order turn=Track order QRT417
+DEBUG: inside start_task! api=search_apartments turn=Find apartments in Portland
+DEBUG: inside start_task! api=search_apartments turn=Find apartments in Portland 2 bedrooms under 2200
+DEBUG: inside start_task! api=search_products turn=Search for a desk under 200 dollars
+DEBUG: inside start_task! api=add_to_cart turn=then put it in the basket
+DEBUG: inside start_task! api=add_to_cart turn=Add PROD1 to my cart
+DEBUG: inside start_task! api=get_exchange_rate turn=what's the exchange rate from USD to EUR
+DEBUG: inside start_task! api=track_order turn=track my order QRT417
+DEBUG: inside start_task! api=track_order turn=Hey so, um, where's my parcel? The order number is QRS765.
+DEBUG: inside start_task! api=track_order turn=Can you check order K-L-M-4-4, no sorry, K-L-M-4-5?
+DEBUG: inside start_task! api=track_order turn=I'd like to check a delivery. The reference is... TUV91.
+DEBUG: inside start_task! api=search_products turn=I'm hunting for, uh, a standing desk under 300 dollars.
+DEBUG: inside start_task! api=search_products turn=Search for a — actually, look up wireless earbuds for me.
+DEBUG: inside start_task! api=search_products turn=Find me a desk lamp
+DEBUG: inside start_task! api=add_to_cart turn=put two of them in my basket.
+DEBUG: inside start_task! api=search_products turn=Look for a kettle
+DEBUG: inside start_task! api=add_to_cart turn=then add four — no wait, just one — to my cart.
+DEBUG: inside start_task! api=get_card_benefits turn=Um, what perks come with my platinum card?
+DEBUG: inside start_task! api=get_card_benefits turn=What are the benefits on my gold card — sorry, I mean my silver card?
+DEBUG: inside start_task! api=get_exchange_rate turn=How much is, uh, 250 euros in dollars?
+DEBUG: inside start_task! api=get_exchange_rate turn=Convert 80 pounds to yen, actually make that 120 pounds.
+DEBUG: inside start_task! api=modify_autopay turn=Set up autopay for my water bill... from my savings account.
+DEBUG: inside start_task! api=modify_autopay turn=Pay my — can you turn on automatic payments for the electricity bill using checking?
+DEBUG: inside start_task! api=search_apartments turn=So, like, I need a two bedroom place in Denver under 2400 a month.
+DEBUG: inside start_task! api=search_apartments turn=Find apartments in Portland with three bedrooms, no, two bedrooms, max 1900.
+DEBUG: inside start_task! api=search_apartments turn=Show me one-bedroom rentals in Atlanta... up to 1500 dollars.
+DEBUG: inside start_task! api=calculate_commute turn=How long is the commute from, um, 12 Oak Street to the airport by transit?
+DEBUG: inside start_task! api=calculate_commute turn=How long does it take to drive from the library to the stadium — actually by bike?
+DEBUG: inside start_task! api=update_search_filter turn=Uh, could you change the max price filter to 2100?
+DEBUG: inside start_task! api=flight_search turn=Um, are there any flights to Toronto on October 14th?
+DEBUG: inside start_task! api=flight_search turn=Search flights to Dallas on November 2nd — no, to Houston.
+DEBUG: inside start_task! api=flight_search turn=Find a flight to Seoul on December 5th and book it for Robin Hale.
+DEBUG: inside start_task! api=update_identity_doc turn=I need to update my passport... the new number is 55123987.
+DEBUG: inside start_task! api=update_identity_doc turn=Could you, uh, update my driver's license number to D441902?
+DEBUG: inside start_task! api=flight_search turn=Book — sorry, first look up flights to Milan on the 20th of January.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter')]
+DEBUG: inside start_task! api=track_order turn=Search for running shoes. Forget that, just track order WXY33.
+DEBUG: inside start_task! api=search_apartments turn=Look for a three bedroom in Austin under 2800
+DEBUG: inside start_task! api=calculate_commute turn=how long is the drive from there to downtown?
+DEBUG: inside start_task! api=flight_search turn=Can you find flights to Chicago for Friday?
+DEBUG: inside start_task! api=track_order turn=Uh... uh... hello... well... is this customer support?... um, I have a question about an order I placed.
+DEBUG: inside start_task! api=track_order turn=Uh... uh... hello... well... is this customer support?... um, I have a question about an order I placed. Like... uh, you know... well, i ordered something last week and... um, I haven't received it yet. Could you track it for me? The order ID is A-B-C-1-2-3.
+DEBUG: inside start_task! api=search_products turn=Hmm... uh... hi... uh... I'm shopping for some new electronics and... um... I was hoping you could help me find something.
+DEBUG: inside start_task! api=search_products turn=Hmm... um... so i'm looking for a pair of wireless headphones... and I'd like... um, to keep it under 100 dollars if possible. What do you have?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(2.0, 'search_products'), (1.5, 'add_to_cart')]
+DEBUG: inside start_task! api=add_to_cart turn=Hmm... uh... hmm... um... can you, like, add product P-9-9 to my cart? I just need one of them for now.
+DEBUG: inside start_task! api=track_order turn=Um... um, well... good afternoon... I've been waiting on... um, a package and it still hasn't arrived.
+DEBUG: inside start_task! api=track_order turn=Um... um, well... good afternoon... I've been waiting on... um, a package and it still hasn't arrived. You know... uh... like... where is my package? Let me find... um... the order number here... the order number is X-Y-Z-8-8. Could you check what's going on with it?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'search_apartments')]
+DEBUG: inside start_task! api=search_products turn=Um, so like, uh... I'm looking... um, for a new... let me think... a desk. Something under 300 dollars if you have any options like that.
+DEBUG: inside start_task! api=add_to_cart turn=Uh, um... well... hey,... um...... um, I found something I want to buy and I'd like to add it to my cart.
+DEBUG: inside start_task! api=add_to_cart turn=Uh, um... well... hey,... um...... um, I found something I want to buy and I'd like to add it to my cart. Hmm... um... so like... could you add 2 of item K-2 to my cart?... um... I need one for me and one as a gift for my friend.
+DEBUG: inside start_task! api=track_order turn=Uh... um... oh, can you help me with something?... um, I need to check on one of my orders.
+DEBUG: inside start_task! api=search_products turn=Oh, um... hello... well... I've been meaning to buy a new keyboard and... um...... um, I finally have time to look.
+DEBUG: inside start_task! api=search_products turn=Uh... hmm... you know... uh... i want a mechanical keyboard... and I'm trying... um, to keep my budget under... 200 dollars. Do you have anything like that?
+DEBUG: inside start_task! api=flight_search turn=Oh... hi... um... I need to find something for an outdoor trip I've got coming up.
+DEBUG: inside start_task! api=search_products turn=Like... well... hmm... could you search for running shoes — actually no...... um, I just remembered I already have running shoes. Search for hiking boots instead, that's what I actually need.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'update_search_filter')]
+DEBUG: inside start_task! api=track_order turn=Hmm... like... like... hmm... first, can you track my order? The ID is 1-2-3-A-B-C. And then while we're at it, could you
+DEBUG: inside start_task! api=search_products turn=also search for winter jackets under 150 dollars?... um, I need one for my trip.
+DEBUG: inside start_task! api=add_to_cart turn=Uh... hmm... um... hi... uh... I'm ready... um, to add something to my cart but I'm still deciding on the quantity.
+DEBUG: inside start_task! api=add_to_cart turn=Uh... hmm... um... hi... uh... I'm ready... um, to add something to my cart but I'm still deciding on the quantity. You know... like... well, go ahead and add product B-7 to my cart. Make it 3 of them — no, wait, that's too many. Just put 1 in there for now, I'll order more later if... um, I need to.
+DEBUG: inside start_task! api=search_products turn=Well... oh, hey... um, I'm looking for a gift for my friend's birthday and I'm not totally sure what... um, to get.
+DEBUG: inside start_task! api=search_products turn=Well... oh, hey... um, I'm looking for a gift for my friend's birthday and I'm not totally sure what... um, to get. Like... you know... uh... i'm thinking something in the... let me think... electronics section would be great. He's really into gadgets and tech stuff.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Um... so well... well... first... could you add item K-2... um, to my cart? Just one of them. And
+DEBUG: inside start_task! api=track_order turn=then can you check on my last order too? The order ID is D-E-L-I-V.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(2.0, 'search_products'), (0.5, 'add_to_cart')]
+DEBUG: inside start_task! api=add_to_cart turn=Hmm... well... um... so uh, yeah, so... um, I already found what I want. Can you add, like, 2 of item P-5-2 to my cart? I want to get one for myself and one as a gift.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'track_order')]
+DEBUG: inside start_task! api=track_order turn=Uh... um, so well... can you, uh, track order B-O-B-1-2 for me?... um, I ordered it a few days ago and it should be arriving... soon, but I just want to make sure.
+DEBUG: inside start_task! api=search_products turn=Um... hmm... hmm... hi,... um...... um...... um, I need help finding a specific type of product for my kitchen.
+DEBUG: inside start_task! api=search_products turn=Um... hmm... hmm... hi,... um...... um...... um, I need help finding a specific type of product for my kitchen. Hmm... like, uh... i need a new... let me think about what it's called... a coffee maker! Yeah... I'm looking... um, for a coffee maker. Something under 50 dollars would be ideal.
+DEBUG: inside start_task! api=search_products turn=Oh... well... um... oh... hey there,... um, I was going to look at some new products but
+DEBUG: inside start_task! api=track_order turn=Like... hmm... can you cancel my — actually... never mind the cancellation,... um... I changed my mind about that. Could you just track order G-G-5 for me instead? I want to see where it is.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Hmm... um... so like... first, search for a gaming mouse —... um, I want to see what you have. Then add the cheapest option to my cart so I can buy it later. And while you're at it, could you
+DEBUG: inside start_task! api=track_order turn=Um, hmm... hello... uh,... um...... um...... um, I need to order some stuff for work but I keep changing my mind on the details.
+DEBUG: inside start_task! api=search_products turn=Um... so you know... search for a laptop — wait... no,... um...... um, I actually need a tablet, not a laptop.
+DEBUG: inside start_task! api=add_to_cart turn=And add 2 of them to the cart. Actually, just add 1 instead, I only have budget for one right now.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=search_products turn=Uh... like, you know... um... so search for a coffee maker first. If you find one that's under 50 dollars, go ahead
+DEBUG: inside start_task! api=add_to_cart turn=add 2... um, to the cart because they'd make great gifts. But
+DEBUG: inside start_task! api=track_order turn=just forget the coffee maker and track order W-W-W for me instead.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=track_order turn=Um... so hmm... hmm... well... could you track order B-O-B for me first? Then... um,... um, I
+DEBUG: inside start_task! api=search_products turn=also want to search for a nice watch under 200 dollars. And
+DEBUG: inside start_task! api=add_to_cart turn=once you find something good, uh, go ahead and add it to my cart.
+DEBUG: inside start_task! api=track_order turn=Uh... oh, hi... oh, I've got multiple orders out and... um, I also want to look at something new.
+DEBUG: inside start_task! api=track_order turn=Uh... oh, hi... oh, I've got multiple orders out and... um, I also want to look at something new. Um, so you know... um... so um, first could you track order A-1 for me? And like,... um, I also need to check on order B-2 while we're at it. Oh and uh, could you search for a cozy blanket too? I've been meaning to get one.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=track_order turn=Hmm... um... so you know... like... first... could you track order G-G-5? Then I'd like to process a refund for it and if possible. And
+DEBUG: inside start_task! api=add_to_cart turn=also, while we're at it, add item X-1 to my cart so... um, I can order a replacement.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'search_products'), (1.0, 'add_to_cart')]
+DEBUG: inside start_task! api=add_to_cart turn=Like... add item K-9 to my cart,... um...... um, I want 2 of those. Then add item M-1 to the cart as well — wait... actually, for M-1 make it 5 units, I need more than I originally thought.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter'), (1.0, 'search_products'), (0.5, 'add_to_cart')]
+DEBUG: inside start_task! api=track_order turn=Let me focus on what I actually need. Track order C-A-T for me.
+DEBUG: inside start_task! api=search_products turn=Then search for cat food because I'm running low.
+DEBUG: inside start_task! api=add_to_cart turn=And add 3 of whatever you find to my cart.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=get_exchange_rate turn=Like... i'm trying to figure out how much 500 US dollars would be if I converted it to euros. Could you check that for me?
+DEBUG: inside start_task! api=get_card_benefits turn=Oh... hey there, I've been thinking... um, about upgrading my credit card.
+DEBUG: inside start_task! api=get_card_benefits turn=Oh... hey there, I've been thinking... um, about upgrading my credit card. Um... so could you tell me what kind of benefits come with the platinum card?... um, I want to know if it's worth switching to.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... hmm... is someone there? I need help making a change to one of my autopay settings.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... hmm... is someone there? I need help making a change to one of my autopay settings. Uh, um, so... um, I want to change my mortgage autopay to pull from, like, my savings account instead of where it's pulling from now.
+DEBUG: inside start_task! api=flight_search turn=Good morning! I'm getting ready for a trip abroad and need... um... to plan my budget.
+DEBUG: inside start_task! api=get_exchange_rate turn=I need... um... to figure out how much 1000 US dollars would be in... British pounds. Do you know the current rate?
+DEBUG: inside start_task! api=modify_autopay turn=Hi... well... I've been meaning to set up automatic payments and... um, I finally have a minute to do it.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... well... I've been meaning to set up automatic payments and... um, I finally have a minute to do it. You know... i want to set my credit card bill to autopay... and have it pull from my checking account every month. Can you do that?
+DEBUG: inside start_task! api=get_card_benefits turn=Uh... um, hi there.... um, I was looking at your different credit card options on the website.
+DEBUG: inside start_task! api=get_card_benefits turn=Um, so uh, I was wondering what the benefits are for the... travel card? I think that's the one my coworker recommended to me.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'modify_autopay')]
+DEBUG: inside start_task! api=modify_autopay turn=Uh... i was going... um, to ask about my account balance but — never mind, I'll check online later. For now, could you change the mortgage autopay so it pulls from my savings account?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'get_exchange_rate')]
+DEBUG: inside start_task! api=get_exchange_rate turn=I'm trying to figure out how much money I'd have if... um... I converted... let me think... about 200 euros into US dollars. What would that come out to?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(2.0, 'get_exchange_rate'), (1.5, 'search_products'), (1.5, 'search_apartments'), (1.5, 'flight_search')]
+DEBUG: inside start_task! api=get_exchange_rate turn=I want to convert 300 US dollars to yen — actually wait... I'm mixing up my trips.... um, I meant euros, not yen. So 300 dollars to euros please.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=get_card_benefits turn=First off... could you tell me what the benefits are for the travel card? I'm considering applying. And then separately,... um, I
+DEBUG: inside start_task! api=get_exchange_rate turn=also need to know how much 200 British pounds would be in Japanese yen.
+DEBUG: inside start_task! api=update_search_filter turn=Hey... well,... um... I realized I need to change where one of my payments is coming from.
+DEBUG: inside start_task! api=modify_autopay turn=Um, so um, so I want to set my credit card payment to pull from, like, my savings account instead of where it is now. Could you switch that over for me?
+DEBUG: inside start_task! api=get_exchange_rate turn=Uh... good day.... um, I need to do a currency conversion before I buy something online from Europe.
+DEBUG: inside start_task! api=get_exchange_rate turn=Uh... good day.... um, I need to do a currency conversion before I buy something online from Europe. Well, i want to calculate how much 100 euros would be in US dollars — oh wait, I was looking at the wrong invoice. It's actually 150 euros, not 100. So 150 euros to US dollars.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... um... I need to reorganize which accounts my bills are pulling from. It's gotten kind of messy.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... um... I need to reorganize which accounts my bills are pulling from. It's gotten kind of messy. Uh... i want to set my credit card bill to pay from... uh... savings, that makes more sense. And then my mortgage should pull from checking instead.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'modify_autopay'), (1.0, 'get_exchange_rate')]
+DEBUG: inside start_task! api=get_exchange_rate turn=Like... first, can you tell me how much 50 US dollars would be in euros? And then
+DEBUG: inside start_task! api=get_exchange_rate turn=also, how much would 100 Canadian dollars be in US dollars?... um, I need both numbers.
+DEBUG: inside start_task! api=modify_autopay turn=Hi,... um, I just realized I need to fix something with my autopay setup. I think I set it wrong.
+DEBUG: inside start_task! api=modify_autopay turn=Hi,... um, I just realized I need to fix something with my autopay setup. I think I set it wrong. Hmm... i want... um, to switch my mortgage autopay to pull from checking — wait no, that's wrong too. Make it savings instead. Yeah, savings is the right one.
+DEBUG: inside start_task! api=search_products turn=Oh... sorry,... um, I need a moment to collect my thoughts. I'm looking at some numbers here.
+DEBUG: inside start_task! api=get_exchange_rate turn=Like... okay so... um, I need to know how much... let me see... 500 yen would be in US dollars. I'm trying to figure out if this online purchase is worth it.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=get_card_benefits turn=Uh... i wanted to pay my credit card bill right now, but — actually, never mind that,... um, I can do it online later. For now, could you just check what benefits come with the gold card? I'm thinking about upgrading.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=get_exchange_rate turn=Um... so alright, so first,... um, I need to know how much 1000 US dollars would be in euros.
+DEBUG: inside start_task! api=modify_autopay turn=Then I want to change my credit card autopay so it pulls from savings instead.
+DEBUG: inside start_task! api=get_card_benefits turn=And finally, can you tell me what kind of benefits the premium card has?
+DEBUG: inside start_task! api=update_search_filter turn=Hey,... um... I keep going back and forth on this conversion, so I apologize in advance if I change my mind.
+DEBUG: inside start_task! api=get_exchange_rate turn=Okay so... um... I want to convert 200 euros to yen — no wait, I just remembered I need British pounds, not yen. And actually, let me change the amount too, make it 300 euros instead of 200.
+DEBUG: inside start_task! api=get_exchange_rate turn=Hey... um... can you help me with something a bit more complicated? It involves a decision that depends on the exchange rate.
+DEBUG: inside start_task! api=get_exchange_rate turn=Hey... um... can you help me with something a bit more complicated? It involves a decision that depends on the exchange rate. Well... here's my situation. I want to check what 1000 US dollars is in euros right now. If the exchange rate looks good to me, then go ahead and change my mortgage autopay to pull from checking. But if the rate isn't great, just leave everything as is and keep it on savings.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_identity_doc'), (1.0, 'modify_autopay')]
+DEBUG: inside start_task! api=get_card_benefits turn=Alright, so first... um, I want to know what the... uh... benefits are for the gold card, because I'm comparing a few options. And then I
+DEBUG: inside start_task! api=get_exchange_rate turn=also need to convert, um, 500 US dollars to yen because I'm buying something from Japan.
+DEBUG: inside start_task! api=modify_autopay turn=Oh, um, hey. I just looked at my bank statements and I think my autopay settings are all messed up.
+DEBUG: inside start_task! api=modify_autopay turn=Oh, um, hey. I just looked at my bank statements and I think my autopay settings are all messed up. Well... like, first... um, I want to change my mortgage autopay so it pulls from, uh, savings — that's the right account for that. And then, um, I also want to set my credit card payment to come from checking.
+DEBUG: inside start_task! api=modify_autopay turn=Hello... well,... um... I need to talk to somebody about my bill payments. There's been some confusion.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter')]
+DEBUG: inside start_task! api=get_exchange_rate turn=Hmm... first... can you tell me how much 250 US dollars would be in Canadian dollars? Then... um, I also need to send a wire transfer to my friend overseas and if you can do that.
+DEBUG: inside start_task! api=get_card_benefits turn=And finally, could you check what benefits come with the rewards card?
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=get_exchange_rate turn=Like... okay, so first I want to... convert 800 US dollars to euros, just so I know the rate.
+DEBUG: inside start_task! api=modify_autopay turn=Then... uh... set my mortgage to autopay from savings. And
+DEBUG: inside start_task! api=get_card_benefits turn=also I want to check the benefits of the... platinum card, because I'm thinking about switching.
+DEBUG: inside start_task! api=search_products turn=Oh, hey... oh... I'm looking for a new place... um...... um, to live and could really use some help narrowing things down.
+DEBUG: inside start_task! api=search_apartments turn=You know... hmm... uh... i'm trying... um...... um... to find a 2-bedroom apartment in Seattle, and I'd like to keep the rent under 2500 a month if possible. Could you see what's available?
+DEBUG: inside start_task! api=calculate_commute turn=Uh, hmm... um... hi... well... I'm considering an apartment and... um, I want to make sure the commute to my office isn't too bad.
+DEBUG: inside start_task! api=search_apartments turn=Um... oh, uh... hi there, I've been looking at a bunch of listings and... um, I think I need to adjust my search a bit.
+DEBUG: inside start_task! api=update_search_filter turn=Um... so well, like... um,... um, I want to update my search filter so the max price is, like, 1800 a month. Everything I've been seeing is over budget.
+DEBUG: inside start_task! api=search_apartments turn=Hmm... uh... hey... oh...... um... I just started apartment hunting in Denver and I need help finding options.
+DEBUG: inside start_task! api=search_apartments turn=Um, oh... well... um, hi there. I've been having... um, the hardest time finding a place that allows my dog.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=calculate_commute turn=Well... um... so hmm... i was wondering how long it would take to walk from Oak Street to the Gym. I'm trying to figure out if... um, I can walk there in the mornings.
+DEBUG: inside start_task! api=calculate_commute turn=Hmm... oh... oh... can you help me with a commute question?... um, I want to make sure this place works before I sign a lease.
+DEBUG: inside start_task! api=calculate_commute turn=Hmm... oh... oh... can you help me with a commute question?... um, I want to make sure this place works before I sign a lease. Hmm... hmm... well... uh... so... um... I was wondering what the, like, transit time would be from Central Ave to the University. I'd be taking public transportation every day.
+DEBUG: inside start_task! api=search_apartments turn=Well, uh, well... good morning! I'm still working on finding the right apartment and... um, I wanted to make some changes.
+DEBUG: inside start_task! api=update_search_filter turn=Like, you know... you know... i want to check the listings in — actually... before... um...... um, I do that, could you just update my search filter so that it only shows me places that allow pets? I have a cat.
+DEBUG: inside start_task! api=search_apartments turn=Well, hmm... hello,... um...... um...... um, I need some help finding apartment options. I've been looking in a few different cities.
+DEBUG: inside start_task! api=search_apartments turn=Well, hmm... hello,... um...... um...... um, I need some help finding apartment options. I've been looking in a few different cities. Well... well... uh... i'm interested in a 2-bedroom in Boston — wait, actually,... um, I changed my mind. Let's look in Chicago instead, and keep the max price around 2000 per month.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'search_apartments')]
+DEBUG: inside start_task! api=calculate_commute turn=Um... so well... uh... like... first, could you check how long the transit commute would be from 500 Central Ave... um, to the University? And also
+DEBUG: inside start_task! api=update_search_filter turn=while you're at it, update my preferred neighborhood in the search to Northside.
+DEBUG: inside start_task! api=search_apartments turn=Hmm... hmm... well... hi... uh... I'm still searching for places in Austin but... um... I think I need to adjust what I'm looking for.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'search_apartments')]
+DEBUG: inside start_task! api=calculate_commute turn=Like... you know... hmm... could you calculate the commute from my apartment to the airport? I'd be going by... let me see... transit... since... um, I probably won't have a car right away.
+DEBUG: inside start_task! api=search_products turn=Um... well... oh... hi there, I've decided to expand my search a bit because I'm not finding anything... um, I like.
+DEBUG: inside start_task! api=update_search_filter turn=You know... you know... like... you know... let's raise the max price to 3000 per month... and
+DEBUG: inside start_task! api=update_search_filter turn=also bump up the minimum bedrooms to 3.... um, I think I need more space than I originally thought.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=search_apartments turn=Like, you know... um... so um... I'm looking for, like, a 1-bedroom apartment in Portland, and I'd want to keep the rent under 1800. Oh, and it needs to be, uh, pet-friendly because... um, I have a dog.
+DEBUG: inside start_task! api=search_apartments turn=Well... uh... um... hey... hmm... I'm trying to find a place and... um, I keep going back and forth on what I need.
+DEBUG: inside start_task! api=search_apartments turn=Well... uh... um... hey... hmm... I'm trying to find a place and... um, I keep going back and forth on what I need. Um, so hmm... uh... i wanted... um, to check the commute from that one listing — actually, let me skip that for now. Could you just search for a 3-bedroom in Atlanta that's pet-friendly? I've got two cats.
+DEBUG: inside start_task! api=search_apartments turn=Hmm... hi... hmm...... um...... um...... um, I have a quick question about commuting from one of the apartments I'm looking at.
+DEBUG: inside start_task! api=calculate_commute turn=Um, so uh, hmm... well... i want to know how long it would take to drive from my apartment to the... uh... hospital? My wife works there and... um, I want to make sure it's not too far.
+DEBUG: inside start_task! api=search_apartments turn=Um... well... hey... well,... um, I need to double-check how long it would take me to get to work from the apartment I'm considering.
+DEBUG: inside start_task! api=calculate_commute turn=Like, like... um... so calculate the transit time to the office from there — wait, no, actually... um, I just remembered I'd be driving. So make it driving time to the office from my house instead.
+DEBUG: inside start_task! api=search_apartments turn=Oh... hi... I'm narrowing down my apartment options and... um...... um...... um, I need to evaluate them based on location.
+DEBUG: inside start_task! api=search_apartments turn=Oh... hi... I'm narrowing down my apartment options and... um...... um...... um, I need to evaluate them based on location. Well... like... um... so first... search for a 1-bedroom in Portland that's under 1800 per month. Then once you find the cheapest option, check how long it would take to bike from there to the coffee shop on 5th Street where... um, I work.
+DEBUG: inside start_task! api=calculate_commute turn=Uh... hey,... um... I need to check a commute route but I keep changing my mind about where I'd be going.
+DEBUG: inside start_task! api=calculate_commute turn=Um... hello... oh... I'm trying... um... to make a smart decision about where to live, and it depends on the commute.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=search_apartments turn=Well, hmm... you know... i want to search for a place with 2 bedrooms. Wait... actually... um, I meant 3 bedrooms, we decided we need a home office.
+DEBUG: inside start_task! api=calculate_commute turn=Also check the transit time to the train station — actually, I'd rather walk, so make that walking time.
+DEBUG: inside start_task! api=search_apartments turn=Uh... oh... oh... hello... uh... I've got a bunch of things... um, I need done for my apartment search.
+DEBUG: inside start_task! api=update_search_filter turn=You know... uh... hmm... um... first can you update my filter so pets are allowed?... um, I keep forgetting to set that.
+DEBUG: inside start_task! api=search_apartments turn=Then, like, search in Seattle for a 1-bedroom. And then
+DEBUG: inside start_task! api=calculate_commute turn=once you find something, uh, check the transit time from there to the stadium because I go to games pretty often.
+DEBUG: inside start_task! api=search_apartments turn=Hmm... well... hi... uh...... um, I need to make some changes to my apartment search but I'm not totally sure what I want yet.
+DEBUG: inside start_task! api=update_search_filter turn=Well, well, uh... can we search for places in — no wait, before we search, let me update my minimum bedrooms... um, to 2. Actually, on second thought, make it 3 bedrooms. We decided we need more space.
+DEBUG: inside start_task! api=modify_autopay turn=Well... hello... I'm planning a move to Dallas and... um...... um... I have a whole list of things I need help with.
+DEBUG: inside start_task! api=update_search_filter turn=Um, so hmm... like... you know... okay... so first... um, I want to... update my max price to 1500 because I'm on a tighter budget.
+DEBUG: inside start_task! api=search_apartments turn=Then... uh... search for apartments in Dallas that fit that budget. And
+DEBUG: inside start_task! api=calculate_commute turn=then... check the walking time from whatever you find to the grocery store, because I want to be close to one.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=update_search_filter turn=You know... you know... alright... first set the filter so pets are allowed... and set the max price to 3000.
+DEBUG: inside start_task! api=search_apartments turn=Then search for places in San Francisco — wait, actually, change the max price to 3500 instead. San Francisco is expensive so... um, I need more room in the budget.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.5, 'flight_search')]
+DEBUG: inside start_task! api=flight_search turn=Well... i'm trying to go to Tokyo, and I was thinking about leaving around July 15th. Could you look up what flights are available for that day?
+DEBUG: inside start_task! api=update_identity_doc turn=Hmm... good morning!... um... I just got my new passport and need to update my records.
+DEBUG: inside start_task! api=update_identity_doc turn=Hmm... good morning!... um... I just got my new passport and need to update my records. Uh, yeah, so my new passport number is P-8-8-9-9-0-0-1-1. Could you update that in the system... um, for me please?
+DEBUG: inside start_task! api=flight_search turn=Hello? Is this... um, the travel booking service?
+DEBUG: inside start_task! api=update_identity_doc turn=Oh... hey there,... um, I need to update some travel documents before my trip.
+DEBUG: inside start_task! api=update_identity_doc turn=Oh... hey there,... um, I need to update some travel documents before my trip. Well... i need to update my visa number. Let me check my card here... the number is V-1-2-3-4-5-6. Could you put that in for me?
+DEBUG: inside start_task! api=flight_search turn=Hi... um, I'm trying to plan a work trip and I could really use some help finding flights.
+DEBUG: inside start_task! api=flight_search turn=Hey... uh... I've decided on my trip and I'm ready... um, to book something.
+DEBUG: inside start_task! api=update_identity_doc turn=Hi... hmm... I recently renewed my driver license and I need to get the new number into your system.
+DEBUG: inside start_task! api=update_identity_doc turn=Hi... hmm... I recently renewed my driver license and I need to get the new number into your system. Uh,... um... the new driver license number is D-L-5-5-5. Could you swap out the old one and put this new one in there?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=I was going to ask about hotel options but — never mind that for now. Could you just find me flights to Seattle on November 1st instead?
+DEBUG: inside start_task! api=flight_search turn=Hi,... um... I need help booking a flight for an upcoming business trip.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Um, so um, I was looking at flights to Miami on October 5th — wait, uh, my schedule just changed. My meeting got moved, so actually make it October 7th instead.
+DEBUG: inside start_task! api=flight_search turn=Uh... hi there,... um, I need to get a flight booked for a colleague who's traveling for work.
+DEBUG: inside start_task! api=flight_search turn=Hey... um... I need to book a flight for someone. Let me give you the details.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=You know... i was thinking about going to — oh... never mind that destination. Let me start over. Just search for flights to Denver on January 15th, that's actually what... um, I need.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Um... so i want to look at flights to Seoul, and the date... um, I was thinking of is... let me think... I'm pretty sure it's March 22nd. Yeah, could you search for that?
+DEBUG: inside start_task! api=update_identity_doc turn=Hey... uh, I've got a couple of document updates that... um, I need to take care of before my trip next week.
+DEBUG: inside start_task! api=update_identity_doc turn=Hey... uh, I've got a couple of document updates that... um, I need to take care of before my trip next week. You know... first... my driver license number changed to D-L-5-5-5, and... um, I also need to change my passport number to P-9-9-9. Could you update both of those for me?
+DEBUG: inside start_task! api=flight_search turn=Hey... sorry... um, to bother you. I've been going back and forth on this trip plan all day.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'track_order')]
+DEBUG: inside start_task! api=flight_search turn=Hmm... yeah,... um... I think I want to fly to... Cairo. I've always wanted to go there. I'm looking at December 1st as the travel date.
+DEBUG: inside start_task! api=flight_search turn=Hi... um... I have a few things I need to get done before my big trip next month.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter'), (1.0, 'update_identity_doc'), (1.0, 'modify_autopay')]
+DEBUG: inside start_task! api=flight_search turn=Hmm... okay so, I want to look at flights to Rome — no wait, I changed my mind, let's do Milan instead. And I was thinking June 1st, but actually, June 3rd works better for me.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Uh... here's the thing.... um, I need to fly to Toronto on July 20th. If there happens to be a flight under 300 dollars, go ahead book it for Riley Kim. But and if everything's too expensive then just forget the flight
+DEBUG: inside start_task! api=update_identity_doc turn=update my driver license to D-L-8-8 instead.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=You know... okay so,... um... I need to find flights to... Vegas, I was thinking around August 8th. And then, um once you find something, book it under the name Quinn Davis. Oh and while you're at it, could you
+DEBUG: inside start_task! api=update_identity_doc turn=also update my visa number to V-7-7?
+DEBUG: inside start_task! api=flight_search turn=Hi... uh,... um, I need to get a flight booked but I keep changing my mind about the details.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(2.0, 'update_identity_doc')]
+DEBUG: inside start_task! api=update_identity_doc turn=Hmm... um... so I need to, like, update my passport number to P-1-1-2-2 because I just renewed it. And then, uh, I
+DEBUG: inside start_task! api=update_identity_doc turn=also got a new driver license, so could you change that one to D-L-9-0-9-0 as well?
+DEBUG: inside start_task! api=flight_search turn=Um... good morning! I'm trying... um, to plan out every detail of my upcoming trip, so I've got a long list.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Uh... okay, so first... um, I need flights to Bangkok for March 1st. Book it for... Cameron, that's the traveler.
+DEBUG: inside start_task! api=update_identity_doc turn=Then I need to update my passport number to P-1-2-3 and
+DEBUG: inside start_task! api=update_identity_doc turn=also... my visa number to V-3-2-1.
+DEBUG: inside start_task! api=track_order turn=Uh... uh... hello... well... is this customer support?... um, I have a question about an order I placed.
+DEBUG: inside start_task! api=track_order turn=Uh... uh... hello... well... is this customer support?... um, I have a question about an order I placed. Like... uh, you know... well, i ordered something last week and... um, I haven't received it yet. Could you track it for me? The order ID is A-B-C-1-2-3.
+DEBUG: inside start_task! api=search_products turn=Hmm... uh... hi... uh... I'm shopping for some new electronics and... um... I was hoping you could help me find something.
+DEBUG: inside start_task! api=search_products turn=Hmm... um... so i'm looking for a pair of wireless headphones... and I'd like... um, to keep it under 100 dollars if possible. What do you have?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(2.0, 'search_products'), (1.5, 'add_to_cart')]
+DEBUG: inside start_task! api=add_to_cart turn=Hmm... uh... hmm... um... can you, like, add product P-9-9 to my cart? I just need one of them for now.
+DEBUG: inside start_task! api=track_order turn=Um... um, well... good afternoon... I've been waiting on... um, a package and it still hasn't arrived.
+DEBUG: inside start_task! api=track_order turn=Um... um, well... good afternoon... I've been waiting on... um, a package and it still hasn't arrived. You know... uh... like... where is my package? Let me find... um... the order number here... the order number is X-Y-Z-8-8. Could you check what's going on with it?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'search_apartments')]
+DEBUG: inside start_task! api=search_products turn=Um, so like, uh... I'm looking... um, for a new... let me think... a desk. Something under 300 dollars if you have any options like that.
+DEBUG: inside start_task! api=add_to_cart turn=Uh, um... well... hey,... um...... um, I found something I want to buy and I'd like to add it to my cart.
+DEBUG: inside start_task! api=add_to_cart turn=Uh, um... well... hey,... um...... um, I found something I want to buy and I'd like to add it to my cart. Hmm... um... so like... could you add 2 of item K-2 to my cart?... um... I need one for me and one as a gift for my friend.
+DEBUG: inside start_task! api=track_order turn=Uh... um... oh, can you help me with something?... um, I need to check on one of my orders.
+DEBUG: inside start_task! api=search_products turn=Oh, um... hello... well... I've been meaning to buy a new keyboard and... um...... um, I finally have time to look.
+DEBUG: inside start_task! api=search_products turn=Uh... hmm... you know... uh... i want a mechanical keyboard... and I'm trying... um, to keep my budget under... 200 dollars. Do you have anything like that?
+DEBUG: inside start_task! api=flight_search turn=Oh... hi... um... I need to find something for an outdoor trip I've got coming up.
+DEBUG: inside start_task! api=search_products turn=Like... well... hmm... could you search for running shoes — actually no...... um, I just remembered I already have running shoes. Search for hiking boots instead, that's what I actually need.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'update_search_filter')]
+DEBUG: inside start_task! api=track_order turn=Hmm... like... like... hmm... first, can you track my order? The ID is 1-2-3-A-B-C. And then while we're at it, could you
+DEBUG: inside start_task! api=search_products turn=also search for winter jackets under 150 dollars?... um, I need one for my trip.
+DEBUG: inside start_task! api=add_to_cart turn=Uh... hmm... um... hi... uh... I'm ready... um, to add something to my cart but I'm still deciding on the quantity.
+DEBUG: inside start_task! api=add_to_cart turn=Uh... hmm... um... hi... uh... I'm ready... um, to add something to my cart but I'm still deciding on the quantity. You know... like... well, go ahead and add product B-7 to my cart. Make it 3 of them — no, wait, that's too many. Just put 1 in there for now, I'll order more later if... um, I need to.
+DEBUG: inside start_task! api=search_products turn=Well... oh, hey... um, I'm looking for a gift for my friend's birthday and I'm not totally sure what... um, to get.
+DEBUG: inside start_task! api=search_products turn=Well... oh, hey... um, I'm looking for a gift for my friend's birthday and I'm not totally sure what... um, to get. Like... you know... uh... i'm thinking something in the... let me think... electronics section would be great. He's really into gadgets and tech stuff.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Um... so well... well... first... could you add item K-2... um, to my cart? Just one of them. And
+DEBUG: inside start_task! api=track_order turn=then can you check on my last order too? The order ID is D-E-L-I-V.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(2.0, 'search_products'), (0.5, 'add_to_cart')]
+DEBUG: inside start_task! api=add_to_cart turn=Hmm... well... um... so uh, yeah, so... um, I already found what I want. Can you add, like, 2 of item P-5-2 to my cart? I want to get one for myself and one as a gift.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'track_order')]
+DEBUG: inside start_task! api=track_order turn=Uh... um, so well... can you, uh, track order B-O-B-1-2 for me?... um, I ordered it a few days ago and it should be arriving... soon, but I just want to make sure.
+DEBUG: inside start_task! api=search_products turn=Um... hmm... hmm... hi,... um...... um...... um, I need help finding a specific type of product for my kitchen.
+DEBUG: inside start_task! api=search_products turn=Um... hmm... hmm... hi,... um...... um...... um, I need help finding a specific type of product for my kitchen. Hmm... like, uh... i need a new... let me think about what it's called... a coffee maker! Yeah... I'm looking... um, for a coffee maker. Something under 50 dollars would be ideal.
+DEBUG: inside start_task! api=search_products turn=Oh... well... um... oh... hey there,... um, I was going to look at some new products but
+DEBUG: inside start_task! api=track_order turn=Like... hmm... can you cancel my — actually... never mind the cancellation,... um... I changed my mind about that. Could you just track order G-G-5 for me instead? I want to see where it is.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Hmm... um... so like... first, search for a gaming mouse —... um, I want to see what you have. Then add the cheapest option to my cart so I can buy it later. And while you're at it, could you
+DEBUG: inside start_task! api=track_order turn=Um, hmm... hello... uh,... um...... um...... um, I need to order some stuff for work but I keep changing my mind on the details.
+DEBUG: inside start_task! api=search_products turn=Um... so you know... search for a laptop — wait... no,... um...... um, I actually need a tablet, not a laptop.
+DEBUG: inside start_task! api=add_to_cart turn=And add 2 of them to the cart. Actually, just add 1 instead, I only have budget for one right now.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=search_products turn=Uh... like, you know... um... so search for a coffee maker first. If you find one that's under 50 dollars, go ahead
+DEBUG: inside start_task! api=add_to_cart turn=add 2... um, to the cart because they'd make great gifts. But
+DEBUG: inside start_task! api=track_order turn=just forget the coffee maker and track order W-W-W for me instead.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=track_order turn=Um... so hmm... hmm... well... could you track order B-O-B for me first? Then... um,... um, I
+DEBUG: inside start_task! api=search_products turn=also want to search for a nice watch under 200 dollars. And
+DEBUG: inside start_task! api=add_to_cart turn=once you find something good, uh, go ahead and add it to my cart.
+DEBUG: inside start_task! api=track_order turn=Uh... oh, hi... oh, I've got multiple orders out and... um, I also want to look at something new.
+DEBUG: inside start_task! api=track_order turn=Uh... oh, hi... oh, I've got multiple orders out and... um, I also want to look at something new. Um, so you know... um... so um, first could you track order A-1 for me? And like,... um, I also need to check on order B-2 while we're at it. Oh and uh, could you search for a cozy blanket too? I've been meaning to get one.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=track_order turn=Hmm... um... so you know... like... first... could you track order G-G-5? Then I'd like to process a refund for it and if possible. And
+DEBUG: inside start_task! api=add_to_cart turn=also, while we're at it, add item X-1 to my cart so... um, I can order a replacement.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'search_products'), (1.0, 'add_to_cart')]
+DEBUG: inside start_task! api=add_to_cart turn=Like... add item K-9 to my cart,... um...... um, I want 2 of those. Then add item M-1 to the cart as well — wait... actually, for M-1 make it 5 units, I need more than I originally thought.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter'), (1.0, 'search_products'), (0.5, 'add_to_cart')]
+DEBUG: inside start_task! api=track_order turn=Let me focus on what I actually need. Track order C-A-T for me.
+DEBUG: inside start_task! api=search_products turn=Then search for cat food because I'm running low.
+DEBUG: inside start_task! api=add_to_cart turn=And add 3 of whatever you find to my cart.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=get_exchange_rate turn=Like... i'm trying to figure out how much 500 US dollars would be if I converted it to euros. Could you check that for me?
+DEBUG: inside start_task! api=get_card_benefits turn=Oh... hey there, I've been thinking... um, about upgrading my credit card.
+DEBUG: inside start_task! api=get_card_benefits turn=Oh... hey there, I've been thinking... um, about upgrading my credit card. Um... so could you tell me what kind of benefits come with the platinum card?... um, I want to know if it's worth switching to.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... hmm... is someone there? I need help making a change to one of my autopay settings.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... hmm... is someone there? I need help making a change to one of my autopay settings. Uh, um, so... um, I want to change my mortgage autopay to pull from, like, my savings account instead of where it's pulling from now.
+DEBUG: inside start_task! api=flight_search turn=Good morning! I'm getting ready for a trip abroad and need... um... to plan my budget.
+DEBUG: inside start_task! api=get_exchange_rate turn=I need... um... to figure out how much 1000 US dollars would be in... British pounds. Do you know the current rate?
+DEBUG: inside start_task! api=modify_autopay turn=Hi... well... I've been meaning to set up automatic payments and... um, I finally have a minute to do it.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... well... I've been meaning to set up automatic payments and... um, I finally have a minute to do it. You know... i want to set my credit card bill to autopay... and have it pull from my checking account every month. Can you do that?
+DEBUG: inside start_task! api=get_card_benefits turn=Uh... um, hi there.... um, I was looking at your different credit card options on the website.
+DEBUG: inside start_task! api=get_card_benefits turn=Um, so uh, I was wondering what the benefits are for the... travel card? I think that's the one my coworker recommended to me.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'modify_autopay')]
+DEBUG: inside start_task! api=modify_autopay turn=Uh... i was going... um, to ask about my account balance but — never mind, I'll check online later. For now, could you change the mortgage autopay so it pulls from my savings account?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'get_exchange_rate')]
+DEBUG: inside start_task! api=get_exchange_rate turn=I'm trying to figure out how much money I'd have if... um... I converted... let me think... about 200 euros into US dollars. What would that come out to?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(2.0, 'get_exchange_rate'), (1.5, 'search_products'), (1.5, 'search_apartments'), (1.5, 'flight_search')]
+DEBUG: inside start_task! api=get_exchange_rate turn=I want to convert 300 US dollars to yen — actually wait... I'm mixing up my trips.... um, I meant euros, not yen. So 300 dollars to euros please.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=get_card_benefits turn=First off... could you tell me what the benefits are for the travel card? I'm considering applying. And then separately,... um, I
+DEBUG: inside start_task! api=get_exchange_rate turn=also need to know how much 200 British pounds would be in Japanese yen.
+DEBUG: inside start_task! api=update_search_filter turn=Hey... well,... um... I realized I need to change where one of my payments is coming from.
+DEBUG: inside start_task! api=modify_autopay turn=Um, so um, so I want to set my credit card payment to pull from, like, my savings account instead of where it is now. Could you switch that over for me?
+DEBUG: inside start_task! api=get_exchange_rate turn=Uh... good day.... um, I need to do a currency conversion before I buy something online from Europe.
+DEBUG: inside start_task! api=get_exchange_rate turn=Uh... good day.... um, I need to do a currency conversion before I buy something online from Europe. Well, i want to calculate how much 100 euros would be in US dollars — oh wait, I was looking at the wrong invoice. It's actually 150 euros, not 100. So 150 euros to US dollars.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... um... I need to reorganize which accounts my bills are pulling from. It's gotten kind of messy.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... um... I need to reorganize which accounts my bills are pulling from. It's gotten kind of messy. Uh... i want to set my credit card bill to pay from... uh... savings, that makes more sense. And then my mortgage should pull from checking instead.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'modify_autopay'), (1.0, 'get_exchange_rate')]
+DEBUG: inside start_task! api=get_exchange_rate turn=Like... first, can you tell me how much 50 US dollars would be in euros? And then
+DEBUG: inside start_task! api=get_exchange_rate turn=also, how much would 100 Canadian dollars be in US dollars?... um, I need both numbers.
+DEBUG: inside start_task! api=modify_autopay turn=Hi,... um, I just realized I need to fix something with my autopay setup. I think I set it wrong.
+DEBUG: inside start_task! api=modify_autopay turn=Hi,... um, I just realized I need to fix something with my autopay setup. I think I set it wrong. Hmm... i want... um, to switch my mortgage autopay to pull from checking — wait no, that's wrong too. Make it savings instead. Yeah, savings is the right one.
+DEBUG: inside start_task! api=search_products turn=Oh... sorry,... um, I need a moment to collect my thoughts. I'm looking at some numbers here.
+DEBUG: inside start_task! api=get_exchange_rate turn=Like... okay so... um, I need to know how much... let me see... 500 yen would be in US dollars. I'm trying to figure out if this online purchase is worth it.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=get_card_benefits turn=Uh... i wanted to pay my credit card bill right now, but — actually, never mind that,... um, I can do it online later. For now, could you just check what benefits come with the gold card? I'm thinking about upgrading.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=get_exchange_rate turn=Um... so alright, so first,... um, I need to know how much 1000 US dollars would be in euros.
+DEBUG: inside start_task! api=modify_autopay turn=Then I want to change my credit card autopay so it pulls from savings instead.
+DEBUG: inside start_task! api=get_card_benefits turn=And finally, can you tell me what kind of benefits the premium card has?
+DEBUG: inside start_task! api=update_search_filter turn=Hey,... um... I keep going back and forth on this conversion, so I apologize in advance if I change my mind.
+DEBUG: inside start_task! api=get_exchange_rate turn=Okay so... um... I want to convert 200 euros to yen — no wait, I just remembered I need British pounds, not yen. And actually, let me change the amount too, make it 300 euros instead of 200.
+DEBUG: inside start_task! api=get_exchange_rate turn=Hey... um... can you help me with something a bit more complicated? It involves a decision that depends on the exchange rate.
+DEBUG: inside start_task! api=get_exchange_rate turn=Hey... um... can you help me with something a bit more complicated? It involves a decision that depends on the exchange rate. Well... here's my situation. I want to check what 1000 US dollars is in euros right now. If the exchange rate looks good to me, then go ahead and change my mortgage autopay to pull from checking. But if the rate isn't great, just leave everything as is and keep it on savings.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_identity_doc'), (1.0, 'modify_autopay')]
+DEBUG: inside start_task! api=get_card_benefits turn=Alright, so first... um, I want to know what the... uh... benefits are for the gold card, because I'm comparing a few options. And then I
+DEBUG: inside start_task! api=get_exchange_rate turn=also need to convert, um, 500 US dollars to yen because I'm buying something from Japan.
+DEBUG: inside start_task! api=modify_autopay turn=Oh, um, hey. I just looked at my bank statements and I think my autopay settings are all messed up.
+DEBUG: inside start_task! api=modify_autopay turn=Oh, um, hey. I just looked at my bank statements and I think my autopay settings are all messed up. Well... like, first... um, I want to change my mortgage autopay so it pulls from, uh, savings — that's the right account for that. And then, um, I also want to set my credit card payment to come from checking.
+DEBUG: inside start_task! api=modify_autopay turn=Hello... well,... um... I need to talk to somebody about my bill payments. There's been some confusion.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter')]
+DEBUG: inside start_task! api=get_exchange_rate turn=Hmm... first... can you tell me how much 250 US dollars would be in Canadian dollars? Then... um, I also need to send a wire transfer to my friend overseas and if you can do that.
+DEBUG: inside start_task! api=get_card_benefits turn=And finally, could you check what benefits come with the rewards card?
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=get_exchange_rate turn=Like... okay, so first I want to... convert 800 US dollars to euros, just so I know the rate.
+DEBUG: inside start_task! api=modify_autopay turn=Then... uh... set my mortgage to autopay from savings. And
+DEBUG: inside start_task! api=get_card_benefits turn=also I want to check the benefits of the... platinum card, because I'm thinking about switching.
+DEBUG: inside start_task! api=search_products turn=Oh, hey... oh... I'm looking for a new place... um...... um, to live and could really use some help narrowing things down.
+DEBUG: inside start_task! api=search_apartments turn=You know... hmm... uh... i'm trying... um...... um... to find a 2-bedroom apartment in Seattle, and I'd like to keep the rent under 2500 a month if possible. Could you see what's available?
+DEBUG: inside start_task! api=calculate_commute turn=Uh, hmm... um... hi... well... I'm considering an apartment and... um, I want to make sure the commute to my office isn't too bad.
+DEBUG: inside start_task! api=search_apartments turn=Um... oh, uh... hi there, I've been looking at a bunch of listings and... um, I think I need to adjust my search a bit.
+DEBUG: inside start_task! api=update_search_filter turn=Um... so well, like... um,... um, I want to update my search filter so the max price is, like, 1800 a month. Everything I've been seeing is over budget.
+DEBUG: inside start_task! api=search_apartments turn=Hmm... uh... hey... oh...... um... I just started apartment hunting in Denver and I need help finding options.
+DEBUG: inside start_task! api=search_apartments turn=Um, oh... well... um, hi there. I've been having... um, the hardest time finding a place that allows my dog.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=calculate_commute turn=Well... um... so hmm... i was wondering how long it would take to walk from Oak Street to the Gym. I'm trying to figure out if... um, I can walk there in the mornings.
+DEBUG: inside start_task! api=calculate_commute turn=Hmm... oh... oh... can you help me with a commute question?... um, I want to make sure this place works before I sign a lease.
+DEBUG: inside start_task! api=search_apartments turn=Well, uh, well... good morning! I'm still working on finding the right apartment and... um, I wanted to make some changes.
+DEBUG: inside start_task! api=update_search_filter turn=Like, you know... you know... i want to check the listings in — actually... before... um...... um, I do that, could you just update my search filter so that it only shows me places that allow pets? I have a cat.
+DEBUG: inside start_task! api=search_apartments turn=Well, hmm... hello,... um...... um...... um, I need some help finding apartment options. I've been looking in a few different cities.
+DEBUG: inside start_task! api=search_apartments turn=Well, hmm... hello,... um...... um...... um, I need some help finding apartment options. I've been looking in a few different cities. Well... well... uh... i'm interested in a 2-bedroom in Boston — wait, actually,... um, I changed my mind. Let's look in Chicago instead, and keep the max price around 2000 per month.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'search_apartments')]
+DEBUG: inside start_task! api=calculate_commute turn=Um... so well... uh... like... first, could you check how long the transit commute would be from 500 Central Ave... um, to the University? And also
+DEBUG: inside start_task! api=update_search_filter turn=while you're at it, update my preferred neighborhood in the search to Northside.
+DEBUG: inside start_task! api=search_apartments turn=Hmm... hmm... well... hi... uh... I'm still searching for places in Austin but... um... I think I need to adjust what I'm looking for.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'search_apartments')]
+DEBUG: inside start_task! api=calculate_commute turn=Like... you know... hmm... could you calculate the commute from my apartment to the airport? I'd be going by... let me see... transit... since... um, I probably won't have a car right away.
+DEBUG: inside start_task! api=search_products turn=Um... well... oh... hi there, I've decided to expand my search a bit because I'm not finding anything... um, I like.
+DEBUG: inside start_task! api=update_search_filter turn=You know... you know... like... you know... let's raise the max price to 3000 per month... and
+DEBUG: inside start_task! api=update_search_filter turn=also bump up the minimum bedrooms to 3.... um, I think I need more space than I originally thought.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=search_apartments turn=Like, you know... um... so um... I'm looking for, like, a 1-bedroom apartment in Portland, and I'd want to keep the rent under 1800. Oh, and it needs to be, uh, pet-friendly because... um, I have a dog.
+DEBUG: inside start_task! api=search_apartments turn=Well... uh... um... hey... hmm... I'm trying to find a place and... um, I keep going back and forth on what I need.
+DEBUG: inside start_task! api=search_apartments turn=Well... uh... um... hey... hmm... I'm trying to find a place and... um, I keep going back and forth on what I need. Um, so hmm... uh... i wanted... um, to check the commute from that one listing — actually, let me skip that for now. Could you just search for a 3-bedroom in Atlanta that's pet-friendly? I've got two cats.
+DEBUG: inside start_task! api=search_apartments turn=Hmm... hi... hmm...... um...... um...... um, I have a quick question about commuting from one of the apartments I'm looking at.
+DEBUG: inside start_task! api=calculate_commute turn=Um, so uh, hmm... well... i want to know how long it would take to drive from my apartment to the... uh... hospital? My wife works there and... um, I want to make sure it's not too far.
+DEBUG: inside start_task! api=search_apartments turn=Um... well... hey... well,... um, I need to double-check how long it would take me to get to work from the apartment I'm considering.
+DEBUG: inside start_task! api=calculate_commute turn=Like, like... um... so calculate the transit time to the office from there — wait, no, actually... um, I just remembered I'd be driving. So make it driving time to the office from my house instead.
+DEBUG: inside start_task! api=search_apartments turn=Oh... hi... I'm narrowing down my apartment options and... um...... um...... um, I need to evaluate them based on location.
+DEBUG: inside start_task! api=search_apartments turn=Oh... hi... I'm narrowing down my apartment options and... um...... um...... um, I need to evaluate them based on location. Well... like... um... so first... search for a 1-bedroom in Portland that's under 1800 per month. Then once you find the cheapest option, check how long it would take to bike from there to the coffee shop on 5th Street where... um, I work.
+DEBUG: inside start_task! api=calculate_commute turn=Uh... hey,... um... I need to check a commute route but I keep changing my mind about where I'd be going.
+DEBUG: inside start_task! api=calculate_commute turn=Um... hello... oh... I'm trying... um... to make a smart decision about where to live, and it depends on the commute.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=search_apartments turn=Well, hmm... you know... i want to search for a place with 2 bedrooms. Wait... actually... um, I meant 3 bedrooms, we decided we need a home office.
+DEBUG: inside start_task! api=calculate_commute turn=Also check the transit time to the train station — actually, I'd rather walk, so make that walking time.
+DEBUG: inside start_task! api=search_apartments turn=Uh... oh... oh... hello... uh... I've got a bunch of things... um, I need done for my apartment search.
+DEBUG: inside start_task! api=update_search_filter turn=You know... uh... hmm... um... first can you update my filter so pets are allowed?... um, I keep forgetting to set that.
+DEBUG: inside start_task! api=search_apartments turn=Then, like, search in Seattle for a 1-bedroom. And then
+DEBUG: inside start_task! api=calculate_commute turn=once you find something, uh, check the transit time from there to the stadium because I go to games pretty often.
+DEBUG: inside start_task! api=search_apartments turn=Hmm... well... hi... uh...... um, I need to make some changes to my apartment search but I'm not totally sure what I want yet.
+DEBUG: inside start_task! api=update_search_filter turn=Well, well, uh... can we search for places in — no wait, before we search, let me update my minimum bedrooms... um, to 2. Actually, on second thought, make it 3 bedrooms. We decided we need more space.
+DEBUG: inside start_task! api=modify_autopay turn=Well... hello... I'm planning a move to Dallas and... um...... um... I have a whole list of things I need help with.
+DEBUG: inside start_task! api=update_search_filter turn=Um, so hmm... like... you know... okay... so first... um, I want to... update my max price to 1500 because I'm on a tighter budget.
+DEBUG: inside start_task! api=search_apartments turn=Then... uh... search for apartments in Dallas that fit that budget. And
+DEBUG: inside start_task! api=calculate_commute turn=then... check the walking time from whatever you find to the grocery store, because I want to be close to one.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=update_search_filter turn=You know... you know... alright... first set the filter so pets are allowed... and set the max price to 3000.
+DEBUG: inside start_task! api=search_apartments turn=Then search for places in San Francisco — wait, actually, change the max price to 3500 instead. San Francisco is expensive so... um, I need more room in the budget.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.5, 'flight_search')]
+DEBUG: inside start_task! api=flight_search turn=Well... i'm trying to go to Tokyo, and I was thinking about leaving around July 15th. Could you look up what flights are available for that day?
+DEBUG: inside start_task! api=update_identity_doc turn=Hmm... good morning!... um... I just got my new passport and need to update my records.
+DEBUG: inside start_task! api=update_identity_doc turn=Hmm... good morning!... um... I just got my new passport and need to update my records. Uh, yeah, so my new passport number is P-8-8-9-9-0-0-1-1. Could you update that in the system... um, for me please?
+DEBUG: inside start_task! api=flight_search turn=Hello? Is this... um, the travel booking service?
+DEBUG: inside start_task! api=update_identity_doc turn=Oh... hey there,... um, I need to update some travel documents before my trip.
+DEBUG: inside start_task! api=update_identity_doc turn=Oh... hey there,... um, I need to update some travel documents before my trip. Well... i need to update my visa number. Let me check my card here... the number is V-1-2-3-4-5-6. Could you put that in for me?
+DEBUG: inside start_task! api=flight_search turn=Hi... um, I'm trying to plan a work trip and I could really use some help finding flights.
+DEBUG: inside start_task! api=flight_search turn=Hey... uh... I've decided on my trip and I'm ready... um, to book something.
+DEBUG: inside start_task! api=update_identity_doc turn=Hi... hmm... I recently renewed my driver license and I need to get the new number into your system.
+DEBUG: inside start_task! api=update_identity_doc turn=Hi... hmm... I recently renewed my driver license and I need to get the new number into your system. Uh,... um... the new driver license number is D-L-5-5-5. Could you swap out the old one and put this new one in there?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=I was going to ask about hotel options but — never mind that for now. Could you just find me flights to Seattle on November 1st instead?
+DEBUG: inside start_task! api=flight_search turn=Hi,... um... I need help booking a flight for an upcoming business trip.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Um, so um, I was looking at flights to Miami on October 5th — wait, uh, my schedule just changed. My meeting got moved, so actually make it October 7th instead.
+DEBUG: inside start_task! api=flight_search turn=Uh... hi there,... um, I need to get a flight booked for a colleague who's traveling for work.
+DEBUG: inside start_task! api=flight_search turn=Hey... um... I need to book a flight for someone. Let me give you the details.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=You know... i was thinking about going to — oh... never mind that destination. Let me start over. Just search for flights to Denver on January 15th, that's actually what... um, I need.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Um... so i want to look at flights to Seoul, and the date... um, I was thinking of is... let me think... I'm pretty sure it's March 22nd. Yeah, could you search for that?
+DEBUG: inside start_task! api=update_identity_doc turn=Hey... uh, I've got a couple of document updates that... um, I need to take care of before my trip next week.
+DEBUG: inside start_task! api=update_identity_doc turn=Hey... uh, I've got a couple of document updates that... um, I need to take care of before my trip next week. You know... first... my driver license number changed to D-L-5-5-5, and... um, I also need to change my passport number to P-9-9-9. Could you update both of those for me?
+DEBUG: inside start_task! api=flight_search turn=Hey... sorry... um, to bother you. I've been going back and forth on this trip plan all day.
+DEBUG: inside start_task! api=flight_search turn=Hey... sorry... um, to bother you. I've been going back and forth on this trip plan all day. Hmm... like... I've been thinking about it and... um, I need to book flights to, um, Vegas. I'm looking at going around, uh, August 8th if there's anything available.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'track_order')]
+DEBUG: inside start_task! api=flight_search turn=Hmm... yeah,... um... I think I want to fly to... Cairo. I've always wanted to go there. I'm looking at December 1st as the travel date.
+DEBUG: inside start_task! api=flight_search turn=Hi... um... I have a few things I need to get done before my big trip next month.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter'), (1.0, 'update_identity_doc'), (1.0, 'modify_autopay')]
+DEBUG: inside start_task! api=flight_search turn=Hmm... okay so, I want to look at flights to Rome — no wait, I changed my mind, let's do Milan instead. And I was thinking June 1st, but actually, June 3rd works better for me.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Uh... here's the thing.... um, I need to fly to Toronto on July 20th. If there happens to be a flight under 300 dollars, go ahead book it for Riley Kim. But and if everything's too expensive then just forget the flight
+DEBUG: inside start_task! api=update_identity_doc turn=update my driver license to D-L-8-8 instead.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=You know... okay so,... um... I need to find flights to... Vegas, I was thinking around August 8th. And then, um once you find something, book it under the name Quinn Davis. Oh and while you're at it, could you
+DEBUG: inside start_task! api=update_identity_doc turn=also update my visa number to V-7-7?
+DEBUG: inside start_task! api=flight_search turn=Hi... uh,... um, I need to get a flight booked but I keep changing my mind about the details.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(2.0, 'update_identity_doc')]
+DEBUG: inside start_task! api=update_identity_doc turn=Hmm... um... so I need to, like, update my passport number to P-1-1-2-2 because I just renewed it. And then, uh, I
+DEBUG: inside start_task! api=update_identity_doc turn=also got a new driver license, so could you change that one to D-L-9-0-9-0 as well?
+DEBUG: inside start_task! api=flight_search turn=Um... good morning! I'm trying... um, to plan out every detail of my upcoming trip, so I've got a long list.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Uh... okay, so first... um, I need flights to Bangkok for March 1st. Book it for... Cameron, that's the traveler.
+DEBUG: inside start_task! api=update_identity_doc turn=Then I need to update my passport number to P-1-2-3 and
+DEBUG: inside start_task! api=update_identity_doc turn=also... my visa number to V-3-2-1.
+DEBUG: inside start_task! api=track_order turn=Uh... uh... hello... well... is this customer support?... um, I have a question about an order I placed.
+DEBUG: inside start_task! api=track_order turn=Uh... uh... hello... well... is this customer support?... um, I have a question about an order I placed. Like... uh, you know... well, i ordered something last week and... um, I haven't received it yet. Could you track it for me? The order ID is A-B-C-1-2-3.
+DEBUG: inside start_task! api=search_products turn=Hmm... uh... hi... uh... I'm shopping for some new electronics and... um... I was hoping you could help me find something.
+DEBUG: inside start_task! api=search_products turn=Hmm... um... so i'm looking for a pair of wireless headphones... and I'd like... um, to keep it under 100 dollars if possible. What do you have?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(2.0, 'search_products'), (1.5, 'add_to_cart')]
+DEBUG: inside start_task! api=add_to_cart turn=Hmm... uh... hmm... um... can you, like, add product P-9-9 to my cart? I just need one of them for now.
+DEBUG: inside start_task! api=track_order turn=Um... um, well... good afternoon... I've been waiting on... um, a package and it still hasn't arrived.
+DEBUG: inside start_task! api=track_order turn=Um... um, well... good afternoon... I've been waiting on... um, a package and it still hasn't arrived. You know... uh... like... where is my package? Let me find... um... the order number here... the order number is X-Y-Z-8-8. Could you check what's going on with it?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'search_apartments')]
+DEBUG: inside start_task! api=search_products turn=Um, so like, uh... I'm looking... um, for a new... let me think... a desk. Something under 300 dollars if you have any options like that.
+DEBUG: inside start_task! api=add_to_cart turn=Uh, um... well... hey,... um...... um, I found something I want to buy and I'd like to add it to my cart.
+DEBUG: inside start_task! api=add_to_cart turn=Uh, um... well... hey,... um...... um, I found something I want to buy and I'd like to add it to my cart. Hmm... um... so like... could you add 2 of item K-2 to my cart?... um... I need one for me and one as a gift for my friend.
+DEBUG: inside start_task! api=track_order turn=Uh... um... oh, can you help me with something?... um, I need to check on one of my orders.
+DEBUG: inside start_task! api=search_products turn=Oh, um... hello... well... I've been meaning to buy a new keyboard and... um...... um, I finally have time to look.
+DEBUG: inside start_task! api=search_products turn=Uh... hmm... you know... uh... i want a mechanical keyboard... and I'm trying... um, to keep my budget under... 200 dollars. Do you have anything like that?
+DEBUG: inside start_task! api=flight_search turn=Oh... hi... um... I need to find something for an outdoor trip I've got coming up.
+DEBUG: inside start_task! api=search_products turn=Like... well... hmm... could you search for running shoes — actually no...... um, I just remembered I already have running shoes. Search for hiking boots instead, that's what I actually need.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'update_search_filter')]
+DEBUG: inside start_task! api=track_order turn=Hmm... like... like... hmm... first, can you track my order? The ID is 1-2-3-A-B-C. And then while we're at it, could you
+DEBUG: inside start_task! api=search_products turn=also search for winter jackets under 150 dollars?... um, I need one for my trip.
+DEBUG: inside start_task! api=add_to_cart turn=Uh... hmm... um... hi... uh... I'm ready... um, to add something to my cart but I'm still deciding on the quantity.
+DEBUG: inside start_task! api=add_to_cart turn=Uh... hmm... um... hi... uh... I'm ready... um, to add something to my cart but I'm still deciding on the quantity. You know... like... well, go ahead and add product B-7 to my cart. Make it 3 of them — no, wait, that's too many. Just put 1 in there for now, I'll order more later if... um, I need to.
+DEBUG: inside start_task! api=search_products turn=Well... oh, hey... um, I'm looking for a gift for my friend's birthday and I'm not totally sure what... um, to get.
+DEBUG: inside start_task! api=search_products turn=Well... oh, hey... um, I'm looking for a gift for my friend's birthday and I'm not totally sure what... um, to get. Like... you know... uh... i'm thinking something in the... let me think... electronics section would be great. He's really into gadgets and tech stuff.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=add_to_cart turn=Um... so well... well... first... could you add item K-2... um, to my cart? Just one of them. And
+DEBUG: inside start_task! api=track_order turn=then can you check on my last order too? The order ID is D-E-L-I-V.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(2.0, 'search_products'), (0.5, 'add_to_cart')]
+DEBUG: inside start_task! api=add_to_cart turn=Hmm... well... um... so uh, yeah, so... um, I already found what I want. Can you add, like, 2 of item P-5-2 to my cart? I want to get one for myself and one as a gift.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'track_order')]
+DEBUG: inside start_task! api=track_order turn=Uh... um, so well... can you, uh, track order B-O-B-1-2 for me?... um, I ordered it a few days ago and it should be arriving... soon, but I just want to make sure.
+DEBUG: inside start_task! api=search_products turn=Um... hmm... hmm... hi,... um...... um...... um, I need help finding a specific type of product for my kitchen.
+DEBUG: inside start_task! api=search_products turn=Um... hmm... hmm... hi,... um...... um...... um, I need help finding a specific type of product for my kitchen. Hmm... like, uh... i need a new... let me think about what it's called... a coffee maker! Yeah... I'm looking... um, for a coffee maker. Something under 50 dollars would be ideal.
+DEBUG: inside start_task! api=search_products turn=Oh... well... um... oh... hey there,... um, I was going to look at some new products but
+DEBUG: inside start_task! api=track_order turn=Like... hmm... can you cancel my — actually... never mind the cancellation,... um... I changed my mind about that. Could you just track order G-G-5 for me instead? I want to see where it is.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=search_products turn=Hmm... um... so like... first, search for a gaming mouse —... um, I want to see what you have.
+DEBUG: inside start_task! api=add_to_cart turn=Then add the cheapest option to my cart so I can buy it later. And while you're at it, could you
+DEBUG: inside start_task! api=track_order turn=also track my order P-O-9-9-9? I've been waiting on that one.
+DEBUG: inside start_task! api=track_order turn=Um, hmm... hello... uh,... um...... um...... um, I need to order some stuff for work but I keep changing my mind on the details.
+DEBUG: inside start_task! api=search_products turn=Um... so you know... search for a laptop — wait... no,... um...... um, I actually need a tablet, not a laptop.
+DEBUG: inside start_task! api=add_to_cart turn=And add 2 of them to the cart. Actually, just add 1 instead, I only have budget for one right now.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=search_products turn=Uh... like, you know... um... so search for a coffee maker first. If you find one that's under 50 dollars, go ahead
+DEBUG: inside start_task! api=add_to_cart turn=add 2... um, to the cart because they'd make great gifts. But
+DEBUG: inside start_task! api=track_order turn=just forget the coffee maker and track order W-W-W for me instead.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=track_order turn=Um... so hmm... hmm... well... could you track order B-O-B for me first? Then... um,... um, I
+DEBUG: inside start_task! api=search_products turn=also want to search for a nice watch under 200 dollars. And
+DEBUG: inside start_task! api=add_to_cart turn=once you find something good, uh, go ahead and add it to my cart.
+DEBUG: inside start_task! api=track_order turn=Uh... oh, hi... oh, I've got multiple orders out and... um, I also want to look at something new.
+DEBUG: inside start_task! api=track_order turn=Uh... oh, hi... oh, I've got multiple orders out and... um, I also want to look at something new. Um, so you know... um... so um, first could you track order A-1 for me? And like,... um, I also need to check on order B-2 while we're at it. Oh and uh, could you search for a cozy blanket too? I've been meaning to get one.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=track_order turn=Hmm... um... so you know... like... first... could you track order G-G-5? Then I'd like to process a refund for it and if possible. And
+DEBUG: inside start_task! api=add_to_cart turn=also, while we're at it, add item X-1 to my cart so... um, I can order a replacement.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'search_products'), (1.0, 'add_to_cart')]
+DEBUG: inside start_task! api=add_to_cart turn=Like... add item K-9 to my cart,... um...... um, I want 2 of those. Then add item M-1 to the cart as well — wait... actually, for M-1 make it 5 units, I need more than I originally thought.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter'), (1.0, 'search_products'), (0.5, 'add_to_cart')]
+DEBUG: inside start_task! api=track_order turn=Let me focus on what I actually need. Track order C-A-T for me.
+DEBUG: inside start_task! api=search_products turn=Then search for cat food because I'm running low.
+DEBUG: inside start_task! api=add_to_cart turn=And add 3 of whatever you find to my cart.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=get_exchange_rate turn=Like... i'm trying to figure out how much 500 US dollars would be if I converted it to euros. Could you check that for me?
+DEBUG: inside start_task! api=get_card_benefits turn=Oh... hey there, I've been thinking... um, about upgrading my credit card.
+DEBUG: inside start_task! api=get_card_benefits turn=Oh... hey there, I've been thinking... um, about upgrading my credit card. Um... so could you tell me what kind of benefits come with the platinum card?... um, I want to know if it's worth switching to.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... hmm... is someone there? I need help making a change to one of my autopay settings.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... hmm... is someone there? I need help making a change to one of my autopay settings. Uh, um, so... um, I want to change my mortgage autopay to pull from, like, my savings account instead of where it's pulling from now.
+DEBUG: inside start_task! api=flight_search turn=Good morning! I'm getting ready for a trip abroad and need... um... to plan my budget.
+DEBUG: inside start_task! api=get_exchange_rate turn=I need... um... to figure out how much 1000 US dollars would be in... British pounds. Do you know the current rate?
+DEBUG: inside start_task! api=modify_autopay turn=Hi... well... I've been meaning to set up automatic payments and... um, I finally have a minute to do it.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... well... I've been meaning to set up automatic payments and... um, I finally have a minute to do it. You know... i want to set my credit card bill to autopay... and have it pull from my checking account every month. Can you do that?
+DEBUG: inside start_task! api=get_card_benefits turn=Uh... um, hi there.... um, I was looking at your different credit card options on the website.
+DEBUG: inside start_task! api=get_card_benefits turn=Um, so uh, I was wondering what the benefits are for the... travel card? I think that's the one my coworker recommended to me.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'modify_autopay')]
+DEBUG: inside start_task! api=modify_autopay turn=Uh... i was going... um, to ask about my account balance but — never mind, I'll check online later. For now, could you change the mortgage autopay so it pulls from my savings account?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'get_exchange_rate')]
+DEBUG: inside start_task! api=get_exchange_rate turn=I'm trying to figure out how much money I'd have if... um... I converted... let me think... about 200 euros into US dollars. What would that come out to?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(2.0, 'get_exchange_rate'), (1.5, 'search_products'), (1.5, 'search_apartments'), (1.5, 'flight_search')]
+DEBUG: inside start_task! api=get_exchange_rate turn=I want to convert 300 US dollars to yen — actually wait... I'm mixing up my trips.... um, I meant euros, not yen. So 300 dollars to euros please.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=get_card_benefits turn=First off... could you tell me what the benefits are for the travel card? I'm considering applying. And then separately,... um, I
+DEBUG: inside start_task! api=get_exchange_rate turn=also need to know how much 200 British pounds would be in Japanese yen.
+DEBUG: inside start_task! api=update_search_filter turn=Hey... well,... um... I realized I need to change where one of my payments is coming from.
+DEBUG: inside start_task! api=modify_autopay turn=Um, so um, so I want to set my credit card payment to pull from, like, my savings account instead of where it is now. Could you switch that over for me?
+DEBUG: inside start_task! api=get_exchange_rate turn=Uh... good day.... um, I need to do a currency conversion before I buy something online from Europe.
+DEBUG: inside start_task! api=get_exchange_rate turn=Uh... good day.... um, I need to do a currency conversion before I buy something online from Europe. Well, i want to calculate how much 100 euros would be in US dollars — oh wait, I was looking at the wrong invoice. It's actually 150 euros, not 100. So 150 euros to US dollars.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... um... I need to reorganize which accounts my bills are pulling from. It's gotten kind of messy.
+DEBUG: inside start_task! api=modify_autopay turn=Hi... um... I need to reorganize which accounts my bills are pulling from. It's gotten kind of messy. Uh... i want to set my credit card bill to pay from... uh... savings, that makes more sense. And then my mortgage should pull from checking instead.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'modify_autopay'), (1.0, 'get_exchange_rate')]
+DEBUG: inside start_task! api=get_exchange_rate turn=Like... first, can you tell me how much 50 US dollars would be in euros? And then
+DEBUG: inside start_task! api=get_exchange_rate turn=also, how much would 100 Canadian dollars be in US dollars?... um, I need both numbers.
+DEBUG: inside start_task! api=modify_autopay turn=Hi,... um, I just realized I need to fix something with my autopay setup. I think I set it wrong.
+DEBUG: inside start_task! api=modify_autopay turn=Hi,... um, I just realized I need to fix something with my autopay setup. I think I set it wrong. Hmm... i want... um, to switch my mortgage autopay to pull from checking — wait no, that's wrong too. Make it savings instead. Yeah, savings is the right one.
+DEBUG: inside start_task! api=search_products turn=Oh... sorry,... um, I need a moment to collect my thoughts. I'm looking at some numbers here.
+DEBUG: inside start_task! api=get_exchange_rate turn=Like... okay so... um, I need to know how much... let me see... 500 yen would be in US dollars. I'm trying to figure out if this online purchase is worth it.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=get_card_benefits turn=Uh... i wanted to pay my credit card bill right now, but — actually, never mind that,... um, I can do it online later. For now, could you just check what benefits come with the gold card? I'm thinking about upgrading.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=get_exchange_rate turn=Um... so alright, so first,... um, I need to know how much 1000 US dollars would be in euros.
+DEBUG: inside start_task! api=modify_autopay turn=Then I want to change my credit card autopay so it pulls from savings instead.
+DEBUG: inside start_task! api=get_card_benefits turn=And finally, can you tell me what kind of benefits the premium card has?
+DEBUG: inside start_task! api=update_search_filter turn=Hey,... um... I keep going back and forth on this conversion, so I apologize in advance if I change my mind.
+DEBUG: inside start_task! api=get_exchange_rate turn=Okay so... um... I want to convert 200 euros to yen — no wait, I just remembered I need British pounds, not yen. And actually, let me change the amount too, make it 300 euros instead of 200.
+DEBUG: inside start_task! api=get_exchange_rate turn=Hey... um... can you help me with something a bit more complicated? It involves a decision that depends on the exchange rate.
+DEBUG: inside start_task! api=get_exchange_rate turn=Hey... um... can you help me with something a bit more complicated? It involves a decision that depends on the exchange rate. Well... here's my situation. I want to check what 1000 US dollars is in euros right now. If the exchange rate looks good to me, then go ahead and change my mortgage autopay to pull from checking. But if the rate isn't great, just leave everything as is and keep it on savings.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_identity_doc'), (1.0, 'modify_autopay')]
+DEBUG: inside start_task! api=get_card_benefits turn=Alright, so first... um, I want to know what the... uh... benefits are for the gold card, because I'm comparing a few options. And then I
+DEBUG: inside start_task! api=get_exchange_rate turn=also need to convert, um, 500 US dollars to yen because I'm buying something from Japan.
+DEBUG: inside start_task! api=modify_autopay turn=Oh, um, hey. I just looked at my bank statements and I think my autopay settings are all messed up.
+DEBUG: inside start_task! api=modify_autopay turn=Oh, um, hey. I just looked at my bank statements and I think my autopay settings are all messed up. Well... like, first... um, I want to change my mortgage autopay so it pulls from, uh, savings — that's the right account for that. And then, um, I also want to set my credit card payment to come from checking.
+DEBUG: inside start_task! api=modify_autopay turn=Hello... well,... um... I need to talk to somebody about my bill payments. There's been some confusion.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter')]
+DEBUG: inside start_task! api=get_exchange_rate turn=Hmm... first... can you tell me how much 250 US dollars would be in Canadian dollars? Then... um, I also need to send a wire transfer to my friend overseas and if you can do that.
+DEBUG: inside start_task! api=get_card_benefits turn=And finally, could you check what benefits come with the rewards card?
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=get_exchange_rate turn=Like... okay, so first I want to... convert 800 US dollars to euros, just so I know the rate.
+DEBUG: inside start_task! api=modify_autopay turn=Then... uh... set my mortgage to autopay from savings. And
+DEBUG: inside start_task! api=get_card_benefits turn=also I want to check the benefits of the... platinum card, because I'm thinking about switching.
+DEBUG: inside start_task! api=search_products turn=Oh, hey... oh... I'm looking for a new place... um...... um, to live and could really use some help narrowing things down.
+DEBUG: inside start_task! api=search_apartments turn=You know... hmm... uh... i'm trying... um...... um... to find a 2-bedroom apartment in Seattle, and I'd like to keep the rent under 2500 a month if possible. Could you see what's available?
+DEBUG: inside start_task! api=calculate_commute turn=Uh, hmm... um... hi... well... I'm considering an apartment and... um, I want to make sure the commute to my office isn't too bad.
+DEBUG: inside start_task! api=search_apartments turn=Um... oh, uh... hi there, I've been looking at a bunch of listings and... um, I think I need to adjust my search a bit.
+DEBUG: inside start_task! api=update_search_filter turn=Um... so well, like... um,... um, I want to update my search filter so the max price is, like, 1800 a month. Everything I've been seeing is over budget.
+DEBUG: inside start_task! api=search_apartments turn=Hmm... uh... hey... oh...... um... I just started apartment hunting in Denver and I need help finding options.
+DEBUG: inside start_task! api=search_apartments turn=Um, oh... well... um, hi there. I've been having... um, the hardest time finding a place that allows my dog.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=calculate_commute turn=Well... um... so hmm... i was wondering how long it would take to walk from Oak Street to the Gym. I'm trying to figure out if... um, I can walk there in the mornings.
+DEBUG: inside start_task! api=calculate_commute turn=Hmm... oh... oh... can you help me with a commute question?... um, I want to make sure this place works before I sign a lease.
+DEBUG: inside start_task! api=search_apartments turn=Well, uh, well... good morning! I'm still working on finding the right apartment and... um, I wanted to make some changes.
+DEBUG: inside start_task! api=update_search_filter turn=Like, you know... you know... i want to check the listings in — actually... before... um...... um, I do that, could you just update my search filter so that it only shows me places that allow pets? I have a cat.
+DEBUG: inside start_task! api=search_apartments turn=Well, hmm... hello,... um...... um...... um, I need some help finding apartment options. I've been looking in a few different cities.
+DEBUG: inside start_task! api=search_apartments turn=Well, hmm... hello,... um...... um...... um, I need some help finding apartment options. I've been looking in a few different cities. Well... well... uh... i'm interested in a 2-bedroom in Boston — wait, actually,... um, I changed my mind. Let's look in Chicago instead, and keep the max price around 2000 per month.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.0, 'search_apartments')]
+DEBUG: inside start_task! api=calculate_commute turn=Um... so well... uh... like... first, could you check how long the transit commute would be from 500 Central Ave... um, to the University? And also
+DEBUG: inside start_task! api=update_search_filter turn=while you're at it, update my preferred neighborhood in the search to Northside.
+DEBUG: inside start_task! api=search_apartments turn=Hmm... hmm... well... hi... uh... I'm still searching for places in Austin but... um... I think I need to adjust what I'm looking for.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'search_apartments')]
+DEBUG: inside start_task! api=calculate_commute turn=Like... you know... hmm... could you calculate the commute from my apartment to the airport? I'd be going by... let me see... transit... since... um, I probably won't have a car right away.
+DEBUG: inside start_task! api=search_products turn=Um... well... oh... hi there, I've decided to expand my search a bit because I'm not finding anything... um, I like.
+DEBUG: inside start_task! api=update_search_filter turn=You know... you know... like... you know... let's raise the max price to 3000 per month... and
+DEBUG: inside start_task! api=update_search_filter turn=also bump up the minimum bedrooms to 3.... um, I think I need more space than I originally thought.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=search_apartments turn=Like, you know... um... so um... I'm looking for, like, a 1-bedroom apartment in Portland, and I'd want to keep the rent under 1800. Oh, and it needs to be, uh, pet-friendly because... um, I have a dog.
+DEBUG: inside start_task! api=search_apartments turn=Well... uh... um... hey... hmm... I'm trying to find a place and... um, I keep going back and forth on what I need.
+DEBUG: inside start_task! api=search_apartments turn=Well... uh... um... hey... hmm... I'm trying to find a place and... um, I keep going back and forth on what I need. Um, so hmm... uh... i wanted... um, to check the commute from that one listing — actually, let me skip that for now. Could you just search for a 3-bedroom in Atlanta that's pet-friendly? I've got two cats.
+DEBUG: inside start_task! api=search_apartments turn=Hmm... hi... hmm...... um...... um...... um, I have a quick question about commuting from one of the apartments I'm looking at.
+DEBUG: inside start_task! api=calculate_commute turn=Um, so uh, hmm... well... i want to know how long it would take to drive from my apartment to the... uh... hospital? My wife works there and... um, I want to make sure it's not too far.
+DEBUG: inside start_task! api=search_apartments turn=Um... well... hey... well,... um, I need to double-check how long it would take me to get to work from the apartment I'm considering.
+DEBUG: inside start_task! api=calculate_commute turn=Like, like... um... so calculate the transit time to the office from there — wait, no, actually... um, I just remembered I'd be driving. So make it driving time to the office from my house instead.
+DEBUG: inside start_task! api=search_apartments turn=Oh... hi... I'm narrowing down my apartment options and... um...... um...... um, I need to evaluate them based on location.
+DEBUG: inside start_task! api=search_apartments turn=Oh... hi... I'm narrowing down my apartment options and... um...... um...... um, I need to evaluate them based on location. Well... like... um... so first... search for a 1-bedroom in Portland that's under 1800 per month. Then once you find the cheapest option, check how long it would take to bike from there to the coffee shop on 5th Street where... um, I work.
+DEBUG: inside start_task! api=calculate_commute turn=Uh... hey,... um... I need to check a commute route but I keep changing my mind about where I'd be going.
+DEBUG: inside start_task! api=calculate_commute turn=Um... hello... oh... I'm trying... um... to make a smart decision about where to live, and it depends on the commute.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=search_apartments turn=Well, hmm... you know... i want to search for a place with 2 bedrooms. Wait... actually... um, I meant 3 bedrooms, we decided we need a home office.
+DEBUG: inside start_task! api=calculate_commute turn=Also check the transit time to the train station — actually, I'd rather walk, so make that walking time.
+DEBUG: inside start_task! api=search_apartments turn=Uh... oh... oh... hello... uh... I've got a bunch of things... um, I need done for my apartment search.
+DEBUG: inside start_task! api=update_search_filter turn=You know... uh... hmm... um... first can you update my filter so pets are allowed?... um, I keep forgetting to set that.
+DEBUG: inside start_task! api=search_apartments turn=Then, like, search in Seattle for a 1-bedroom. And then
+DEBUG: inside start_task! api=calculate_commute turn=once you find something, uh, check the transit time from there to the stadium because I go to games pretty often.
+DEBUG: inside start_task! api=search_apartments turn=Hmm... well... hi... uh...... um, I need to make some changes to my apartment search but I'm not totally sure what I want yet.
+DEBUG: inside start_task! api=update_search_filter turn=Well, well, uh... can we search for places in — no wait, before we search, let me update my minimum bedrooms... um, to 2. Actually, on second thought, make it 3 bedrooms. We decided we need more space.
+DEBUG: inside start_task! api=modify_autopay turn=Well... hello... I'm planning a move to Dallas and... um...... um... I have a whole list of things I need help with.
+DEBUG: inside start_task! api=update_search_filter turn=Um, so hmm... like... you know... okay... so first... um, I want to... update my max price to 1500 because I'm on a tighter budget.
+DEBUG: inside start_task! api=search_apartments turn=Then... uh... search for apartments in Dallas that fit that budget. And
+DEBUG: inside start_task! api=calculate_commute turn=then... check the walking time from whatever you find to the grocery store, because I want to be close to one.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=update_search_filter turn=You know... you know... alright... first set the filter so pets are allowed... and set the max price to 3000.
+DEBUG: inside start_task! api=search_apartments turn=Then search for places in San Francisco — wait, actually, change the max price to 3500 instead. San Francisco is expensive so... um, I need more room in the budget.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(1.5, 'flight_search')]
+DEBUG: inside start_task! api=flight_search turn=Well... i'm trying to go to Tokyo, and I was thinking about leaving around July 15th. Could you look up what flights are available for that day?
+DEBUG: inside start_task! api=update_identity_doc turn=Hmm... good morning!... um... I just got my new passport and need to update my records.
+DEBUG: inside start_task! api=update_identity_doc turn=Hmm... good morning!... um... I just got my new passport and need to update my records. Uh, yeah, so my new passport number is P-8-8-9-9-0-0-1-1. Could you update that in the system... um, for me please?
+DEBUG: inside start_task! api=flight_search turn=Hello? Is this... um, the travel booking service?
+DEBUG: inside start_task! api=update_identity_doc turn=Oh... hey there,... um, I need to update some travel documents before my trip.
+DEBUG: inside start_task! api=update_identity_doc turn=Oh... hey there,... um, I need to update some travel documents before my trip. Well... i need to update my visa number. Let me check my card here... the number is V-1-2-3-4-5-6. Could you put that in for me?
+DEBUG: inside start_task! api=flight_search turn=Hi... um, I'm trying to plan a work trip and I could really use some help finding flights.
+DEBUG: inside start_task! api=flight_search turn=Hey... uh... I've decided on my trip and I'm ready... um, to book something.
+DEBUG: inside start_task! api=update_identity_doc turn=Hi... hmm... I recently renewed my driver license and I need to get the new number into your system.
+DEBUG: inside start_task! api=update_identity_doc turn=Hi... hmm... I recently renewed my driver license and I need to get the new number into your system. Uh,... um... the new driver license number is D-L-5-5-5. Could you swap out the old one and put this new one in there?
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=I was going to ask about hotel options but — never mind that for now. Could you just find me flights to Seattle on November 1st instead?
+DEBUG: inside start_task! api=flight_search turn=Hi,... um... I need help booking a flight for an upcoming business trip.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Um, so um, I was looking at flights to Miami on October 5th — wait, uh, my schedule just changed. My meeting got moved, so actually make it October 7th instead.
+DEBUG: inside start_task! api=flight_search turn=Uh... hi there,... um, I need to get a flight booked for a colleague who's traveling for work.
+DEBUG: inside start_task! api=flight_search turn=Hey... um... I need to book a flight for someone. Let me give you the details.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=You know... i was thinking about going to — oh... never mind that destination. Let me start over. Just search for flights to Denver on January 15th, that's actually what... um, I need.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Um... so i want to look at flights to Seoul, and the date... um, I was thinking of is... let me think... I'm pretty sure it's March 22nd. Yeah, could you search for that?
+DEBUG: inside start_task! api=update_identity_doc turn=Hey... uh, I've got a couple of document updates that... um, I need to take care of before my trip next week.
+DEBUG: inside start_task! api=update_identity_doc turn=Hey... uh, I've got a couple of document updates that... um, I need to take care of before my trip next week. You know... first... my driver license number changed to D-L-5-5-5, and... um, I also need to change my passport number to P-9-9-9. Could you update both of those for me?
+DEBUG: inside start_task! api=flight_search turn=Hey... sorry... um, to bother you. I've been going back and forth on this trip plan all day.
+DEBUG: inside start_task! api=flight_search turn=Hey... sorry... um, to bother you. I've been going back and forth on this trip plan all day. Hmm... like... I've been thinking about it and... um, I need to book flights to, um, Vegas. I'm looking at going around, uh, August 8th if there's anything available.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'track_order')]
+DEBUG: inside start_task! api=flight_search turn=Hmm... yeah,... um... I think I want to fly to... Cairo. I've always wanted to go there. I'm looking at December 1st as the travel date.
+DEBUG: inside start_task! api=flight_search turn=Hi... um... I have a few things I need to get done before my big trip next month.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[(1.0, 'update_search_filter'), (1.0, 'update_identity_doc'), (1.0, 'modify_autopay')]
+DEBUG: inside start_task! api=flight_search turn=Hmm... okay so, I want to look at flights to Rome — no wait, I changed my mind, let's do Milan instead. And I was thinking June 1st, but actually, June 3rd works better for me.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Uh... here's the thing.... um, I need to fly to Toronto on July 20th. If there happens to be a flight under 300 dollars, go ahead book it for Riley Kim. But and if everything's too expensive then just forget the flight
+DEBUG: inside start_task! api=update_identity_doc turn=update my driver license to D-L-8-8 instead.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=You know... okay so,... um... I need to find flights to... Vegas, I was thinking around August 8th. And then, um once you find something, book it under the name Quinn Davis. Oh and while you're at it, could you
+DEBUG: inside start_task! api=update_identity_doc turn=also update my visa number to V-7-7?
+DEBUG: inside start_task! api=flight_search turn=Hi... uh,... um, I need to get a flight booked but I keep changing my mind about the details.
+DEBUG: fell back to chitchat! is_smalltalk=True, ranked=[(2.0, 'update_identity_doc')]
+DEBUG: inside start_task! api=update_identity_doc turn=Hmm... um... so I need to, like, update my passport number to P-1-1-2-2 because I just renewed it. And then, uh, I
+DEBUG: inside start_task! api=update_identity_doc turn=also got a new driver license, so could you change that one to D-L-9-0-9-0 as well?
+DEBUG: inside start_task! api=flight_search turn=Um... good morning! I'm trying... um, to plan out every detail of my upcoming trip, so I've got a long list.
+DEBUG: fell back to chitchat! is_smalltalk=False, ranked=[]
+DEBUG: inside start_task! api=flight_search turn=Uh... okay, so first... um, I need flights to Bangkok for March 1st. Book it for... Cameron, that's the traveler.
+DEBUG: inside start_task! api=update_identity_doc turn=Then I need to update my passport number to P-1-2-3 and
+DEBUG: inside start_task! api=update_identity_doc turn=also... my visa number to V-3-2-1.

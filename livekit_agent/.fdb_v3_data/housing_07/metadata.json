@@ -1,0 +1,35 @@
+{
+  "id": "housing_07",
+  "domain": "housing_location",
+  "title": "Commute with Fillers",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hmm... oh... oh... can you help me with a commute question?... um, I want to make sure this place works before I sign a lease.",
+      "user_annotated": "Hmm... oh... oh... can you help me with a commute question?... um, I want to make sure this place works before I sign a lease.",
+      "ai": "I sure can! What route do you want me to check?"
+    },
+    {
+      "user": "Hmm... hmm... well... uh... so... um... I was wondering what the, like, transit time would be from Central Ave to the University. I'd be taking public transportation every day.",
+      "user_annotated": "Hmm... hmm... well... uh... so... um... I was wondering what the, like, transit time would be from Central Ave to the University. I'd be taking public transportation every day.",
+      "ai": "I'll check the transit commute from Central Ave to the University."
+    }
+  ],
+  "acting_notes": "Sound casual with filler words.",
+  "disfluency_features": [
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "Central Ave",
+        "destination_address": "University",
+        "mode": "transit"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

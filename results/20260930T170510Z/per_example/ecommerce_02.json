@@ -1,0 +1,70 @@
+{
+  "example_id": "ecommerce_02",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hmm... uh... hi... uh... I'm shopping for some new electronics and... um... I was hoping you could help me find something.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... um... so i'm looking for a pair of wireless headphones... and I'd like... um, to keep it under 100 dollars if possible. What do you have?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "electronics"
+      },
+      "timestamp_start": 0.014,
+      "timestamp_end": 0.014
+    },
+    {
+      "function": "search_products",
+      "args": {
+        "query": "wireless headphones",
+        "max_price": 100
+      },
+      "timestamp_start": 0.334,
+      "timestamp_end": 0.334
+    }
+  ],
+  "transcript": "Searching for electronics. Here's what I found: ref PROD1, electronics Premium, $99.99. Searching for wireless headphones under 100. Here's what I found: ref PROD1, wireless headphones Premium, $90.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Searching for electronics.",
+      "t": 0.014
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, electronics Premium, $99.99.",
+      "t": 0.014
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Searching for wireless headphones under 100.",
+      "t": 0.334
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, wireless headphones Premium, $90.",
+      "t": 0.335
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "wireless headphones",
+        "max_price": 100
+      }
+    }
+  ]
+}

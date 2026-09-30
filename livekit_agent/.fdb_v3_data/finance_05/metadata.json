@@ -1,0 +1,32 @@
+{
+  "id": "finance_05",
+  "domain": "finance_billing",
+  "title": "Simple Autopay Setup",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hi... well... I've been meaning to set up automatic payments and... um, I finally have a minute to do it.",
+      "user_annotated": "Hi... well... I've been meaning to set up automatic payments and... um, I finally have a minute to do it.",
+      "ai": "Of course! What would you like to set up?"
+    },
+    {
+      "user": "You know... i want to set my credit card bill to autopay... and have it pull from my checking account every month. Can you do that?",
+      "user_annotated": "You know... i want to set my credit card bill to autopay... and have it pull from my checking account every month. Can you do that?",
+      "ai": "I'll set up credit card autopay from your checking account right away."
+    }
+  ],
+  "acting_notes": "Direct and clear.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "credit_card",
+        "source_account": "checking"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

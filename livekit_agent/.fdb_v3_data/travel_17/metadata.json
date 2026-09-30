@@ -1,0 +1,34 @@
+{
+  "id": "travel_17",
+  "domain": "travel_identity",
+  "title": "Search with Pause Before Destination",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hi... oh... I'm in the middle of planning a vacation and... um, I haven't fully decided where to go yet.",
+      "user_annotated": "Hi... oh... I'm in the middle of planning a vacation and... um, I haven't fully decided where to go yet.",
+      "ai": "That's exciting! Let me help. Do you have any destinations in mind?"
+    },
+    {
+      "user": "Hmm... yeah,... um... I think I want to fly to... Cairo. I've always wanted to go there. I'm looking at December 1st as the travel date.",
+      "user_annotated": "Hmm... yeah,... um... I think I want to fly to... Cairo. I've always wanted to go there. I'm looking at December 1st as the travel date.",
+      "ai": "I'll search for flights to Cairo on December 1st."
+    }
+  ],
+  "acting_notes": "Pause for 2 seconds before saying Cairo, like you're making up your mind on the spot.",
+  "disfluency_features": [
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Cairo",
+        "date": "December 1"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

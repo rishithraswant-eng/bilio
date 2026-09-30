@@ -1,0 +1,83 @@
+{
+  "example_id": "travel_18",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hi... um... I have a few things I need to get done before my big trip next month.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... alright, first... um, I need to find flights to Dubai on April 10th. Then go ahead and book the cheapest option — the name on the ticket should be Casey Lee. Oh, and I almost forgot, I also need to update my passport number to E-7-7-2-2-1-1.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "date": "today"
+      },
+      "timestamp_start": 0.012,
+      "timestamp_end": 0.244
+    },
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Update My Passport",
+        "date": "April 10"
+      },
+      "timestamp_start": 0.367,
+      "timestamp_end": 1.093
+    }
+  ],
+  "transcript": "Sure, checking flights to None for today. I started that flight search, but the system also needs the destination — what should I use? Got it — switching to Update My Passport. I found a flight to Update My Passport: FL123 departing April 10 for $450.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to None for today.",
+      "t": 0.012
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that flight search, but the system also needs the destination — what should I use?",
+      "t": 0.244
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Got it — switching to Update My Passport.",
+      "t": 0.366
+    },
+    {
+      "kind": "final_response",
+      "text": "I found a flight to Update My Passport: FL123 departing April 10 for $450.",
+      "t": 1.093
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Dubai",
+        "date": "April 10"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Casey Lee"
+      }
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "passport",
+        "doc_number": "E772211"
+      }
+    }
+  ]
+}

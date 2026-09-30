@@ -1,6 +1,6 @@
 {
-  "name": "TriageLine Live Assistant",
-  "short_name": "TriageLine",
+  "name": "BILIO Live Assistant",
+  "short_name": "BILIO",
   "description": "Interruptible real-time voice assistant: talk over it, correct it mid-task, show it what you mean. Actions are simulated.",
   "id": "/live.html",
   "start_url": "/live.html",

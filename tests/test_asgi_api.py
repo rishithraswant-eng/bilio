@@ -212,9 +212,9 @@ def test_access_code_ignores_surrounding_whitespace(monkeypatch):
     for name in ('TRIAGELINE_ENV', 'TRIAGELINE_PRODUCTION', 'ALLOWED_HOSTS', 'CORS_ORIGINS'):
         monkeypatch.delenv(name, raising=False)
     monkeypatch.setenv('TRIAGELINE_OFFLINE', '1')
-    monkeypatch.setenv('TRIAGELINE_ACCESS_CODE', 'TriageLineDemo2026!   \r')
+    monkeypatch.setenv('TRIAGELINE_ACCESS_CODE', 'BILIODemo2026!   \r')
     with TestClient(api.create_app()) as c:
         assert c.get('/api/auth/config').json()['access_code_required'] is True
-        assert c.post('/api/auth/login', json={'access_code': 'TriageLineDemo2026!'}).status_code == 200
-        assert c.post('/api/auth/login', json={'access_code': ' TriageLineDemo2026! '}).status_code == 200
-        assert c.post('/api/auth/login', json={'access_code': 'TriageLineDemo2026'}).status_code == 401
+        assert c.post('/api/auth/login', json={'access_code': 'BILIODemo2026!'}).status_code == 200
+        assert c.post('/api/auth/login', json={'access_code': ' BILIODemo2026! '}).status_code == 200
+        assert c.post('/api/auth/login', json={'access_code': 'BILIODemo2026'}).status_code == 401

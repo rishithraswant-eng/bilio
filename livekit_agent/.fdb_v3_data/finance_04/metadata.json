@@ -1,0 +1,35 @@
+{
+  "id": "finance_04",
+  "domain": "finance_billing",
+  "title": "Exchange with Pause Before Currency",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Good morning! I'm getting ready for a trip abroad and need... um... to plan my budget.",
+      "user_annotated": "Good morning! I'm getting ready for a trip abroad and need... um... to plan my budget.",
+      "ai": "Good morning! That's exciting. What can I help you with?"
+    },
+    {
+      "user": "I need... um... to figure out how much 1000 US dollars would be in... British pounds. Do you know the current rate?",
+      "user_annotated": "I need... um... to figure out how much 1000 US dollars would be in... British pounds. Do you know the current rate?",
+      "ai": "I will calculate the exchange rate for 1000 USD to GBP right now."
+    }
+  ],
+  "acting_notes": "Pause for about 2 seconds before saying 'British pounds', as if remembering which currency you need.",
+  "disfluency_features": [
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 1000,
+        "from_currency": "USD",
+        "to_currency": "GBP"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

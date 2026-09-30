@@ -1,0 +1,63 @@
+{
+  "example_id": "travel_22",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hi... uh,... um, I need to get a flight booked but I keep changing my mind about the details.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "You know... alright... so let's search for flights... um, to Sydney for September 1st — no wait, my plans changed. Make that Melbourne on September 4th instead. And once you find a good option, go ahead and book it for Alex Chen.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Melbourne",
+        "date": "September 4"
+      },
+      "timestamp_start": 0.327,
+      "timestamp_end": 0.565
+    }
+  ],
+  "transcript": "Sure, checking flights to None for today. Got it — switching to Melbourne. I found a flight to Melbourne: FL123 departing September 4 for $450.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to None for today.",
+      "t": 0.016
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Got it — switching to Melbourne.",
+      "t": 0.327
+    },
+    {
+      "kind": "final_response",
+      "text": "I found a flight to Melbourne: FL123 departing September 4 for $450.",
+      "t": 0.566
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Melbourne",
+        "date": "September 4"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Alex Chen"
+      }
+    }
+  ]
+}

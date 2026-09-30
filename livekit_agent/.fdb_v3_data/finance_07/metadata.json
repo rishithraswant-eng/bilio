@@ -1,0 +1,34 @@
+{
+  "id": "finance_07",
+  "domain": "finance_billing",
+  "title": "False Start then Autopay",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Well... hello? Can you hear me? I need some help with my account.",
+      "user_annotated": "Well... hello? Can you hear me? I need some help with my account.",
+      "ai": "Yes, I hear you. What do you need?"
+    },
+    {
+      "user": "Uh... i was going... um, to ask about my account balance but \u2014 never mind, I'll check online later. For now, could you change the mortgage autopay so it pulls from my savings account?",
+      "user_annotated": "Uh... i was going... um, to ask about my account balance but \u2014 never mind, I'll check online later. For now, could you change the mortgage autopay so it pulls from my savings account?",
+      "ai": "Updating your mortgage autopay to pull from savings."
+    }
+  ],
+  "acting_notes": "Start asking about your balance, drop it, then ask for autopay change.",
+  "disfluency_features": [
+    "FALSE_START"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "savings"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

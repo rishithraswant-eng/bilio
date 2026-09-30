@@ -1,0 +1,38 @@
+{
+  "id": "travel_06",
+  "domain": "travel_identity",
+  "title": "Simple Flight Booking",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hey... uh... I've decided on my trip and I'm ready... um, to book something.",
+      "user_annotated": "Hey... uh... I've decided on my trip and I'm ready... um, to book something.",
+      "ai": "That's exciting! Tell me the details and I'll get it set up."
+    },
+    {
+      "user": "Uh... yeah, so I want to fly to Denver on January 15th. Go ahead and book it under my name, it's Taylor Reed.",
+      "user_annotated": "Uh... yeah, so I want to fly to Denver on January 15th. Go ahead and book it under my name, it's Taylor Reed.",
+      "ai": "I'll search for flights to Denver on January 15th and book it for Taylor Reed."
+    }
+  ],
+  "acting_notes": "Confident and direct. Sound like you've already made up your mind.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Denver",
+        "date": "January 15"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Taylor Reed"
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

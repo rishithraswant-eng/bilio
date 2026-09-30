@@ -1,0 +1,38 @@
+{
+  "id": "ecommerce_10",
+  "domain": "ecommerce_support",
+  "title": "Track + Search Combo",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Well, uh... well, hey... oh,... um, I need help with two things at once if that's okay.",
+      "user_annotated": "Well, uh... well, hey... oh,... um, I need help with two things at once if that's okay.",
+      "ai": "Sure! What do you need?"
+    },
+    {
+      "user": "Hmm... like... like... hmm... first, can you track my order? The ID is 1-2-3-A-B-C. And then while we're at it, could you also search for winter jackets under 150 dollars?... um, I need one for my trip.",
+      "user_annotated": "Hmm... like... like... hmm... first, can you track my order? The ID is 1-2-3-A-B-C. And then while we're at it, could you also search for winter jackets under 150 dollars?... um, I need one for my trip.",
+      "ai": "I'll track that order and search for winter jackets under $150."
+    }
+  ],
+  "acting_notes": "Say both requests smoothly in one go.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "123ABC"
+      }
+    },
+    {
+      "function": "search_products",
+      "args": {
+        "query": "winter jackets",
+        "max_price": 150
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

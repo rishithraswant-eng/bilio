@@ -1,0 +1,38 @@
+{
+  "id": "ecommerce_23",
+  "domain": "ecommerce_support",
+  "title": "Unsupported Tool (Refund) + Valid Requests",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Um... oh... uh... good day,... um, I have a few things I need help with, and one of them might be outside what you can do.",
+      "user_annotated": "Um... oh... uh... good day,... um, I have a few things I need help with, and one of them might be outside what you can do.",
+      "ai": "Good day! I'll do my best to help with everything. What do you need?"
+    },
+    {
+      "user": "Hmm... um... so you know... like... first... could you track order G-G-5? Then I'd like to process a refund for it if possible. And also, while we're at it, add item X-1 to my cart so... um, I can order a replacement.",
+      "user_annotated": "Hmm... um... so you know... like... first... could you track order G-G-5? Then I'd like to process a refund for it if possible. And also, while we're at it, add item X-1 to my cart so... um, I can order a replacement.",
+      "ai": "I'll track the order and add X1 to the cart. Unfortunately, I'm not able to process refunds at this time."
+    }
+  ],
+  "acting_notes": "Include 'process a refund' naturally between valid requests.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "GG5"
+      }
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "X1",
+        "quantity": 1
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "fast"
+}

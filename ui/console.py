@@ -18,7 +18,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import FileResponse, JSONResponse
 
 ROOT = Path(__file__).resolve().parents[1]
-AGENTS = {"triageline": "agent.agent:ParticipantAgent", "baseline": "agent.agent:BaselineAgent"}
+AGENTS = {"bilio": "agent.agent:ParticipantAgent", "baseline": "agent.agent:BaselineAgent"}
 OFFICIAL_TAIL_MS = 6000.0          # identical to run_local.py / runner default
 MAX_EVENTS = 60
 MAX_SCENARIO_MS = 60_000
@@ -91,12 +91,13 @@ def run(req: Dict[str, Any]) -> Dict[str, Any]:
         sc = req["scenario"]
         validate_scenario(sc)
     else:
-        path = os.path.normpath(str(req.get("path", "")))
+        path = str(req.get("path", "")).replace("\\", "/")
+        path = os.path.normpath(path).replace("\\", "/")
         if not (re.fullmatch(r"scenarios(_extra)?/[\w\-]+\.json", path) and (ROOT / path).exists()):
             raise BadRequest("bad path")
         with open(ROOT / path) as fh:
             sc = json.load(fh)
-    agent = req.get("agent") if req.get("agent") in AGENTS else "triageline"
+    agent = req.get("agent") if req.get("agent") in AGENTS else "bilio"
     factory = load_agent_factory(AGENTS[agent])
     ts = min(max(_num(req.get("time_scale"), "time_scale", 1), 1.0), 8.0)
     if not _QUEUE.acquire(blocking=False):

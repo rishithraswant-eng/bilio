@@ -1,0 +1,34 @@
+{
+  "id": "housing_08",
+  "domain": "housing_location",
+  "title": "False Start Before Filter Update",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Well, uh, well... good morning! I'm still working on finding the right apartment and... um, I wanted to make some changes.",
+      "user_annotated": "Well, uh, well... good morning! I'm still working on finding the right apartment and... um, I wanted to make some changes.",
+      "ai": "Good morning! Sure, what updates do you need?"
+    },
+    {
+      "user": "Like, you know... you know... i want to check the listings in \u2014 actually... before... um...... um, I do that, could you just update my search filter so that it only shows me places that allow pets? I have a cat.",
+      "user_annotated": "Like, you know... you know... i want to check the listings in \u2014 actually... before... um...... um, I do that, could you just update my search filter so that it only shows me places that allow pets? I have a cat.",
+      "ai": "Updating your filter to only show pet-friendly listings."
+    }
+  ],
+  "acting_notes": "Start a sentence, drop it, then ask for a filter update.",
+  "disfluency_features": [
+    "FALSE_START"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "pets_allowed",
+        "value": true
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

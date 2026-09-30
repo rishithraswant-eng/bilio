@@ -1,4 +1,4 @@
-# Free API keys: running TriageLine at no cost
+# Free API keys: running BILIO at no cost
 
 One **Google AI Studio key** is enough for everything except the transport: Gemini does the speech-to-text,
 the text-to-speech and the optional LLM planner. The free LLM providers below act only as automatic
@@ -17,7 +17,7 @@ Free-tier quotas and model names change. Run `python3 scripts/check_providers.py
 ## 1. LiveKit Cloud
 1. Sign up at <https://cloud.livekit.io> (GitHub or Google login, no card), then create a project.
 2. Go to **Settings → API Keys → Create key**. Copy the WebSocket URL (`wss://<project>.livekit.cloud`), the key and the secret.
-3. Optional: set `TRIAGELINE_AGENT_NAME=triageline` on the worker **and** the gateway. The worker then joins only the rooms whose tokens request it (explicit dispatch), which lets several workers share one project.
+3. Optional: set `TRIAGELINE_AGENT_NAME=bilio` on the worker **and** the gateway. The worker then joins only the rooms whose tokens request it (explicit dispatch), which lets several workers share one project.
 
 ## 2. Gemini (Google AI Studio)
 1. Open <https://aistudio.google.com/apikey> → **Create API key**.

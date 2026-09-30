@@ -1,0 +1,43 @@
+{
+  "id": "housing_23",
+  "domain": "housing_location",
+  "title": "False Start + Filter Correction",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Hmm... well... hi... uh...... um, I need to make some changes to my apartment search but I'm not totally sure what I want yet.",
+      "user_annotated": "Hmm... well... hi... uh...... um, I need to make some changes to my apartment search but I'm not totally sure what I want yet.",
+      "ai": "Hello! That's okay. We can figure it out together."
+    },
+    {
+      "user": "Well, well, uh... can we search for places in \u2014 no wait, before we search, let me update my minimum bedrooms... um, to 2. Actually, on second thought, make it 3 bedrooms. We decided we need more space.",
+      "user_annotated": "Well, well, uh... can we search for places in \u2014 no wait, before we search, let me update my minimum bedrooms... um, to 2. Actually, on second thought, make it 3 bedrooms. We decided we need more space.",
+      "ai": "I'll update the minimum bedroom filter to 3."
+    }
+  ],
+  "acting_notes": "Start with search, change to filter update, then correct value.",
+  "disfluency_features": [
+    "FALSE_START",
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "min_bedrooms",
+        "value": 3
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "value": 2
+    },
+    "corrected_param": {
+      "value": 3
+    }
+  },
+  "latency_profile": "fast"
+}

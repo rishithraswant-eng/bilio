@@ -1,0 +1,57 @@
+{
+  "example_id": "travel_17",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hi... oh... I'm in the middle of planning a vacation and... um, I haven't fully decided where to go yet.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... yeah,... um... I think I want to fly to... Cairo. I've always wanted to go there. I'm looking at December 1st as the travel date.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Go There",
+        "date": "December 1"
+      },
+      "timestamp_start": 0.335,
+      "timestamp_end": 0.803
+    }
+  ],
+  "transcript": "Sure — what do you need? Sure, checking flights to Go There for December 1. I found a flight to Go There: FL123 departing December 1 for $450.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.027
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to Go There for December 1.",
+      "t": 0.335
+    },
+    {
+      "kind": "final_response",
+      "text": "I found a flight to Go There: FL123 departing December 1 for $450.",
+      "t": 0.803
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Cairo",
+        "date": "December 1"
+      }
+    }
+  ]
+}

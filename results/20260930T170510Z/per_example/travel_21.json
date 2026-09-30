@@ -1,0 +1,98 @@
+{
+  "example_id": "travel_21",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hello... uh, I've got a pretty involved travel request. There are a bunch of things... um, I need done at once.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "You know... okay so,... um... I need to find flights to... Vegas, I was thinking around August 8th. And then, um, once you find something, book it under the name Quinn Davis. Oh and while you're at it, could you also update my visa number to V-7-7?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Las Vegas",
+        "date": "August 8"
+      },
+      "timestamp_start": 0.35,
+      "timestamp_end": 0.805
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "flight_id": "FL123",
+        "passenger_name": "Quinn Davis"
+      },
+      "timestamp_start": 0.805,
+      "timestamp_end": 0.806
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "visa",
+        "doc_number": "V77"
+      },
+      "timestamp_start": 0.81,
+      "timestamp_end": 0.81
+    }
+  ],
+  "transcript": "Sure — what do you need? On it — finding flights to Las Vegas for August 8 first. Found FL123 at August 8 for $450 — booking it for Quinn Davis now. Done — you're booked on FL123 to Las Vegas for Quinn Davis. Booking reference B789. Done — your document details are updated.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.025
+    },
+    {
+      "kind": "filler_speech",
+      "text": "On it — finding flights to Las Vegas for August 8 first.",
+      "t": 0.35
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Found FL123 at August 8 for $450 — booking it for Quinn Davis now.",
+      "t": 0.805
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — you're booked on FL123 to Las Vegas for Quinn Davis. Booking reference B789.",
+      "t": 0.81
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — your document details are updated.",
+      "t": 0.81
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Las Vegas",
+        "date": "August 8"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Quinn Davis"
+      }
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "visa",
+        "doc_number": "V77"
+      }
+    }
+  ]
+}

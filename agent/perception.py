@@ -118,7 +118,9 @@ def transcribe(ref: Optional[str], vocab_prompt: str = "") -> Dict[str, Any]:
         text = " ".join(w for w, _ in words).strip() or " ".join(s.text.strip() for s in segs).strip()
         conf = math.exp(sum(math.log(max(p, 1e-4)) for _, p in words) / len(words)) if words else 0.0
         return {"text": text, "confidence": conf, "words": words, "ok": bool(text), "alt_text": alt}
-    except Exception:
+    except Exception as e:
+        print("TRANSCRIBE EXCEPTION:", e)
+        import traceback; traceback.print_exc()
         return {"text": "", "confidence": 0.0, "words": [], "ok": False}
 
 
@@ -339,7 +341,7 @@ def _hosted_transcribe(path: str, prompt: str, cfg: Dict[str, Any]) -> Dict[str,
             url = "https://api.deepgram.com/v1/listen?" + urlencode({"model": cfg["model"], "smart_format": "true"})
             data, headers = raw, {"Content-Type": mime, "Authorization": "Token " + os.environ["DEEPGRAM_API_KEY"]}
         else:
-            boundary = "triageline" + secrets.token_hex(16)
+            boundary = "bilio" + secrets.token_hex(16)
             fields = {"model": cfg["model"], "response_format": "json", "temperature": "0", "prompt": prompt}
             data = b"".join((f'--{boundary}\r\nContent-Disposition: form-data; name="{key}"\r\n\r\n{value}\r\n').encode() for key, value in fields.items())
             data += (f'--{boundary}\r\nContent-Disposition: form-data; name="file"; filename="audio.{ext}"\r\nContent-Type: {mime}\r\n\r\n').encode() + raw + f"\r\n--{boundary}--\r\n".encode()

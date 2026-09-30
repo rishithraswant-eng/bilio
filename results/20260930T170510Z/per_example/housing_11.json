@@ -1,0 +1,57 @@
+{
+  "example_id": "housing_11",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hmm... hmm... well... hi... uh... I'm still searching for places in Austin but... um... I think I need to adjust what I'm looking for.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Uh... well... i was thinking a 1-bedroom under 1200... but actually, no wait — my partner is moving in with me, so we need a 2-bedroom, and we can go up... um, to 1600 a month.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Austin"
+      },
+      "timestamp_start": 0.014,
+      "timestamp_end": 0.723
+    }
+  ],
+  "transcript": "Looking for apartments in Austin. Okay — still on it. I started that search apartments, but the system also needs the bedrooms and max price — what should I use?",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Looking for apartments in Austin.",
+      "t": 0.014
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — still on it.",
+      "t": 0.331
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that search apartments, but the system also needs the bedrooms and max price — what should I use?",
+      "t": 0.724
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Austin",
+        "bedrooms": 2,
+        "max_price": 1600
+      }
+    }
+  ]
+}

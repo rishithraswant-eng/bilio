@@ -7,7 +7,7 @@ judge *preflight* therefore does not prove the whole report was judged. This scr
 JSON files and counts argument checks whose explanation is one of the exact-match fallback strings, and
 response checks that carry a judge-error explanation.
 
-    python3 scripts/judge_coverage.py results/<stamp>/triageline_evaluation_report.json [...more reports]
+    python3 scripts/judge_coverage.py results/<stamp>/bilio_evaluation_report.json [...more reports]
     exit 0: every check judged   exit 1: some checks fell back (listed)   exit 2: usage / unreadable report
 """
 from __future__ import annotations

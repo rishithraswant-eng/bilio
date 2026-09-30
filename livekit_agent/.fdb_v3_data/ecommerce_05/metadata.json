@@ -1,0 +1,35 @@
+{
+  "id": "ecommerce_05",
+  "domain": "ecommerce_support",
+  "title": "Product Search with Hesitation",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hmm... well... um... hi there.... um, I need help finding something for my home office.",
+      "user_annotated": "Hmm... well... um... hi there.... um, I need help finding something for my home office.",
+      "ai": "Hello! What can I help you find?"
+    },
+    {
+      "user": "Um, so like, uh... I'm looking... um, for a new... let me think... a desk. Something under 300 dollars if you have any options like that.",
+      "user_annotated": "Um, so like, uh... I'm looking... um, for a new... let me think... a desk. Something under 300 dollars if you have any options like that.",
+      "ai": "I'll search for desks under $300 for you."
+    }
+  ],
+  "acting_notes": "Sound casual. Hesitate before saying the product.",
+  "disfluency_features": [
+    "FILLER",
+    "HESITATION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "desk",
+        "max_price": 300
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

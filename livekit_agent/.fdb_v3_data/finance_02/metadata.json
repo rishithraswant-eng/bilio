@@ -1,0 +1,31 @@
+{
+  "id": "finance_02",
+  "domain": "finance_billing",
+  "title": "Check Card Benefits",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Oh... hey there, I've been thinking... um, about upgrading my credit card.",
+      "user_annotated": "Oh... hey there, I've been thinking... um, about upgrading my credit card.",
+      "ai": "Hi! That's a great idea. What would you like to know?"
+    },
+    {
+      "user": "Um... so could you tell me what kind of benefits come with the platinum card?... um, I want to know if it's worth switching to.",
+      "user_annotated": "Um... so could you tell me what kind of benefits come with the platinum card?... um, I want to know if it's worth switching to.",
+      "ai": "I'll check the benefits for the platinum card right away."
+    }
+  ],
+  "acting_notes": "Clear, curious tone. Sound like you're genuinely interested.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "platinum"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

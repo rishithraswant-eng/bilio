@@ -1,0 +1,36 @@
+{
+  "id": "housing_14",
+  "domain": "housing_location",
+  "title": "Filler-Heavy Apartment Search",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Um... hmm... uh... sorry, I'm still figuring out what... um, I want but let me try to explain.",
+      "user_annotated": "Um... hmm... uh... sorry, I'm still figuring out what... um, I want but let me try to explain.",
+      "ai": "Take your time! I'm here to help."
+    },
+    {
+      "user": "Like, you know... um... so um... I'm looking for, like, a 1-bedroom apartment in Portland, and I'd want to keep the rent under 1800. Oh, and it needs to be, uh, pet-friendly because... um, I have a dog.",
+      "user_annotated": "Like, you know... um... so um... I'm looking for, like, a 1-bedroom apartment in Portland, and I'd want to keep the rent under 1800. Oh, and it needs to be, uh, pet-friendly because... um, I have a dog.",
+      "ai": "Searching for pet-friendly 1-bedroom apartments in Portland under $1800."
+    }
+  ],
+  "acting_notes": "Use lots of fillers throughout.",
+  "disfluency_features": [
+    "FILLER"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Portland",
+        "bedrooms": 1,
+        "max_price": 1800,
+        "pets_allowed": true
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

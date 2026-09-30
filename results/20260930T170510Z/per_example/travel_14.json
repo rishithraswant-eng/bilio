@@ -1,0 +1,57 @@
+{
+  "example_id": "travel_14",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Well... good evening! I'm starting... um, to plan a vacation and could really use your help.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um... so i want to look at flights to Seoul, and the date... um, I was thinking of is... let me think... I'm pretty sure it's March 22nd. Yeah, could you search for that?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Seoul",
+        "date": "March 22"
+      },
+      "timestamp_start": 0.329,
+      "timestamp_end": 0.922
+    }
+  ],
+  "transcript": "Sure — what do you need? Sure, checking flights to Seoul for March 22. I found a flight to Seoul: FL123 departing March 22 for $450.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.026
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to Seoul for March 22.",
+      "t": 0.329
+    },
+    {
+      "kind": "final_response",
+      "text": "I found a flight to Seoul: FL123 departing March 22 for $450.",
+      "t": 0.923
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Seoul",
+        "date": "March 22"
+      }
+    }
+  ]
+}

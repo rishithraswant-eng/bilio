@@ -1,0 +1,59 @@
+{
+  "example_id": "housing_15",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Well... uh... um... hey... hmm... I'm trying to find a place and... um, I keep going back and forth on what I need.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um, so hmm... uh... i wanted... um, to check the commute from that one listing — actually, let me skip that for now. Could you just search for a 3-bedroom in Atlanta that's pet-friendly? I've got two cats.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Atlanta",
+        "bedrooms": 3,
+        "pets_allowed": true
+      },
+      "timestamp_start": 0.398,
+      "timestamp_end": 0.665
+    }
+  ],
+  "transcript": "Sure — which city? Looking for 3-bedroom apartments in Atlanta. I started that search apartments, but the system also needs the max price — what should I use?",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — which city?",
+      "t": 0.035
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Looking for 3-bedroom apartments in Atlanta.",
+      "t": 0.398
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that search apartments, but the system also needs the max price — what should I use?",
+      "t": 0.665
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Atlanta",
+        "bedrooms": 3,
+        "pets_allowed": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "example_id": "finance_24",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hi,... um... I need to take care of a few financial things today. Some of them might be outside what you can do, but let's try.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... first... can you tell me how much 250 US dollars would be in Canadian dollars? Then... um, I also need to send a wire transfer to my friend overseas if you can do that. And finally, could you check what benefits come with the rewards card?",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 250,
+        "from_currency": "USD",
+        "to_currency": "CAD"
+      },
+      "timestamp_start": 0.35,
+      "timestamp_end": 0.353
+    }
+  ],
+  "transcript": "Sure — what do you need? Checking the USD to CAD rate. Here's what I found: converted amount 225.0, rate 0.9. Sure — what card type should I use?",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.019
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking the USD to CAD rate.",
+      "t": 0.35
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: converted amount 225.0, rate 0.9.",
+      "t": 0.36
+    },
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what card type should I use?",
+      "t": 0.36
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 250,
+        "from_currency": "USD",
+        "to_currency": "CAD"
+      }
+    },
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "rewards"
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "id": "travel_11",
+  "domain": "travel_identity",
+  "title": "Search and Book with Name",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Uh... hi there,... um, I need to get a flight booked for a colleague who's traveling for work.",
+      "user_annotated": "Uh... hi there,... um, I need to get a flight booked for a colleague who's traveling for work.",
+      "ai": "Hello! I can help with that. Tell me the details."
+    },
+    {
+      "user": "You know... we need a flight to Austin on February 2nd... and go ahead and book it under the name Morgan Smith. That's the person who'll be traveling.",
+      "user_annotated": "You know... we need a flight to Austin on February 2nd... and go ahead and book it under the name Morgan Smith. That's the person who'll be traveling.",
+      "ai": "I'll search for flights to Austin on February 2nd and book it for Morgan Smith."
+    }
+  ],
+  "acting_notes": "Say both the search and booking request smoothly in one go.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Austin",
+        "date": "February 2"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Morgan Smith"
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

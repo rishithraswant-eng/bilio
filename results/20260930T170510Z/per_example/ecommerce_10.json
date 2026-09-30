@@ -1,0 +1,81 @@
+{
+  "example_id": "ecommerce_10",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Well, uh... well, hey... oh,... um, I need help with two things at once if that's okay.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... like... like... hmm... first, can you track my order? The ID is 1-2-3-A-B-C. And then while we're at it, could you also search for winter jackets under 150 dollars?... um, I need one for my trip.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "123ABC"
+      },
+      "timestamp_start": 0.348,
+      "timestamp_end": 0.351
+    },
+    {
+      "function": "search_products",
+      "args": {
+        "query": "winter jackets",
+        "max_price": 150
+      },
+      "timestamp_start": 0.362,
+      "timestamp_end": 0.363
+    }
+  ],
+  "transcript": "Sure — what do you need? Checking order 123ABC now. Here's what I found: ref 123ABC, Out for delivery. Searching for winter jackets under 150. Here's what I found: ref PROD1, winter jackets Premium, $140.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.011
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking order 123ABC now.",
+      "t": 0.348
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref 123ABC, Out for delivery.",
+      "t": 0.362
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Searching for winter jackets under 150.",
+      "t": 0.362
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: ref PROD1, winter jackets Premium, $140.",
+      "t": 0.363
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "123ABC"
+      }
+    },
+    {
+      "function": "search_products",
+      "args": {
+        "query": "winter jackets",
+        "max_price": 150
+      }
+    }
+  ]
+}

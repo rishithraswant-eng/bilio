@@ -1,0 +1,55 @@
+{
+  "example_id": "finance_02",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Oh... hey there, I've been thinking... um, about upgrading my credit card.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um... so could you tell me what kind of benefits come with the platinum card?... um, I want to know if it's worth switching to.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "platinum"
+      },
+      "timestamp_start": 0.334,
+      "timestamp_end": 0.335
+    }
+  ],
+  "transcript": "Sure — what card type should I use? Looking up your platinum card benefits. Here's what I found: platinum, 2% Cashback, No Foreign Transaction Fee.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what card type should I use?",
+      "t": 0.01
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Looking up your platinum card benefits.",
+      "t": 0.334
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: platinum, 2% Cashback, No Foreign Transaction Fee.",
+      "t": 0.335
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "platinum"
+      }
+    }
+  ]
+}

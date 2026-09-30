@@ -87,7 +87,7 @@ def split_rates(pass_report: dict) -> dict:
 
 def main():
     run = Path(sys.argv[1]).resolve() if len(sys.argv) > 1 else newest_run()
-    lines = ["# FDB-v3 results — TriageLine", "",
+    lines = ["# FDB-v3 results — BILIO", "",
              f"Generated: {datetime.datetime.now(datetime.timezone.utc).isoformat(timespec='seconds')}", ""]
     if run is None or not run.exists():
         lines += ["## Status: NOT RUN", "", "No run directory under `results/`. Run `./run_fdb_v3.sh` "
@@ -96,7 +96,7 @@ def main():
         print("\n".join(lines))
         return
     cfg = _load(run / "run_config.json") or {}
-    prov = cfg.get("provider", "triageline")
+    prov = cfg.get("provider", "bilio")
     pr = _load(run / f"{prov}_pass_rate_report.json")
     ev = _load(run / f"{prov}_evaluation_report.json")
     lat = _load(run / f"{prov}_latency_report.json")
@@ -107,7 +107,7 @@ def main():
                               if mode == "offline_text_replay" else ""),
         f"Provider name: `{prov}` · LLM judge: **{'on (gpt-4o)' if cfg.get('llm_judge') else 'off (exact match = lower bound)'}**"
         f" · examples: {pr.get('total_scenarios') if pr else '?'}{' (limited)' if cfg.get('limit') else ''}  ",
-        f"FDB-v3 commit: `{cfg.get('fdb_commit', '?')}` · TriageLine commit: `{cfg.get('triageline_commit', '?')}` · {cfg.get('python', '')}  ",
+        f"FDB-v3 commit: `{cfg.get('fdb_commit', '?')}` · BILIO commit: `{cfg.get('bilio_commit', '?')}` · {cfg.get('python', '')}  ",
         _agent_line(cfg), "",
     ]
     try:
@@ -116,8 +116,8 @@ def main():
                               timeout=5).stdout.strip()
     except Exception:  # noqa: BLE001 - git optional
         head = ""
-    if head and cfg.get("triageline_commit") and cfg["triageline_commit"] != head:
-        lines += [f"> **Stale evidence:** this run was produced at `{cfg['triageline_commit'][:10]}`, not the current "
+    if head and cfg.get("bilio_commit") and cfg["bilio_commit"] != head:
+        lines += [f"> **Stale evidence:** this run was produced at `{cfg['bilio_commit'][:10]}`, not the current "
                   f"checkout `{head[:10]}`. Re-run `./run_fdb_v3.sh` on the submission commit.", ""]
     if mode == "offline_text_replay":
         lines += ["> **Diagnostic only.** Offline text replay feeds the official transcripts to the agent without LiveKit, "
@@ -162,7 +162,7 @@ def main():
         lines += ["Fine-grained latency report: `" + f"{prov}_latency_report.json`", ""]
     turns = turn_latency(run / "agent_heartbeat.log")
     if turns:
-        lines += ["## Per-turn timing (TriageLine worker telemetry, not an official metric)", "",
+        lines += ["## Per-turn timing (BILIO worker telemetry, not an official metric)", "",
                   "| event | n | median | p90 | max |", "|---|---|---|---|---|"]
         for k, label in (("turn", "final transcript → agent audio"), ("barge_in", "user onset → agent audio stopped")):
             v = sorted(turns.get(k, []))

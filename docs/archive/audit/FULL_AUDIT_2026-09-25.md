@@ -1,4 +1,4 @@
-# TriageLine — Full Audit vs Theme 05 Guidelines (2026-09-25)
+# BILIO — Full Audit vs Theme 05 Guidelines (2026-09-25)
 
 > Scope: this is an analysis only. **No project code was changed.** Every number below comes from a
 > command run in this session (see §9, "How to reproduce this audit"). If something could not be
@@ -66,8 +66,8 @@ Per-scenario results for all 100 examples: `docs/audit/FULL_AUDIT_2026-09-25_app
 2. Stage 2: require `LIVEKIT_URL/KEY/SECRET` and `OPENAI_API_KEY` (the judge needs it, and so does the STT/TTS in this cascade). Write `v3/.env.local` from them. Never write secrets into `results/`.
 3. Stage 3: clone FDB-v3 **pinned to a commit** (`3e799c45a045256f47d5f1c9cda90157e2d2ec9e` was HEAD during this audit). Run `gdown` for the data, unzip to `v3/fdb_v3_data_released`, and drop `__MACOSX/`. Skip this if the data already exists.
 4. Stage 4: copy `mock_apis.py`/`latency_injector.py` from the pinned clone. Start `python livekit_agent/cascaded_agent.py start` in the background. Wait until the log says it is registered (not `sleep 2`), with a timeout.
-5. Stage 5: `cd v3 && python run_tool_benchmark_all_released.py --provider triageline --root_dir fdb_v3_data_released`, then the three evaluators **with `--use-llm`** (`evaluate_tool_calls.py`, `evaluate_pass_rate.py`, `analyze_tool_latency.py`), all with `--provider triageline`.
-6. Stage 6: copy the three JSON reports + every `result_triageline.json` + the agent log + `pip freeze` + the git SHAs into `results/<timestamp>/`, and update `results/results.md` from them.
+5. Stage 5: `cd v3 && python run_tool_benchmark_all_released.py --provider bilio --root_dir fdb_v3_data_released`, then the three evaluators **with `--use-llm`** (`evaluate_tool_calls.py`, `evaluate_pass_rate.py`, `analyze_tool_latency.py`), all with `--provider bilio`.
+6. Stage 6: copy the three JSON reports + every `result_bilio.json` + the agent log + `pip freeze` + the git SHAs into `results/<timestamp>/`, and update `results/results.md` from them.
 7. Add `--limit N` for a smoke run and `--skip-install`. Make the script idempotent. Kill the agent in the `trap`.
 8. **Test it on a clean machine or VM** (the guide asks for this explicitly).
 
@@ -75,7 +75,7 @@ Per-scenario results for all 100 examples: `docs/audit/FULL_AUDIT_2026-09-25_app
 The README (table row B, "Model/provider"), `results/config.json` (`"model": "gpt-4o"`) and `docs/ARCHITECTURE.md` (lines 19, 45, 63) all say **gpt-4o does tool calling**. The code does not: `cascaded_agent.py` has **no LLM**. It runs Silero VAD → OpenAI whisper-1 → **rule-based `ParticipantAgent`/`nlu.py`** → OpenAI tts-1. The guide requires "a clear declaration of the model provider or custom agent". Declare it as a **custom LiveKit agent** and list every hosted API (OpenAI STT/TTS) and every local model (faster-whisper/CLIP if used).
 
 ### B-03 🟠 P1 — Provider name and output file names
-The official scripts key everything on `--provider` → `result_{provider}.json`. Pick one name (for example `triageline`), use it in every stage, and put it in the README.
+The official scripts key everything on `--provider` → `result_{provider}.json`. Pick one name (for example `bilio`), use it in every stage, and put it in the README.
 
 ### B-04 🟠 P1 — Versions, seeds and Python are not pinned
 - `~=1.3` resolved to **livekit-agents 1.8.3** here. `results/config.json` says 1.3 was the target and 1.8.3 was "tested, not verified". Pin one version.
@@ -254,5 +254,5 @@ pytest tests -q; (cd legacy && pytest tests -q); for f in livekit_agent/adapter_
 python run_local.py --all --agent agent.agent:ParticipantAgent
 python livekit_agent/fdb_v3_offline_replay.py --data data/fdb_v3_data_released --text
 cd livekit_agent/.fdb_v3_repo/v3 && python evaluate_pass_rate.py --benchmark benchmark_data_v2.json \
-   --results-dir ../../../data/fdb_v3_data_released --provider triageline_text --output pass.json   # add --use-llm with a gpt-4o key
+   --results-dir ../../../data/fdb_v3_data_released --provider bilio_text --output pass.json   # add --use-llm with a gpt-4o key
 ```

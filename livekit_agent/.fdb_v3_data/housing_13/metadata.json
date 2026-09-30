@@ -1,0 +1,39 @@
+{
+  "id": "housing_13",
+  "domain": "housing_location",
+  "title": "Dual Filter Update",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Um... well... oh... hi there, I've decided to expand my search a bit because I'm not finding anything... um, I like.",
+      "user_annotated": "Um... well... oh... hi there, I've decided to expand my search a bit because I'm not finding anything... um, I like.",
+      "ai": "Hi! I can adjust your filters. What changes?"
+    },
+    {
+      "user": "You know... you know... like... you know... let's raise the max price to 3000 per month... and also bump up the minimum bedrooms to 3.... um, I think I need more space than I originally thought.",
+      "user_annotated": "You know... you know... like... you know... let's raise the max price to 3000 per month... and also bump up the minimum bedrooms to 3.... um, I think I need more space than I originally thought.",
+      "ai": "I'll update both the max price and minimum bedroom filters for you."
+    }
+  ],
+  "acting_notes": "Speak clearly and concisely.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "max_price",
+        "value": 3000
+      }
+    },
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "min_bedrooms",
+        "value": 3
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "fast"
+}

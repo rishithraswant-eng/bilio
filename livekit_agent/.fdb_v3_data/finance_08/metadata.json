@@ -1,0 +1,35 @@
+{
+  "id": "finance_08",
+  "domain": "finance_billing",
+  "title": "Simple Exchange with Hesitation",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Hey... hmm... I've got a quick conversion question... um... for you.",
+      "user_annotated": "Hey... hmm... I've got a quick conversion question... um... for you.",
+      "ai": "Sure! Go ahead, I'm happy to help."
+    },
+    {
+      "user": "I'm trying to figure out how much money I'd have if... um... I converted... let me think... about 200 euros into US dollars. What would that come out to?",
+      "user_annotated": "I'm trying to figure out how much money I'd have if... um... I converted... let me think... about 200 euros into US dollars. What would that come out to?",
+      "ai": "I'll convert 200 EUR to USD for you."
+    }
+  ],
+  "acting_notes": "Hesitate briefly as if doing mental math before asking.",
+  "disfluency_features": [
+    "HESITATION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 200,
+        "from_currency": "EUR",
+        "to_currency": "USD"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

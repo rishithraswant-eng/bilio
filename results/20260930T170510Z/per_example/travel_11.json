@@ -1,0 +1,63 @@
+{
+  "example_id": "travel_11",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Uh... hi there,... um, I need to get a flight booked for a colleague who's traveling for work.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "You know... we need a flight to Austin on February 2nd... and go ahead and book it under the name Morgan Smith. That's the person who'll be traveling.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Austin",
+        "date": "February 2"
+      },
+      "timestamp_start": 0.322,
+      "timestamp_end": 0.555
+    }
+  ],
+  "transcript": "Sure, checking flights to None for today. Got it — switching to Austin. I found a flight to Austin: FL123 departing February 2 for $450.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to None for today.",
+      "t": 0.027
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Got it — switching to Austin.",
+      "t": 0.322
+    },
+    {
+      "kind": "final_response",
+      "text": "I found a flight to Austin: FL123 departing February 2 for $450.",
+      "t": 0.555
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Austin",
+        "date": "February 2"
+      }
+    },
+    {
+      "function": "book_flight",
+      "args": {
+        "passenger_name": "Morgan Smith"
+      }
+    }
+  ]
+}

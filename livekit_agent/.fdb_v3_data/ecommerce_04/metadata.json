@@ -1,0 +1,33 @@
+{
+  "id": "ecommerce_04",
+  "domain": "ecommerce_support",
+  "title": "Order Tracking with Pause",
+  "difficulty": "easy",
+  "dialogue": [
+    {
+      "user": "Um... um, well... good afternoon... I've been waiting on... um, a package and it still hasn't arrived.",
+      "user_annotated": "Um... um, well... good afternoon... I've been waiting on... um, a package and it still hasn't arrived.",
+      "ai": "Good afternoon! I'm sorry about that. Let me look into it."
+    },
+    {
+      "user": "You know... uh... like... where is my package? Let me find... um... the order number here... the order number is X-Y-Z-8-8. Could you check what's going on with it?",
+      "user_annotated": "You know... uh... like... where is my package? Let me find... um... the order number here... the order number is X-Y-Z-8-8. Could you check what's going on with it?",
+      "ai": "Let me look up order XYZ88 for you right away."
+    }
+  ],
+  "acting_notes": "Pause as if looking for the receipt on your phone.",
+  "disfluency_features": [
+    "PAUSE"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "track_order",
+      "args": {
+        "order_id": "XYZ88"
+      }
+    }
+  ],
+  "num_expected_calls": 1,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

@@ -1,0 +1,42 @@
+{
+  "example_id": "finance_23",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hello... well,... um... I need to talk to somebody about my bill payments. There's been some confusion.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um... so can you check the balance on my — oh actually, never mind that part. What... um, I really need is to set the mortgage autopay to pull from checking. No wait, on second thought, savings is better. Make it pull from savings instead.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [],
+  "transcript": "Sure — what bill type should I use? Okay, I've stopped that and dropped the request. Anything else I can do?",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — what bill type should I use?",
+      "t": 0.014
+    },
+    {
+      "kind": "final_response",
+      "text": "Okay, I've stopped that and dropped the request. Anything else I can do?",
+      "t": 0.309
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "modify_autopay",
+      "args": {
+        "bill_type": "mortgage",
+        "source_account": "savings"
+      }
+    }
+  ]
+}

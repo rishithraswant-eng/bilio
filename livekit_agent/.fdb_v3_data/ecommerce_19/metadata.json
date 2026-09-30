@@ -1,0 +1,50 @@
+{
+  "id": "ecommerce_19",
+  "domain": "ecommerce_support",
+  "title": "Product + Quantity Double Correction",
+  "difficulty": "hard",
+  "dialogue": [
+    {
+      "user": "Um, hmm... hello... uh,... um...... um...... um, I need to order some stuff for work but I keep changing my mind on the details.",
+      "user_annotated": "Um, hmm... hello... uh,... um...... um...... um, I need to order some stuff for work but I keep changing my mind on the details.",
+      "ai": "Sure thing! Take your time and I'll adjust as we go."
+    },
+    {
+      "user": "Um... so you know... search for a laptop \u2014 wait... no,... um...... um, I actually need a tablet, not a laptop. And add 2 of them to the cart. Actually, just add 1 instead, I only have budget for one right now.",
+      "user_annotated": "Um... so you know... search for a laptop \u2014 wait... no,... um...... um, I actually need a tablet, not a laptop. And add 2 of them to the cart. Actually, just add 1 instead, I only have budget for one right now.",
+      "ai": "I'll search for a tablet and add one to your cart."
+    }
+  ],
+  "acting_notes": "Correct the item type, then correct the quantity.",
+  "disfluency_features": [
+    "SELF_CORRECTION"
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_products",
+      "args": {
+        "query": "tablet"
+      }
+    },
+    {
+      "function": "add_to_cart",
+      "args": {
+        "product_id": "$RESULT_0.products[0].product_id",
+        "quantity": 1
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": true,
+  "state_rollback_details": {
+    "original_param": {
+      "query": "laptop",
+      "quantity": 2
+    },
+    "corrected_param": {
+      "query": "tablet",
+      "quantity": 1
+    }
+  },
+  "latency_profile": "normal"
+}

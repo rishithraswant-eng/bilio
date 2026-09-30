@@ -1,0 +1,58 @@
+{
+  "example_id": "housing_02",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Uh, hmm... um... hi... well... I'm considering an apartment and... um, I want to make sure the commute to my office isn't too bad.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Hmm... uh... like, could you tell me how long it would take to drive from 101 Main Street to the Downtown Office during a normal day?... um...... um, I want to make sure it's reasonable.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "destination_address": "Downtown Office",
+        "mode": "driving"
+      },
+      "timestamp_start": 0.317,
+      "timestamp_end": 0.899
+    }
+  ],
+  "transcript": "Working out the commute from there to my office isn't too bad. Got it — switching to Downtown Office. I started that calculate commute, but the system also needs the origin address — what should I use?",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Working out the commute from there to my office isn't too bad.",
+      "t": 0.046
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Got it — switching to Downtown Office.",
+      "t": 0.317
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that calculate commute, but the system also needs the origin address — what should I use?",
+      "t": 0.899
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "101 Main Street",
+        "destination_address": "Downtown Office",
+        "mode": "driving"
+      }
+    }
+  ]
+}

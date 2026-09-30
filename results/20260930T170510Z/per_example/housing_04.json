@@ -1,0 +1,56 @@
+{
+  "example_id": "housing_04",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hmm... uh... hey... oh...... um... I just started apartment hunting in Denver and I need help finding options.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Well... hmm... uh, you know... i'm looking for an apartment in Denver that has... 1 bedroom. I'm living alone so... um, I don't need anything too big.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Denver"
+      },
+      "timestamp_start": 0.026,
+      "timestamp_end": 0.337
+    }
+  ],
+  "transcript": "Looking for apartments in Denver. Okay — still on it. I started that search apartments, but the system also needs the bedrooms and max price — what should I use?",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Looking for apartments in Denver.",
+      "t": 0.026
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — still on it.",
+      "t": 0.323
+    },
+    {
+      "kind": "clarification_request",
+      "text": "I started that search apartments, but the system also needs the bedrooms and max price — what should I use?",
+      "t": 0.337
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Denver",
+        "bedrooms": 1
+      }
+    }
+  ]
+}

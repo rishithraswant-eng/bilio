@@ -1,0 +1,39 @@
+{
+  "id": "travel_15",
+  "domain": "travel_identity",
+  "title": "Update Two Documents",
+  "difficulty": "medium",
+  "dialogue": [
+    {
+      "user": "Hey... uh, I've got a couple of document updates that... um, I need to take care of before my trip next week.",
+      "user_annotated": "Hey... uh, I've got a couple of document updates that... um, I need to take care of before my trip next week.",
+      "ai": "Sure! I can help with those. What documents need updating?"
+    },
+    {
+      "user": "You know... first... my driver license number changed to D-L-5-5-5, and... um, I also need to change my passport number to P-9-9-9. Could you update both of those for me?",
+      "user_annotated": "You know... first... my driver license number changed to D-L-5-5-5, and... um, I also need to change my passport number to P-9-9-9. Could you update both of those for me?",
+      "ai": "I'll update both your driver license and passport numbers right away."
+    }
+  ],
+  "acting_notes": "Deliver both requests in one smooth sentence.",
+  "disfluency_features": [],
+  "expected_tool_calls": [
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "driver_license",
+        "doc_number": "DL555"
+      }
+    },
+    {
+      "function": "update_identity_doc",
+      "args": {
+        "doc_type": "passport",
+        "doc_number": "P999"
+      }
+    }
+  ],
+  "num_expected_calls": 2,
+  "state_rollback_test": false,
+  "latency_profile": "normal"
+}

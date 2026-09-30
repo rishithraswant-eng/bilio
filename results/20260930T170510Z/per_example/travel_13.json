@@ -1,0 +1,57 @@
+{
+  "example_id": "travel_13",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Hello... you there?... um, I had something I wanted to ask about.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "You know... i was thinking about going to — oh... never mind that destination. Let me start over. Just search for flights to Denver on January 15th, that's actually what... um, I need.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Denver",
+        "date": "January 15"
+      },
+      "timestamp_start": 0.385,
+      "timestamp_end": 0.653
+    }
+  ],
+  "transcript": "Sure — what do you need? Sure, checking flights to Denver for January 15. I found a flight to Denver: FL123 departing January 15 for $450.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.013
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, checking flights to Denver for January 15.",
+      "t": 0.385
+    },
+    {
+      "kind": "final_response",
+      "text": "I found a flight to Denver: FL123 departing January 15 for $450.",
+      "t": 0.653
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "search_flights",
+      "args": {
+        "destination": "Denver",
+        "date": "January 15"
+      }
+    }
+  ]
+}

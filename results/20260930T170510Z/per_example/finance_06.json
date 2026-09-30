@@ -1,0 +1,68 @@
+{
+  "example_id": "finance_06",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Uh... um, hi there.... um, I was looking at your different credit card options on the website.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Um, so uh, I was wondering what the benefits are for the... travel card? I think that's the one my coworker recommended to me.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "different"
+      },
+      "timestamp_start": 0.024,
+      "timestamp_end": 0.029
+    },
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "travel"
+      },
+      "timestamp_start": 0.326,
+      "timestamp_end": 0.326
+    }
+  ],
+  "transcript": "Looking up your different card benefits. Here's what I found: different, 2% Cashback, No Foreign Transaction Fee. Looking up your travel card benefits. Here's what I found: travel, 2% Cashback, No Foreign Transaction Fee.",
+  "agent_actions": [
+    {
+      "kind": "filler_speech",
+      "text": "Looking up your different card benefits.",
+      "t": 0.024
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: different, 2% Cashback, No Foreign Transaction Fee.",
+      "t": 0.029
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Looking up your travel card benefits.",
+      "t": 0.326
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: travel, 2% Cashback, No Foreign Transaction Fee.",
+      "t": 0.326
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_card_benefits",
+      "args": {
+        "card_type": "travel"
+      }
+    }
+  ]
+}

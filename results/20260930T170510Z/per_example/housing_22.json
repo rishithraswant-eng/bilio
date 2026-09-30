@@ -1,0 +1,101 @@
+{
+  "example_id": "housing_22",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Uh... oh... oh... hello... uh... I've got a bunch of things... um, I need done for my apartment search.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "You know... uh... hmm... um... first can you update my filter so pets are allowed?... um, I keep forgetting to set that. Then, like, search in Seattle for a 1-bedroom. And then once you find something, uh, check the transit time from there to the stadium because I go to games pretty often.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "pets_allowed",
+        "value": true
+      },
+      "timestamp_start": 0.39,
+      "timestamp_end": 0.51
+    },
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Seattle",
+        "bedrooms": 1
+      },
+      "timestamp_start": 0.515,
+      "timestamp_end": 1.027
+    },
+    {
+      "function": "calculate_commute",
+      "args": {
+        "destination_address": "the stadium",
+        "mode": "transit",
+        "origin_address": "Seattle"
+      },
+      "timestamp_start": 1.039,
+      "timestamp_end": 1.832
+    }
+  ],
+  "transcript": "Sure — which city? Sure, dropping that — switching to your filter request. Okay — updating that now (pets_allowed). Done — pets_allowed is now True. Here's what I found: duration mins 25, transit.",
+  "agent_actions": [
+    {
+      "kind": "clarification_request",
+      "text": "Sure — which city?",
+      "t": 0.015
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Sure, dropping that — switching to your filter request.",
+      "t": 0.39
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Okay — updating that now (pets_allowed).",
+      "t": 0.39
+    },
+    {
+      "kind": "final_response",
+      "text": "Done — pets_allowed is now True.",
+      "t": 0.515
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: duration mins 25, transit.",
+      "t": 1.832
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "update_search_filter",
+      "args": {
+        "filter_name": "pets_allowed",
+        "value": true
+      }
+    },
+    {
+      "function": "search_apartments",
+      "args": {
+        "city": "Seattle",
+        "bedrooms": 1
+      }
+    },
+    {
+      "function": "calculate_commute",
+      "args": {
+        "origin_address": "$RESULT_1.apartments[0].address",
+        "destination_address": "the stadium",
+        "mode": "transit"
+      }
+    }
+  ]
+}

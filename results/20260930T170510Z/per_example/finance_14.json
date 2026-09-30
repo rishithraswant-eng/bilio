@@ -1,0 +1,87 @@
+{
+  "example_id": "finance_14",
+  "provider": "bilio_text",
+  "status": "completed",
+  "mode": "offline_replay_official_data",
+  "user_turns_asr": [
+    {
+      "text": "Um... hey there, I'm dealing with payments in different currencies and need... um, a couple of conversions done.",
+      "start": 0,
+      "end": 0
+    },
+    {
+      "text": "Like... first, can you tell me how much 50 US dollars would be in euros? And then also, how much would 100 Canadian dollars be in US dollars?... um, I need both numbers.",
+      "start": 1,
+      "end": 1
+    }
+  ],
+  "asr_seconds": 0.0,
+  "actual_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 50,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      },
+      "timestamp_start": 0.318,
+      "timestamp_end": 0.318
+    },
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 100,
+        "from_currency": "CAD",
+        "to_currency": "USD"
+      },
+      "timestamp_start": 0.325,
+      "timestamp_end": 0.325
+    }
+  ],
+  "transcript": "Sure — what do you need? Checking the USD to EUR rate. Here's what I found: converted amount 45.0, rate 0.9. Checking the CAD to USD rate. Here's what I found: converted amount 90.0, rate 0.9.",
+  "agent_actions": [
+    {
+      "kind": "final_response",
+      "text": "Sure — what do you need?",
+      "t": 0.018
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking the USD to EUR rate.",
+      "t": 0.318
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: converted amount 45.0, rate 0.9.",
+      "t": 0.325
+    },
+    {
+      "kind": "filler_speech",
+      "text": "Checking the CAD to USD rate.",
+      "t": 0.325
+    },
+    {
+      "kind": "final_response",
+      "text": "Here's what I found: converted amount 90.0, rate 0.9.",
+      "t": 0.325
+    }
+  ],
+  "expected_tool_calls": [
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 50,
+        "from_currency": "USD",
+        "to_currency": "EUR"
+      }
+    },
+    {
+      "function": "get_exchange_rate",
+      "args": {
+        "amount": 100,
+        "from_currency": "CAD",
+        "to_currency": "USD"
+      }
+    }
+  ]
+}

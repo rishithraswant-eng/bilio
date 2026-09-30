@@ -1,1 +1,1 @@
-"""TriageLine browser transport package (distinct from legacy.ui)."""
+"""BILIO browser transport package (distinct from legacy.ui)."""

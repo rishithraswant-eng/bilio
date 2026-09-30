@@ -171,6 +171,9 @@ def _install_fake_livekit():
     sys.modules["livekit.plugins"] = plugins_mod
     sys.modules["livekit.plugins.openai"] = openai_plugin_mod
     sys.modules["livekit.plugins.silero"] = silero_plugin_mod
+    
+    plugin_mod = types.ModuleType("livekit.agents.plugin")
+    sys.modules["livekit.agents.plugin"] = plugin_mod
 
 
 class CascadedAgentWiringTest(unittest.IsolatedAsyncioTestCase):

@@ -3,7 +3,7 @@ sih_problem_id: SIH26182
 theme: "05"
 agent_name: bilio
 provider_name: bilio
-repo_url: https://github.com/RomitDeokar/bilio-sih26182
+repo_url: https://github.com/rishithraswant-eng/bilio
 reported_scores:
   offline_text_replay: "61.0%"
   heldout_rules_only: 32
